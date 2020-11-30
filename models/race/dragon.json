@@ -1,0 +1,10 @@
+[
+   {
+      "resistance": {
+         "fire": 0,
+         "physical": 95,
+         "water": 110,
+         "earth": 65
+      }
+   }
+]
