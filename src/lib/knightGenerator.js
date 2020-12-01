@@ -1,13 +1,13 @@
-const uniqid = require('uniqid');
+import uniqid from "uniqid"
 
-module.exports = class Knight {
+export default class Knight {
    constructor(options) {
-      this.id = uniqid(this.resolveName(options.nickname) + "-"),
-      this.name = this.resolveName(options.nickname);
+      this.id = uniqid(this.resolveName(options.name) + "-");
+      this.name = this.resolveName(options.name);
       this.nickname = options.nickname || null;
-      this.birthday = options.birthday || null;
+      this.birthday = Date.now();
       this.sprite = options.sprite || 0;
-      this.gender = options.sprite || "female";
+      this.gender = options.gender || "female";
 
       this.weapons = [
          {
