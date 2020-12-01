@@ -29,6 +29,7 @@ app.use(logger('tiny'));
 app.use(bodyParser.json());
 
 app.use('/', require(path.join(__dirname, 'routes/knights.js')));
+app.use('/', require(path.join(__dirname, 'routes/profile.js')));
 
 app.use((req, res, next) => {
   const ERROR = new Error(`${req.method} ${req.url} Not Found`);
