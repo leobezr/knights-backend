@@ -1,12 +1,20 @@
 import express from "express";
-import { getUsers, addUser } from "./repositories/UserRepositories";
+import cors from "cors";
+
+import Routes from "./route.js";
 
 const app = express();
 
-app.get("/", (req, res) => {
-   const users = getUsers();
+// middleware
+app.use(express.json());
+app.use(express.urlencoded());
 
-   return res.json({ users });
-})
+app.use(cors({
+   origin: "*",
+   optionsSuccessStatus: 200
+}));
 
 app.listen(3333);
+
+// Sets routes
+Routes(app);

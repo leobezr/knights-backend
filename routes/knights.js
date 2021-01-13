@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const router = express.Router();
 
-const KnightFactory = require("../lib/knight.js");
+const KnightFactory = require("../src/lib/knight.js");
 
 const findKnight = async (req, res, next) => {
   try {
@@ -31,7 +31,6 @@ const createKnight = async (req, res, next) => {
 
     const newStats = new KnightFactory({
       nickname: req.body.name,
-      birthday: req.body.birthday,
       sprite: req.body.sprite,
       gender: req.body.gender
     })
