@@ -27,7 +27,7 @@ export default function (app) {
    /**
     * CREATE knights
     */
-   app.post("/api/v1/knight/create", async (req, res, next) => {
+   app.post("/api/v1/knights/create", async (req, res, next) => {
       try {
          const newUser = await addUser(req);
 
