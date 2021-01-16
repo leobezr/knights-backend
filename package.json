@@ -1,4 +1,5 @@
 {
+  "version": "v0.1.0",
   "dependencies": {
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
@@ -9,6 +10,11 @@
   },
   "scripts": {
     "run": "node main.js",
-    "start": "yarn run run"
+    "start": "yarn run run",
+    "dev": "nodemon src/server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sucrase": "^3.16.0"
   }
 }
