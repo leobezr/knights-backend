@@ -1,5 +1,18 @@
 import uniqid from "uniqid"
 
+const Modifier = () => {
+   return {
+      armor: 0,
+      luk: 0,
+      str: 0,
+      agi: 0,
+      vit: 0,
+
+      hit: 0,
+      atk: 0,
+   };
+}
+
 export default class Knight {
    constructor(options) {
       this.id = uniqid(this.resolveName(options.name) + "-");
@@ -36,15 +49,7 @@ export default class Knight {
          accessory_4: null,
       };
 
-      this.modifier = {
-         hit: 0,
-         str: 10,
-         vit: 10,
-         agi: 10,
-         luk: 10,
-         atk: 10,
-         def: 10,
-      }
+      this.modifier = { ...Modifier() };
 
       this.inventory = [];
       this.gold = 0;
@@ -63,9 +68,33 @@ export default class Knight {
          }
       }
    }
+   _applyMod() {
+      let itemsEquipped = {};
+      let attr = { ...Modifier() };
+
+      for (let equipped in this.equipped) {
+         if (this.equipped[equipped]) {
+            itemsEquipped[equipped] = this.equipped[equipped]
+         }
+      }
+
+      for (let item in itemsEquipped) {
+         for (let mod in itemsEquipped[item].attr) {
+            attr[mod] += itemsEquipped[item].attr[mod];
+         }
+      }
+
+      this.modifier = { ...attr };
+   }
    resolveName(name) {
       name = name || "";
 
       return name.toLowerCase().replace(/ /g, "-")
+   }
+   equip(itemSet) {
+      for (let item in itemSet) {
+         this.equipped[item] = itemSet[item];
+      }
+      this._applyMod();
    }
 }
