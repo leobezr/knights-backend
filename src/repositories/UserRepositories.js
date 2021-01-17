@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import KnightFactory from "../lib/knightGenerator.js";
+import noviceItemGenerator from "../lib//noviceItemGenerator.js";
 
 export async function getUsers() {
    try {
@@ -17,6 +18,7 @@ export async function getUsers() {
 export async function addUser(req) {
    try {
       const DB = fs.readFileSync(path.join(__dirname, '../model/knights.json'));
+      const NOVICE_SET = await noviceItemGenerator()
 
       let data = JSON.parse(DB);
       let userData = req.body;
@@ -26,7 +28,8 @@ export async function addUser(req) {
       }
 
       let newKnightConfig = new KnightFactory(userData);
-
+      newKnightConfig.equiped = NOVICE_SET;
+      
       data.push(newKnightConfig);
 
       fs.writeFileSync(path.join(__dirname, '../model/knights.json'), JSON.stringify(data));
