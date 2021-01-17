@@ -4,28 +4,40 @@ export default class Knight {
    constructor(options) {
       this.id = uniqid(this.resolveName(options.name) + "-");
       this.name = this.resolveName(options.name);
-      this.nickname = options.nickname || null;
-      this.birthday = Date.now();
+      this.nickname = options.name || null;
       this.sprite = options.sprite || 0;
       this.gender = options.gender || "female";
+      
+      this.birthday = Date.now();
+      this.experience = 0;
+      this.level = 1;
 
-      this.weapons = [
-         {
-            name: "wooden sword",
-            damage: 11,
-            attr: "strength",
-            equipped: true
-         }
-      ];
+      this.cooldown = {
+         train: Date.now(),
+         hunt: Date.now(),
+         brew: Date.now()
+      }
+
+      this.events = {
+         dungeon: Date.now(),
+      }
+
+      this.equiped = [];
+      this.inventory = [];
+      this.gold = 0;
 
       this.attributes = {
-         strength: 0,
-         dexterity: 0,
-         defense: 0,
-         constitution: 0,
-         intelligence: 0,
-         wisdom: 0,
-         charisma: 0
+         hit: 10,
+         str: 10,
+         vit: 10,
+         agi: 10,
+         luk: 10,
+         atk: 10,
+         def: 10,
+         hp: {
+            value: 10,
+            total: 10
+         }
       }
    }
    resolveName(name) {
