@@ -7,7 +7,8 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "uniqid": "^5.2.0",
-    "websocket": "^1.0.33"
+    "websocket": "^1.0.33",
+    "yup": "^0.32.8"
   },
   "scripts": {
     "run": "node main.js",
