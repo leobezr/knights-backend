@@ -1,1 +1,1059 @@
-[{"id":"the-man-993bvebski5lp9gn","name":"the-man","nickname":null,"birthday":1606804145446,"sprite":1,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"the-man-993bv7lgki5lrfum","name":"the-man","nickname":null,"birthday":1606804247037,"sprite":1,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"the-man-993bv57cki5mkj15","name":"the-man","nickname":null,"birthday":1606805604185,"sprite":1,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"the-man-993bv5r4ki5mn4jc","name":"the-man","nickname":null,"birthday":1606805725367,"sprite":1,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"the-man-2kjooz5r4kjv8vunw","name":"the-man","nickname":null,"birthday":1610531520763,"sprite":1,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"kitty-2kjooz700kjv9qake","name":"kitty","nickname":null,"birthday":1610532941053,"sprite":0,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"kitty-2kjooz5ikkjv9rej7","name":"kitty","nickname":null,"birthday":1610532992850,"sprite":0,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"kittyy-2kjoozbe4kjv9vkp8","name":"kittyy","nickname":null,"birthday":1610533187467,"sprite":0,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"kittey-2kjooze6ckjv9w73n","name":"kittey","nickname":null,"birthday":1610533216498,"sprite":0,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}},{"id":"tophtoph-2kjooz6vckjvad5b1","name":"tophtoph","nickname":null,"birthday":1610534007324,"sprite":0,"gender":"female","weapons":[{"name":"wooden sword","damage":11,"attr":"strength","equipped":true}],"attributes":{"strength":0,"dexterity":0,"defense":0,"constitution":0,"intelligence":0,"wisdom":0,"charisma":0}}]
+[
+    {
+        "id": "the-man-12ashqgtzkk0dsigv",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842093950,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842093950,
+            "hunt": 1610842093950,
+            "brew": 1610842093950
+        },
+        "events": {
+            "dungeon": 1610842093950
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqgwskk0du37p",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842167492,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842167492,
+            "hunt": 1610842167492,
+            "brew": 1610842167492
+        },
+        "events": {
+            "dungeon": 1610842167492
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqgzdkk0dv8zl",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842221632,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842221632,
+            "hunt": 1610842221632,
+            "brew": 1610842221632
+        },
+        "events": {
+            "dungeon": 1610842221632
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqh9jkk0dze1k",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842414807,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842414807,
+            "hunt": 1610842414807,
+            "brew": 1610842414807
+        },
+        "events": {
+            "dungeon": 1610842414807
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhalkk0dzvkk",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842437523,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842437523,
+            "hunt": 1610842437523,
+            "brew": 1610842437523
+        },
+        "events": {
+            "dungeon": 1610842437523
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhdqkk0e0xix",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842486712,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842486712,
+            "hunt": 1610842486712,
+            "brew": 1610842486712
+        },
+        "events": {
+            "dungeon": 1610842486712
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhf7kk0e1nhl",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842520360,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842520360,
+            "hunt": 1610842520360,
+            "brew": 1610842520360
+        },
+        "events": {
+            "dungeon": 1610842520360
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhj0kk0e3e1k",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842601431,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842601431,
+            "hunt": 1610842601431,
+            "brew": 1610842601431
+        },
+        "events": {
+            "dungeon": 1610842601431
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhlrkk0e4085",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842630180,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842630180,
+            "hunt": 1610842630180,
+            "brew": 1610842630180
+        },
+        "events": {
+            "dungeon": 1610842630180
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhmvkk0e4gs9",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842651640,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842651640,
+            "hunt": 1610842651640,
+            "brew": 1610842651640
+        },
+        "events": {
+            "dungeon": 1610842651640
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhpokk0e59pi",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842689125,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842689125,
+            "hunt": 1610842689125,
+            "brew": 1610842689125
+        },
+        "events": {
+            "dungeon": 1610842689125
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhsokk0e6atb",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842737214,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842737214,
+            "hunt": 1610842737214,
+            "brew": 1610842737214
+        },
+        "events": {
+            "dungeon": 1610842737214
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhtmkk0e6gim",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842744605,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842744605,
+            "hunt": 1610842744605,
+            "brew": 1610842744605
+        },
+        "events": {
+            "dungeon": 1610842744605
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhx5kk0e7qi1",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842804200,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842804200,
+            "hunt": 1610842804200,
+            "brew": 1610842804200
+        },
+        "events": {
+            "dungeon": 1610842804200
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqhzqkk0e8djm",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610842834065,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610842834065,
+            "hunt": 1610842834065,
+            "brew": 1610842834065
+        },
+        "events": {
+            "dungeon": 1610842834065
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqi57kk0ecodl",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843034728,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843034728,
+            "hunt": 1610843034728,
+            "brew": 1610843034728
+        },
+        "events": {
+            "dungeon": 1610843034728
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqi7gkk0edwkc",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843091995,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843091995,
+            "hunt": 1610843091995,
+            "brew": 1610843091995
+        },
+        "events": {
+            "dungeon": 1610843091995
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqibbkk0eexpk",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843140135,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843140135,
+            "hunt": 1610843140135,
+            "brew": 1610843140135
+        },
+        "events": {
+            "dungeon": 1610843140135
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqig4kk0eiyga",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843327721,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843327721,
+            "hunt": 1610843327721,
+            "brew": 1610843327721
+        },
+        "events": {
+            "dungeon": 1610843327721
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqijpkk0elbcy",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843437761,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843437761,
+            "hunt": 1610843437761,
+            "brew": 1610843437761
+        },
+        "events": {
+            "dungeon": 1610843437761
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqikukk0emms0",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843499215,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843499215,
+            "hunt": 1610843499215,
+            "brew": 1610843499215
+        },
+        "events": {
+            "dungeon": 1610843499215
+        },
+        "equiped": [],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqipskk0enz27",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843561790,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843561790,
+            "hunt": 1610843561790,
+            "brew": 1610843561790
+        },
+        "events": {
+            "dungeon": 1610843561790
+        },
+        "equiped": {
+            "armor": {
+                "id": 2301,
+                "name": "Shirt",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            "weapon": {
+                "id": 1154,
+                "name": "Broadsword",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 15,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            "shield": {
+                "id": 2103,
+                "name": "Iron shield",
+                "attr": {
+                    "armor": 15,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            }
+        },
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "the-man-12ashqirrkk0eole1",
+        "name": "the-man",
+        "nickname": "the man",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610843590728,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610843590728,
+            "hunt": 1610843590728,
+            "brew": 1610843590728
+        },
+        "events": {
+            "dungeon": 1610843590728
+        },
+        "equiped": [
+            {
+                "id": 2301,
+                "name": "Shirt",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 1154,
+                "name": "Broadsword",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 15,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 2103,
+                "name": "Iron shield",
+                "attr": {
+                    "armor": 15,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            }
+        ],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "bunny-boy-12ashqlcakk135x07",
+        "name": "bunny-boy",
+        "nickname": "Bunny Boy",
+        "sprite": 3,
+        "gender": "female",
+        "birthday": 1610884709718,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610884709718,
+            "hunt": 1610884709718,
+            "brew": 1610884709718
+        },
+        "events": {
+            "dungeon": 1610884709718
+        },
+        "equiped": [
+            {
+                "id": 2301,
+                "name": "Shirt",
+                "sprite": "/sprite/armor/2301.gif",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 1154,
+                "name": "Broadsword",
+                "sprite": "/sprite/weapons/1154.gif",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 15,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 2103,
+                "name": "Iron shield",
+                "sprite": "/sprite/shields/2103.gif",
+                "attr": {
+                    "armor": 15,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            }
+        ],
+        "inventory": [],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    },
+    {
+        "id": "solphyz-12ashqnrekk17lmg4",
+        "name": "solphyz",
+        "nickname": "Solphyz",
+        "sprite": 1,
+        "gender": "female",
+        "birthday": 1610892160995,
+        "experience": 0,
+        "level": 1,
+        "cooldown": {
+            "train": 1610892160995,
+            "hunt": 1610892160995,
+            "brew": 1610892160995
+        },
+        "events": {
+            "dungeon": 1610892160995
+        },
+        "equiped": [
+            {
+                "id": 2301,
+                "name": "Shirt",
+                "sprite": "/sprite/armor/2301.gif",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 1154,
+                "name": "Broadsword",
+                "sprite": "/sprite/weapons/1154.gif",
+                "attr": {
+                    "armor": 10,
+                    "luk": 0,
+                    "str": 15,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            },
+            {
+                "id": 2103,
+                "name": "Iron shield",
+                "sprite": "/sprite/shields/2103.gif",
+                "attr": {
+                    "armor": 15,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 1
+            }
+        ],
+        "inventory": [
+            {
+                "id": 2415,
+                "name": "Bunny shoes",
+                "sprite": "/sprite/footgear/2415.gif",
+                "attr": {
+                    "armor": 5,
+                    "luk": 20,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 10
+            },
+            {
+                "id": 2415,
+                "name": "Bunny shoes",
+                "sprite": "/sprite/footgear/2415.gif",
+                "attr": {
+                    "armor": 5,
+                    "luk": 20,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 10
+            },
+            {
+                "id": 2434,
+                "name": "Elegant boots",
+                "sprite": "/sprite/footgear/2434.gif",
+                "attr": {
+                    "armor": 20,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 3
+            },
+            {
+                "id": 2535,
+                "name": "Nomad garment",
+                "sprite": "/sprite/garments/2535.gif",
+                "attr": {
+                    "armor": 20,
+                    "luk": 0,
+                    "str": 0,
+                    "agi": 0,
+                    "vit": 0
+                },
+                "tier": 3
+            }
+        ],
+        "gold": 0,
+        "attributes": {
+            "hit": 10,
+            "str": 10,
+            "vit": 10,
+            "agi": 10,
+            "luk": 10,
+            "atk": 10,
+            "def": 10,
+            "hp": {
+                "value": 10,
+                "total": 10
+            }
+        }
+    }
+]
