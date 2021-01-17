@@ -28,8 +28,21 @@ export async function addUser(req) {
       }
 
       let newKnightConfig = new KnightFactory(userData);
-      newKnightConfig.equiped = NOVICE_SET;
-      
+
+      newKnightConfig.equipped = {
+         headgear_top: null,
+         headgear_middle: null,
+         headgear_lower: null,
+         armor: NOVICE_SET.armor,
+         footgear: null,
+         shield: NOVICE_SET.shield,
+         weapon: NOVICE_SET.weapon,
+         accessory_1: NOVICE_SET.accessory,
+         accessory_2: null,
+         accessory_3: null,
+         accessory_4: null,
+      };
+
       data.push(newKnightConfig);
 
       fs.writeFileSync(path.join(__dirname, '../model/knights.json'), JSON.stringify(data));
