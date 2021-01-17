@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import path from "path";
 
 import Routes from "./route.js";
 
@@ -13,6 +14,8 @@ app.use(cors({
    origin: "*",
    optionsSuccessStatus: 200
 }));
+
+app.use(express.static(path.join(__dirname, "/public")));
 
 app.listen(3333);
 
