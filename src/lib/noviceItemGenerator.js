@@ -12,6 +12,6 @@ export default async function () {
         armor,
         weapon,
         shield,
-        accessory
+        accessory_1: accessory
     };
 }
