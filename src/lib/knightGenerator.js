@@ -7,7 +7,7 @@ export default class Knight {
       this.nickname = options.name || null;
       this.sprite = options.sprite || 0;
       this.gender = options.gender || "female";
-      
+
       this.birthday = Date.now();
       this.experience = 0;
       this.level = 1;
@@ -22,7 +22,30 @@ export default class Knight {
          dungeon: Date.now(),
       }
 
-      this.equiped = [];
+      this.equipped = {
+         headgear_top: null,
+         headgear_middle: null,
+         headgear_lower: null,
+         armor: null,
+         footgear: null,
+         shield: null,
+         weapon: null,
+         accessory_1: null,
+         accessory_2: null,
+         accessory_3: null,
+         accessory_4: null,
+      };
+
+      this.modifier = {
+         hit: 0,
+         str: 10,
+         vit: 10,
+         agi: 10,
+         luk: 10,
+         atk: 10,
+         def: 10,
+      }
+
       this.inventory = [];
       this.gold = 0;
 
