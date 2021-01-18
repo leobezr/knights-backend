@@ -4,6 +4,32 @@ import KnightFactory from "../lib/knightGenerator.js";
 import KnightEditor from "../lib/knightEditor.js";
 import noviceItemGenerator from "../lib//noviceItemGenerator.js";
 
+/**
+ * Private functions
+ */
+function _removeItem(list, item) {
+   item = JSON.stringify(item);
+   let itemIndex = null;
+
+   for (let $index in list) {
+      let listItem = JSON.stringify(list[$index]);
+
+      if (listItem == item) {
+         itemIndex = $index;
+         break;
+      }
+   }
+
+   if (itemIndex) {
+      list.splice(itemIndex, 1);
+   }
+   return list;
+}
+
+/**
+ * Public functions
+ */
+
 export async function getUsers() {
    const DB = fs.readFileSync(path.join(__dirname, "../model/knights.json"));
 
@@ -38,12 +64,12 @@ export async function addUser(req) {
 export async function gearHandler(characterId, equip, removing) {
    removing = removing || false;
 
-   const CHARACTER_LIST = await getUsers();
+   let knightList = await getUsers();
 
-   const CHARACTER = CHARACTER_LIST.filter(character => character.id == characterId);
+   let character = knightList.filter(character => character.id == characterId);
 
-   if (CHARACTER && CHARACTER.length) {
-      let knight = new KnightEditor(CHARACTER[0]);
+   if (character && character.length) {
+      let knight = new KnightEditor(character[0]);
 
       if (!removing) {
          knight.equip(equip);
@@ -51,10 +77,10 @@ export async function gearHandler(characterId, equip, removing) {
          knight.unequip(equip);
       }
 
-      CHARACTER_LIST.splice(CHARACTER_LIST.indexOf(CHARACTER, 1));
-      CHARACTER_LIST.push(knight.config);
+      knightList = _removeItem(knightList, character[0]);
+      knightList.push(knight.config);
 
-      fs.writeFileSync(path.join(__dirname, '../model/knights.json'), JSON.stringify(CHARACTER_LIST));
+      fs.writeFileSync(path.join(__dirname, '../model/knights.json'), JSON.stringify(knightList));
       return knight.config;
    } else {
       throw "Character not found";

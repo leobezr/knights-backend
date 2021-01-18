@@ -33,6 +33,23 @@ export default class {
 
       this.config.modifier = { ...attr };
    }
+   _removeItem(list, item) {
+      item = JSON.stringify(item);
+      let itemIndex = null;
+
+      for (let $index in list) {
+         let listItem = JSON.stringify(list[$index]);
+
+         if (listItem == item) {
+            itemIndex = $index;
+            break;
+         }
+      }
+      if (itemIndex) {
+         list.splice(itemIndex, 1);
+      }
+      return list;
+   }
    unequip(item) {
       for (let equip in this.config.equipped) {
          if (JSON.stringify(item) == JSON.stringify(this.config.equipped[equip])) {
@@ -43,38 +60,40 @@ export default class {
    }
    equip(item) {
       const EQUIPPED = { ...this.config.equipped };
-      var equippedItem = null;
+      var equipRemovedFromSlot = null;
 
       this.removeFromInventory(item);
 
       if (item.type == "accessories") {
-         let { accessory_1, accessory_2, accessory_3, accessory_4 } = EQUIPPED;
+         let equippedEmptySlot = false;
 
-         if (!accessory_1) {
-            EQUIPPED.accessory_1 = item;
-         } else if (!accessory_2) {
-            EQUIPPED.accessory_2 = item;
-         } else if (!accessory_3) {
-            EQUIPPED.accessory_3 = item;
-         } else if (!accessory_4) {
-            EQUIPPED.accessory_4 = item;
+         for (let i = 1; i < 5; i++) {
+            if (!EQUIPPED[`accessory_${i}`]) {
+               EQUIPPED[`accessory_${i}`] = item;
+               equippedEmptySlot = true;
+               break;
+            }
+         }
+
+         if (equippedEmptySlot) {
+            this.config.equipped = EQUIPPED;
          } else {
-            equippedItem = { ...EQUIPPED.accessory_1 };
-            EQUIPPED.accessory_1 = item;
+            equipRemovedFromSlot = { ...this.config.equipped.accessory_1 };
+            this.config.equipped.accessory_1 = item;
          }
       } else {
          let itemType = item.type;
 
          if (this.config.equipped[itemType]) {
-            equippedItem = this.config.equipped[itemType];
+            equipRemovedFromSlot = this.config.equipped[itemType];
             this.config.equipped[itemType] = item;
          } else {
             this.config.equipped[itemType] = item;
          }
       }
 
-      if (equippedItem) {
-         this.sendToInventory(equippedItem)
+      if (equipRemovedFromSlot) {
+         this.sendToInventory(equipRemovedFromSlot)
       }
 
       this._applyMod();
@@ -83,8 +102,6 @@ export default class {
       this.config.inventory.push(item);
    }
    removeFromInventory(item) {
-      const INVENTORY = this.config.inventory;
-
-      this.config.inventory.splice(INVENTORY.indexOf(item), 1);
+      this.config.inventory = this._removeItem(this.config.inventory, item);
    }
 }
