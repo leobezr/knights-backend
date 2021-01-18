@@ -2,6 +2,7 @@
     "accessories": [
         {
             "id": 2602,
+            "type": "accessories",
             "name": "Gold earing",
             "sprite": "/sprite/accessories/2602.gif",
             "attr": {
@@ -15,6 +16,7 @@
         },
         {
             "id": 2613,
+            "type": "accessories",
             "name": "Diamond Ring",
             "sprite": "/sprite/accessories/2613.gif",
             "attr": {
@@ -28,6 +30,7 @@
         },
         {
             "id": 2627,
+            "type": "accessories",
             "name": "Leather belt",
             "sprite": "/sprite/accessories/2627.gif",
             "attr": {
@@ -41,6 +44,7 @@
         },
         {
             "id": 2664,
+            "type": "accessories",
             "name": "Pink scarf",
             "sprite": "/sprite/accessories/2664.gif",
             "attr": {
@@ -54,6 +58,7 @@
         },
         {
             "id": 2672,
+            "type": "accessories",
             "name": "Gold ring",
             "sprite": "/sprite/accessories/2672.gif",
             "attr": {
@@ -67,6 +72,7 @@
         },
         {
             "id": 2702,
+            "type": "accessories",
             "name": "Lucky horn",
             "sprite": "/sprite/accessories/2702.gif",
             "attr": {
@@ -80,6 +86,7 @@
         },
         {
             "id": 2708,
+            "type": "accessories",
             "name": "Gold emblem",
             "sprite": "/sprite/accessories/2708.gif",
             "attr": {
@@ -93,6 +100,7 @@
         },
         {
             "id": 2727,
+            "type": "accessories",
             "name": "Richman scarf",
             "sprite": "/sprite/accessories/2727.gif",
             "attr": {
@@ -106,6 +114,7 @@
         },
         {
             "id": 2729,
+            "type": "accessories",
             "name": "Cult ring",
             "sprite": "/sprite/accessories/2729.gif",
             "attr": {
@@ -119,6 +128,7 @@
         },
         {
             "id": 2741,
+            "type": "accessories",
             "name": "Necklace of fortune",
             "sprite": "/sprite/accessories/2741.gif",
             "attr": {
@@ -132,6 +142,7 @@
         },
         {
             "id": 2743,
+            "type": "accessories",
             "name": "Bunny ring",
             "sprite": "/sprite/accessories/2743.gif",
             "attr": {
@@ -145,6 +156,7 @@
         },
         {
             "id": 2746,
+            "type": "accessories",
             "name": "Dagger necklace",
             "sprite": "/sprite/accessories/2746.gif",
             "attr": {
@@ -158,6 +170,7 @@
         },
         {
             "id": 2780,
+            "type": "accessories",
             "name": "Dark knight's glove",
             "sprite": "/sprite/accessories/2708.gif",
             "attr": {
@@ -171,6 +184,7 @@
         },
         {
             "id": 2781,
+            "type": "accessories",
             "name": "Bone necklace",
             "sprite": "/sprite/accessories/2781.gif",
             "attr": {
@@ -184,6 +198,7 @@
         },
         {
             "id": 2784,
+            "type": "accessories",
             "name": "Lucky charm",
             "sprite": "/sprite/accessories/2784.gif",
             "attr": {
@@ -199,6 +214,7 @@
     "armor": [
         {
             "id": 2301,
+            "type": "armor",
             "name": "Shirt",
             "sprite": "/sprite/armor/2301.gif",
             "attr": {
@@ -212,6 +228,7 @@
         },
         {
             "id": 2305,
+            "type": "armor",
             "name": "Tunic",
             "sprite": "/sprite/armor/2305.gif",
             "attr": {
@@ -225,6 +242,7 @@
         },
         {
             "id": 2310,
+            "type": "armor",
             "name": "Coat",
             "sprite": "/sprite/armor/2310.gif",
             "attr": {
@@ -238,6 +256,7 @@
         },
         {
             "id": 2312,
+            "type": "armor",
             "name": "Leather plate",
             "sprite": "/sprite/armor/2312.gif",
             "attr": {
@@ -251,6 +270,7 @@
         },
         {
             "id": 2318,
+            "type": "armor",
             "name": "Nomad Coat",
             "sprite": "/sprite/armor/2318.gif",
             "attr": {
@@ -264,6 +284,7 @@
         },
         {
             "id": 2322,
+            "type": "armor",
             "name": "Silk shirt",
             "sprite": "/sprite/armor/2322.gif",
             "attr": {
@@ -277,6 +298,7 @@
         },
         {
             "id": 2338,
+            "type": "armor",
             "name": "Wedding dress",
             "sprite": "/sprite/armor/2338.gif",
             "attr": {
@@ -290,6 +312,7 @@
         },
         {
             "id": 2348,
+            "type": "armor",
             "name": "Stone plate",
             "sprite": "/sprite/armor/2348.gif",
             "attr": {
@@ -303,6 +326,7 @@
         },
         {
             "id": 2357,
+            "type": "armor",
             "name": "High honor plate",
             "sprite": "/sprite/armor/2357.gif",
             "attr": {
@@ -316,6 +340,7 @@
         },
         {
             "id": 2358,
+            "type": "armor",
             "name": "Noble suit",
             "sprite": "/sprite/armor/2358.gif",
             "attr": {
@@ -329,6 +354,7 @@
         },
         {
             "id": 2359,
+            "type": "armor",
             "name": "Ninja suit",
             "sprite": "/sprite/armor/2359.gif",
             "attr": {
@@ -342,6 +368,7 @@
         },
         {
             "id": 2366,
+            "type": "armor",
             "name": "Kimono",
             "sprite": "/sprite/armor/2366.gif",
             "attr": {
@@ -355,6 +382,7 @@
         },
         {
             "id": 2368,
+            "type": "armor",
             "name": "Titanium plate",
             "sprite": "/sprite/armor/2368.gif",
             "attr": {
@@ -368,6 +396,7 @@
         },
         {
             "id": 2375,
+            "type": "armor",
             "name": "Black knight armor",
             "sprite": "/sprite/armor/2375.gif",
             "attr": {
@@ -381,6 +410,7 @@
         },
         {
             "id": 2376,
+            "type": "armor",
             "name": "Iron plate",
             "sprite": "/sprite/armor/2376.gif",
             "attr": {
@@ -394,6 +424,7 @@
         },
         {
             "id": 2382,
+            "type": "armor",
             "name": "Festival Royal silk",
             "sprite": "/sprite/armor/2382.gif",
             "attr": {
@@ -407,6 +438,7 @@
         },
         {
             "id": 2385,
+            "type": "armor",
             "name": "Odins suit",
             "sprite": "/sprite/armor/2385.gif",
             "attr": {
@@ -420,6 +452,7 @@
         },
         {
             "id": 2386,
+            "type": "armor",
             "name": "Jacket",
             "sprite": "/sprite/armor/2386.gif",
             "attr": {
@@ -433,6 +466,7 @@
         },
         {
             "id": 2397,
+            "type": "armor",
             "name": "Red Robe",
             "sprite": "/sprite/armor/2397.gif",
             "attr": {
@@ -448,6 +482,7 @@
     "footgear": [
         {
             "id": 2405,
+            "type": "footgear",
             "name": "Snow boots",
             "sprite": "/sprite/footgear/2405.gif",
             "attr": {
@@ -461,6 +496,7 @@
         },
         {
             "id": 2415,
+            "type": "footgear",
             "name": "Bunny shoes",
             "sprite": "/sprite/footgear/2415.gif",
             "attr": {
@@ -474,6 +510,7 @@
         },
         {
             "id": 2434,
+            "type": "footgear",
             "name": "Elegant boots",
             "sprite": "/sprite/footgear/2434.gif",
             "attr": {
@@ -487,6 +524,7 @@
         },
         {
             "id": 2435,
+            "type": "footgear",
             "name": "Steel boots",
             "sprite": "/sprite/footgear/2435.gif",
             "attr": {
@@ -500,6 +538,7 @@
         },
         {
             "id": 2437,
+            "type": "footgear",
             "name": "Sneakers",
             "sprite": "/sprite/footgear/2437.gif",
             "attr": {
@@ -513,6 +552,7 @@
         },
         {
             "id": 2441,
+            "type": "footgear",
             "name": "Sandals",
             "sprite": "/sprite/footgear/2441.gif",
             "attr": {
@@ -526,6 +566,7 @@
         },
         {
             "id": 2447,
+            "type": "footgear",
             "name": "Dark knight boots",
             "sprite": "/sprite/footgear/2447.gif",
             "attr": {
@@ -539,6 +580,7 @@
         },
         {
             "id": 2448,
+            "type": "footgear",
             "name": "High honor boots",
             "sprite": "/sprite/footgear/2448.gif",
             "attr": {
@@ -554,6 +596,7 @@
     "garments": [
         {
             "id": 2504,
+            "type": "garment",
             "name": "Leather garment",
             "sprite": "/sprite/garments/2504.gif",
             "attr": {
@@ -567,6 +610,7 @@
         },
         {
             "id": 2507,
+            "type": "garment",
             "name": "Thief cape",
             "sprite": "/sprite/garments/2507.gif",
             "attr": {
@@ -580,6 +624,7 @@
         },
         {
             "id": 2514,
+            "type": "garment",
             "name": "Shoulder pad",
             "sprite": "/sprite/garments/2514.gif",
             "attr": {
@@ -593,6 +638,7 @@
         },
         {
             "id": 2516,
+            "type": "garment",
             "name": "Night-gown",
             "sprite": "/sprite/garments/2516.gif",
             "attr": {
@@ -606,6 +652,7 @@
         },
         {
             "id": 2528,
+            "type": "garment",
             "name": "Silk scarf",
             "sprite": "/sprite/garments/2528.gif",
             "attr": {
@@ -619,6 +666,7 @@
         },
         {
             "id": 2535,
+            "type": "garment",
             "name": "Nomad garment",
             "sprite": "/sprite/garments/2535.gif",
             "attr": {
@@ -632,6 +680,7 @@
         },
         {
             "id": 2538,
+            "type": "garment",
             "name": "High honor garment",
             "sprite": "/sprite/garments/2538.gif",
             "attr": {
@@ -645,6 +694,7 @@
         },
         {
             "id": 2540,
+            "type": "garment",
             "name": "Old garment",
             "sprite": "/sprite/garments/2540.gif",
             "attr": {
@@ -658,6 +708,7 @@
         },
         {
             "id": 2546,
+            "type": "garment",
             "name": "Hood",
             "sprite": "/sprite/garments/2546.gif",
             "attr": {
@@ -671,6 +722,7 @@
         },
         {
             "id": 2554,
+            "type": "garment",
             "name": "Black knight garment",
             "sprite": "/sprite/garments/2554.gif",
             "attr": {
@@ -686,6 +738,7 @@
     "shields": [
         {
             "id": 2101,
+            "type": "shield",
             "name": "The defender",
             "sprite": "/sprite/shields/2101.gif",
             "attr": {
@@ -699,6 +752,7 @@
         },
         {
             "id": 2103,
+            "type": "shield",
             "name": "Iron shield",
             "sprite": "/sprite/shields/2103.gif",
             "attr": {
@@ -712,6 +766,7 @@
         },
         {
             "id": 2110,
+            "type": "shield",
             "name": "Mirror shield",
             "sprite": "/sprite/shields/2110.gif",
             "attr": {
@@ -725,6 +780,7 @@
         },
         {
             "id": 2116,
+            "type": "shield",
             "name": "Angelic shield",
             "sprite": "/sprite/shields/2116.gif",
             "attr": {
@@ -738,6 +794,7 @@
         },
         {
             "id": 2137,
+            "type": "shield",
             "name": "High honor shield",
             "sprite": "/sprite/shields/2137.gif",
             "attr": {
@@ -751,6 +808,7 @@
         },
         {
             "id": 2138,
+            "type": "shield",
             "name": "Blessed shield",
             "sprite": "/sprite/shields/2138.gif",
             "attr": {
@@ -766,6 +824,7 @@
     "weapons": [
         {
             "id": 1109,
+            "type": "weapon",
             "name": "Blade",
             "sprite": "/sprite/weapons/1109.gif",
             "attr": {
@@ -779,6 +838,7 @@
         },
         {
             "id": 1154,
+            "type": "weapon",
             "name": "Broadsword",
             "sprite": "/sprite/weapons/1154.gif",
             "attr": {
@@ -792,6 +852,7 @@
         },
         {
             "id": 1160,
+            "type": "weapon",
             "name": "Titan sword",
             "sprite": "/sprite/weapons/1160.gif",
             "attr": {
@@ -805,6 +866,7 @@
         },
         {
             "id": 1175,
+            "type": "weapon",
             "name": "Giant sword",
             "sprite": "/sprite/weapons/1175.gif",
             "attr": {
@@ -818,6 +880,7 @@
         },
         {
             "id": 1183,
+            "type": "weapon",
             "name": "Relic sword",
             "sprite": "/sprite/weapons/1183.gif",
             "attr": {
@@ -831,6 +894,7 @@
         },
         {
             "id": 1190,
+            "type": "weapon",
             "name": "Claymore",
             "sprite": "/sprite/weapons/1190.gif",
             "attr": {
@@ -844,6 +908,7 @@
         },
         {
             "id": 1520,
+            "type": "weapon",
             "name": "Chain",
             "sprite": "/sprite/weapons/1520.gif",
             "attr": {
