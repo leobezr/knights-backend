@@ -1,0 +1,10 @@
+DATABANK
+   - add mongodb
+OTHERS
+   - EQUIPS
+      - unequip function
+      - throw equip away function
+   - account creation
+   - session
+   - update 
+   - websocket
