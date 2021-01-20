@@ -1,10 +1,18 @@
+CHARACTER
+   - FOOD
+      - food system (regen, potion)
+      - buff system 
 DATABANK
-   - add mongodb
+   - choose data base
+      - MongoDB (NoSQL) @done
+      - ...
+DOCKER
+   - TODO
 OTHERS
    - EQUIPS
-      - unequip function
-      - throw equip away function
-   - account creation
-   - session
-   - update 
+      - unequip function @done
+      - throw equip away function @done
+   - ACCOUNT
+      - account creation
+      - session
    - websocket

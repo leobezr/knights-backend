@@ -50,6 +50,9 @@ export default class {
       }
       return list;
    }
+   _compare(item1, item2) {
+      return JSON.stringify(item1) == JSON.stringify(item2);
+   }
    unequip(item) {
       for (let equip in this.config.equipped) {
          if (JSON.stringify(item) == JSON.stringify(this.config.equipped[equip])) {
@@ -57,6 +60,8 @@ export default class {
             this.config.equipped[equip] = null;
          }
       }
+      this._applyMod();
+      return this;
    }
    equip(item) {
       const EQUIPPED = { ...this.config.equipped };
@@ -97,11 +102,14 @@ export default class {
       }
 
       this._applyMod();
+      return this;
    }
    sendToInventory(item) {
       this.config.inventory.push(item);
+      return this;
    }
    removeFromInventory(item) {
       this.config.inventory = this._removeItem(this.config.inventory, item);
+      return this;
    }
 }

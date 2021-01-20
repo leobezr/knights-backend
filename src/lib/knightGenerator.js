@@ -51,8 +51,24 @@ export default class Knight {
 
       this.modifier = { ...Modifier() };
 
-      this.inventory = [];
-      this.gold = 0;
+      this.inventory = [
+         {
+            id: 1109,
+            type: "weapon",
+            name: "Blade",
+            sprite: "/sprite/weapons/1109.gif",
+            attr: {
+               armor: 10,
+               luk: 0,
+               str: 30,
+               agi: 0,
+               vit: 0
+            },
+            tier: 3
+         }
+      ];
+
+      this.gold = 200;
 
       this.attributes = {
          hit: 10,
