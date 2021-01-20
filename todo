@@ -4,14 +4,14 @@ CHARACTER
       - buff system 
 DATABANK
    - choose data base
-      - MongoDB (NoSQL)
+      - MongoDB (NoSQL) @done
       - ...
 DOCKER
    - TODO
 OTHERS
    - EQUIPS
-      - unequip function
-      - throw equip away function
+      - unequip function @done
+      - throw equip away function @done
    - ACCOUNT
       - account creation
       - session
