@@ -2,6 +2,7 @@ CHARACTER
    - FOOD
       - food system (regen, potion)
       - buff system 
+   - honor system
 DATABANK
    - choose data base @done
       - MongoDB (NoSQL) @done
@@ -15,3 +16,11 @@ OTHERS
       - account creation
       - session
    - websocket
+ITEMS
+   - STORE
+      - item value @done
+      - sell item
+         - selling: (goldValue * tier) * .1
+         - buying: (goldValue * tier) / .1
+            - selling(30000, 10) = 30000 || selling(100, 1) = 10
+            - buying(30000, 10) = 3000000  || buying(100, 1) = 1000

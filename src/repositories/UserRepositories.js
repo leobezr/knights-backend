@@ -4,27 +4,7 @@ import KnightFactory from "../lib/knightGenerator.js";
 import KnightEditor from "../lib/knightEditor.js";
 import noviceItemGenerator from "../lib//noviceItemGenerator.js";
 
-/**
- * Private functions
- */
-function _removeItem(list, item) {
-   item = JSON.stringify(item);
-   let itemIndex = null;
-
-   for (let $index in list) {
-      let listItem = JSON.stringify(list[$index]);
-
-      if (listItem == item) {
-         itemIndex = $index;
-         break;
-      }
-   }
-
-   if (itemIndex) {
-      list.splice(itemIndex, 1);
-   }
-   return list;
-}
+import { getItemList } from "../service/controllers/itemController";
 
 /**
  * Public functions
@@ -38,16 +18,17 @@ export async function getUsers() {
 }
 
 export async function addUser(req) {
-   try {
-      const NOVICE_SET = await noviceItemGenerator();
+   let itemList = await getItemList();
 
-      let knight = new KnightFactory(req.body);
-      knight.equip(NOVICE_SET);
+   const NOVICE_SET = noviceItemGenerator(itemList);
 
-      return knight;
-   } catch (err) {
-      throw Error(err)
-   }
+   let knight = new KnightFactory(req.body);
+   knight.equip(NOVICE_SET);
+   
+   knight.giveItem(itemList.accessories[2]);
+   knight.giveItem(itemList.footgear[0]);
+
+   return knight;
 }
 
 export function gearHandler(character) {

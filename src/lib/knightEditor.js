@@ -53,13 +53,10 @@ export default class {
    _compare(item1, item2) {
       return JSON.stringify(item1) == JSON.stringify(item2);
    }
-   unequip(item) {
-      for (let equip in this.config.equipped) {
-         if (JSON.stringify(item) == JSON.stringify(this.config.equipped[equip])) {
-            this.sendToInventory(item);
-            this.config.equipped[equip] = null;
-         }
-      }
+   unequip(item, slot) {
+      this.config.equipped[slot] = null;
+      this.sendToInventory(item);
+      
       this._applyMod();
       return this;
    }

@@ -51,7 +51,7 @@ export default function (app) {
     */
    app.post("/api/v1/knights/create", async (req, res, next) => {
       try {
-         if (yupSchema.validate(req.body)) {
+         if (yupSchema.validate(req)) {
             const newUser = await addUser(req);
             const DB = process.env.MONGO_SERVER
 
@@ -59,9 +59,9 @@ export default function (app) {
                assert.strictEqual(null, err);
 
                const db = client.db("test");
+               const cursor = db.collection("knights");
 
-               db.collection("knights").insertOne(newUser, (error, result) => {
-                  assert.strictEqual(null, error);
+               cursor.insertOne(newUser, () => {
                   client.close();
                })
             });
@@ -134,7 +134,7 @@ export default function (app) {
                const cursor = db.collection("knights").find({ id: req.body.id });
 
                cursor.forEach((doc) => {
-                  knightData = gearHandler(doc).unequip(req.body.equip).config;
+                  knightData = gearHandler(doc).unequip(req.body.item, req.body.slot).config;
                   let { _id, ...char } = knightData;
 
                   db.collection("knights").updateOne({ id: req.body.id }, {

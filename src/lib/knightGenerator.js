@@ -36,9 +36,9 @@ export default class Knight {
       }
 
       this.equipped = {
-         headgear_top: null,
-         headgear_middle: null,
-         headgear_lower: null,
+         "headgear-top": null,
+         "headgear-middle": null,
+         "headgear-lower": null,
          armor: null,
          footgear: null,
          shield: null,
@@ -51,22 +51,7 @@ export default class Knight {
 
       this.modifier = { ...Modifier() };
 
-      this.inventory = [
-         {
-            id: 1109,
-            type: "weapon",
-            name: "Blade",
-            sprite: "/sprite/weapons/1109.gif",
-            attr: {
-               armor: 10,
-               luk: 0,
-               str: 30,
-               agi: 0,
-               vit: 0
-            },
-            tier: 3
-         }
-      ];
+      this.inventory = [];
 
       this.gold = 200;
 
@@ -106,6 +91,10 @@ export default class Knight {
       name = name || "";
 
       return name.toLowerCase().replace(/ /g, "-")
+   }
+   giveItem(item) {
+      this.inventory.push(item);
+      return this;
    }
    equip(itemSet) {
       for (let item in itemSet) {

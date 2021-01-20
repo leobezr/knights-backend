@@ -1,8 +1,4 @@
-import deserializeItems from "./deserializeItems";
-
-export default async function () {
-    let itemList = await deserializeItems();
-
+export default function (itemList) {
     let armor = itemList.armor.filter(armor => armor.tier == 1)[0];
     let weapon = itemList.weapons.filter(weapon => weapon.tier == 1)[0];
     let shield = itemList.shields.filter(shield => shield.tier == 1)[0];
