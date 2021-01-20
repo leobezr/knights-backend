@@ -3,9 +3,8 @@ CHARACTER
       - food system (regen, potion)
       - buff system 
 DATABANK
-   - choose data base
+   - choose data base @done
       - MongoDB (NoSQL) @done
-      - ...
 DOCKER
    - TODO
 OTHERS
