@@ -1,37 +1,36 @@
 import fs from "fs";
 import path from "path";
 import KnightFactory from "../lib/knightGenerator.js";
+import KnightEditor from "../lib/knightEditor.js";
+import noviceItemGenerator from "../lib//noviceItemGenerator.js";
+
+import { getItemList } from "../service/controllers/itemController";
+
+/**
+ * Public functions
+ */
 
 export async function getUsers() {
-   try {
-      const DB = fs.readFileSync(path.join(__dirname, "../model/knights.json"));
+   const DB = fs.readFileSync(path.join(__dirname, "../model/knights.json"));
 
-      let data = JSON.parse(DB);
-      return data;
-   } catch (e) {
-      next(e)
-   }
-
+   let data = JSON.parse(DB);
+   return data;
 }
 
 export async function addUser(req) {
-   try {
-      const DB = fs.readFileSync(path.join(__dirname, '../model/knights.json'));
+   let itemList = await getItemList();
 
-      let data = JSON.parse(DB);
-      let userData = req.body;
+   const NOVICE_SET = noviceItemGenerator(itemList);
 
-      if (!userData) {
-         return false
-      }
+   let knight = new KnightFactory(req.body);
+   knight.equip(NOVICE_SET);
+   
+   knight.giveItem(itemList.accessories[2]);
+   knight.giveItem(itemList.footgear[0]);
 
-      let newKnightConfig = new KnightFactory(userData);
+   return knight;
+}
 
-      data.push(newKnightConfig);
-
-      fs.writeFileSync(path.join(__dirname, '../model/knights.json'), JSON.stringify(data));
-      return newKnightConfig;
-   } catch (e) {
-      throw new Error(e)
-   }
+export function gearHandler(character) {
+   return new KnightEditor(character);
 }
