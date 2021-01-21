@@ -21,15 +21,20 @@ export default class Knight {
       this.sprite = options.sprite || 0;
       this.gender = options.gender || "female";
 
-      this.birthday = Date.now();
       this.experience = 0;
       this.level = 1;
+      this.job = "Knight";
+      this.vocation = "Squire";
+
+      this.lastBattles = [];
 
       this.cooldown = {
          train: Date.now(),
          hunt: Date.now(),
-         brew: Date.now()
+         brew: Date.now(),
       }
+
+      this.honor = 0;
 
       this.events = {
          dungeon: Date.now(),

@@ -1,3 +1,9 @@
+import { buyItem, sellItem } from "./market.js";
+
+/**
+ * Modifier boilerplate
+ * @returns {Object}
+ */
 const Modifier = () => {
    return {
       armor: 0,
@@ -9,6 +15,27 @@ const Modifier = () => {
       hit: 0,
       atk: 0,
    };
+}
+
+const _compare = (item1, item2) => {
+   return JSON.stringify(item1) == JSON.stringify(item2);
+}
+const _removeItem = (list, item) => {
+   item = JSON.stringify(item);
+   let itemIndex = null;
+
+   for (let $index in list) {
+      let listItem = JSON.stringify(list[$index]);
+
+      if (listItem == item) {
+         itemIndex = $index;
+         break;
+      }
+   }
+   if (itemIndex) {
+      list.splice(itemIndex, 1);
+   }
+   return list;
 }
 
 export default class {
@@ -33,33 +60,34 @@ export default class {
 
       this.config.modifier = { ...attr };
    }
-   _removeItem(list, item) {
-      item = JSON.stringify(item);
-      let itemIndex = null;
+   /**
+    * Finds item inside knight config
+    * @param {Object} item 
+    * @returns {Object}
+    */
+   findItem(item) {
+      const INVENTORY = this.config.inventory;
 
-      for (let $index in list) {
-         let listItem = JSON.stringify(list[$index]);
-
-         if (listItem == item) {
-            itemIndex = $index;
-            break;
-         }
-      }
-      if (itemIndex) {
-         list.splice(itemIndex, 1);
-      }
-      return list;
+      return INVENTORY.filter(search => _compare(item, search))[0];
    }
-   _compare(item1, item2) {
-      return JSON.stringify(item1) == JSON.stringify(item2);
-   }
+   /**
+    * Un-equips item
+    * @param {Object} item 
+    * @param {String} slot 
+    * @returns {Object}
+    */
    unequip(item, slot) {
       this.config.equipped[slot] = null;
       this.sendToInventory(item);
-      
+
       this._applyMod();
       return this;
    }
+   /**
+    * Equips item
+    * @param {Object} item 
+    * @returns {Object}
+    */
    equip(item) {
       const EQUIPPED = { ...this.config.equipped };
       var equipRemovedFromSlot = null;
@@ -101,12 +129,59 @@ export default class {
       this._applyMod();
       return this;
    }
+   /**
+    * Object setter
+    * @param {String} key 
+    * @param {void} value 
+    */
+   set(key, value) {
+      this.config[key] = value;
+   }
+   /**
+    * Gold setter, as sums
+    * @param {Number} amount 
+    */
+   addGold(amount) {
+      this.config.gold += amount;
+   }
+   /**
+    * Gold setter, as sub
+    * @param {Number} amount 
+    */
+   removeGold(amount) {
+      if (this.config.gold > amount) {
+         this.config.gold -= amount;
+         return true;
+      }
+      return false;
+   }
+   /**
+    * Send item to inventory
+    * @param {Object} item 
+    */
    sendToInventory(item) {
       this.config.inventory.push(item);
       return this;
    }
+   /**
+    * Removes item from inventory
+    * @param {Object} item 
+    */
    removeFromInventory(item) {
-      this.config.inventory = this._removeItem(this.config.inventory, item);
+      this.config.inventory = _removeItem(this.config.inventory, item);
       return this;
+   }
+   /**
+    * Buys item from store
+    * @param {Object} item
+    */
+   buyItem(item) {
+      this.config = buyItem(this, item);
+   }
+   /**
+    * @param {Object} item
+    */
+   sellItem(item) {
+      this.config = sellItem(this, item);
    }
 }
