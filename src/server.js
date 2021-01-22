@@ -4,8 +4,8 @@ import path from "path";
 import dotenv from "dotenv";
 import Routes from "./route.js";
 
-const PORT = process.env.PORT ?? 3333;
 const app = express();
+const PORT = process.env.PORT ?? 3333;
 
 dotenv.config();
 
