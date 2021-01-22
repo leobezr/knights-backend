@@ -199,4 +199,44 @@ export default function (app) {
          next();
       }
    })
+
+   app.put(KNIGHT_API + "attr/add", async (req, res, next) => {
+      try {
+         if (yupSchema.validate(req)) {
+            const DB_SERVER = process.env.MONGO_SERVER;
+            const DB_NAME = process.env.MONGO_DB_NAME;
+
+            let knightData = null;
+
+            mongo.connect(DB_SERVER, (err, client) => {
+               assert.strictEqual(null, err);
+
+               const db = client.db(DB_NAME);
+               const cursor = db.collection("knights").find({ id: req.body.id });
+
+               cursor.forEach((doc) => {
+                  knightData = gearHandler(doc).addAttrStatus(req.body.attr).config;
+                  let { _id, ...char } = knightData;
+
+                  db.collection("knights").updateOne({ id: req.body.id }, {
+                     $set: { ...char }
+                  })
+               }, () => {
+
+                  if (knightData) {
+                     res.status(200).json({ ...knightData });
+                  } else {
+                     res.status(400).json({ detail: "Not modified" });
+                  }
+                  client.close();
+               })
+            })
+         } else {
+            throw "Request required body"
+         }
+      } catch (err) {
+         res.status(404).json({ detail: err });
+         next();
+      }
+   })
 }
