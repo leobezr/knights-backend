@@ -19,7 +19,9 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.listen(process.env.PORT || 3333);
+app.listen(process.env.PORT || 3333, () => {
+   console.log("Using port: " + process.env.PORT || 3333);
+});
 
 // Sets routes
 Routes(app);
