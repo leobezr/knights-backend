@@ -61,6 +61,7 @@ export default class Knight {
       this.gold = 200;
 
       this.attributes = {
+         cp: 0,
          hit: 10,
          str: 10,
          vit: 10,
@@ -91,6 +92,22 @@ export default class Knight {
       }
 
       this.modifier = { ...attr };
+      this._calculateCP();
+   }
+   _calculateCP() {
+      let { cp, ...attr } = this.attributes;
+      let mods = { ...this.modifier };
+
+      let values = { ...attr, ...mods }
+      cp = 0;
+
+      for (let value in values) {
+         let val = parseFloat(values[value]) || 0;
+
+         cp += val * 10;
+      }
+
+      this.attributes.cp = cp + this.level * 100;
    }
    resolveName(name) {
       name = name || "";
