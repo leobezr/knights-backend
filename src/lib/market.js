@@ -11,7 +11,7 @@ export function sellItem(knight, item) {
 
    if (knight.findItem(item)) {
       knight.removeFromInventory(item);
-      knight.addGold(itemPriceModifier.selling(item.gold, item.tier, knight.config.honor ?? 0))
+      knight.addGold(itemPriceModifier.selling(item.gold, item.tier, knight.config.honor || 0))
    }
 
    return knight.config;
@@ -19,7 +19,7 @@ export function sellItem(knight, item) {
 
 export function buyItem(knight, item) {
    if (itemLevelRule(knight.config.level, item.tier)) {
-      if (knight.removeGold(itemPriceModifier.buying(item.gold, item.tier, knight.config.honor ?? 0))) {
+      if (knight.removeGold(itemPriceModifier.buying(item.gold, item.tier, knight.config.honor || 0))) {
          knight.sendToInventory(item);
       }
    }
