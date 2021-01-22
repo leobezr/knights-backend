@@ -1,11 +1,11 @@
-import { getUsers, addUser, gearHandler } from "../../repositories/UserRepositories";
+import { getUsers, addUser, gearHandler } from "../../repositories/UserRepositories.js";
 import * as yup from "yup";
 
 import mongo from "mongodb";
 import assert from "assert";
 
-const yupSchema = yup.object().shape({
-   body: yup.object().required()
+const yupSchema = yup.default.object().shape({
+   body: yup.default.object().required()
 })
 
 const KNIGHT_API = "/api/v1/knights/";

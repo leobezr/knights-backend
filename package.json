@@ -11,6 +11,7 @@
     "uniqid": "^5.2.0",
     "yup": "^0.32.8"
   },
+  "type": "module",
   "scripts": {
     "run": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +20,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
-    "sucrase": "^3.16.0"
+    "sucrase": "^3.17.0"
   }
 }
