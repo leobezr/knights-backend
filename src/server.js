@@ -4,6 +4,7 @@ import path from "path";
 import dotenv from "dotenv";
 import Routes from "./route.js";
 
+const PORT = process.env.PORT ?? 3333;
 const app = express();
 
 dotenv.config();
@@ -19,8 +20,8 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.listen(process.env.PORT || 3333, () => {
-   console.log("Using port: " + process.env.PORT || 3333);
+app.listen(PORT, () => {
+   console.log("Using port: " + PORT);
 });
 
 // Sets routes
