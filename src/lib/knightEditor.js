@@ -1,5 +1,8 @@
 import { buyItem, sellItem } from "./market.js";
 
+const GAIN_STATUS_PER_LEVEL = 5;
+const MAX_STATUS_POINTS = 200;
+
 /**
  * Modifier boilerplate
  * @returns {Object}
@@ -42,6 +45,39 @@ export default class {
    constructor(knight) {
       this.config = { ...knight };
    }
+   _calculateCP() {
+      let { cp, ...attr } = this.config.attributes;
+      let mods = { ...this.config.modifier };
+
+      cp = 0;
+
+      for (let value in attr) {
+         let val = parseFloat(attr[value]) || 0;
+
+         cp += val * 10;
+      }
+      for (let value in mods) {
+         let val = parseFloat(mods[value]) || 0;
+
+         cp += val * 10;
+      }
+
+      this.config.attributes.cp = cp + this.config.level * 100;
+   }
+   _calculateAttrPoints() {
+      let { str, agi, vit, luk } = this.config.attributes;
+      let attr = { str, agi, vit, luk };
+
+      let statusPoints = -40;
+
+      for (let value in attr) {
+         let val = parseFloat(attr[value]) || 0;
+
+         statusPoints += val;
+      }
+
+      return statusPoints;
+   }
    _applyMod() {
       let itemsEquipped = {};
       let attr = { ...Modifier() };
@@ -59,6 +95,23 @@ export default class {
       }
 
       this.config.modifier = { ...attr };
+      this._calculateCP();
+   }
+   /**
+    * Adds status to attr
+    * @param {Object} status
+    */
+   addAttrStatus(status) {
+      let attrPoints = this._calculateAttrPoints();
+      let hasPoints = Math.round(Math.abs(attrPoints - (this.config.level * GAIN_STATUS_PER_LEVEL)))
+
+      let statusName = this.config.attributes[status]
+
+      if (hasPoints && statusName < MAX_STATUS_POINTS) {
+         this.config.attributes[status] += 1;
+      }
+      this._calculateCP();
+      return this;
    }
    /**
     * Finds item inside knight config
