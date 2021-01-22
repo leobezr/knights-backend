@@ -1,5 +1,4 @@
 import { getUsers, addUser, gearHandler } from "../../repositories/UserRepositories";
-import { getUserById } from "../controllers/knightController.js";
 import * as yup from "yup";
 
 import mongo from "mongodb";
@@ -9,11 +8,13 @@ const yupSchema = yup.object().shape({
    body: yup.object().required()
 })
 
+const KNIGHT_API = "/api/v1/knights/";
+
 export default function (app) {
    /**
     * GET Knights
     */
-   app.get("/api/v1/knights", async (req, res) => {
+   app.get(KNIGHT_API, async (req, res) => {
       const users = await getUsers();
 
       res.json({ users });
@@ -21,7 +22,7 @@ export default function (app) {
    /**
     * GET Knight using ID
     */
-   app.get("/api/v1/knights/:id", async (req, res) => {
+   app.get(KNIGHT_API + ":id", async (req, res) => {
       const DB = process.env.MONGO_SERVER;
       var knightUser = null;
 
@@ -49,7 +50,7 @@ export default function (app) {
    /**
     * CREATE knights
     */
-   app.post("/api/v1/knights/create", async (req, res, next) => {
+   app.post(KNIGHT_API + "create", async (req, res, next) => {
       try {
          if (yupSchema.validate(req)) {
             const newUser = await addUser(req);
@@ -79,7 +80,7 @@ export default function (app) {
    /**
     * PUT knight equip handlers
     */
-   app.put("/api/v1/knights/equip", async (req, res, next) => {
+   app.put(KNIGHT_API + "equip", async (req, res, next) => {
       try {
          if (yupSchema.validate(req)) {
             const DB_SERVER = process.env.MONGO_SERVER;
@@ -119,7 +120,7 @@ export default function (app) {
       }
    })
 
-   app.put("/api/v1/knights/unequip", async (req, res, next) => {
+   app.put(KNIGHT_API + "unequip", async (req, res, next) => {
       try {
          if (yupSchema.validate(req)) {
             const DB_SERVER = process.env.MONGO_SERVER;
@@ -159,7 +160,7 @@ export default function (app) {
       }
    })
 
-   app.put("/api/v1/knights/inventory/discard", async (req, res, next) => {
+   app.put(KNIGHT_API + "inventory/discard", async (req, res, next) => {
       try {
          if (yupSchema.validate(req)) {
             const DB_SERVER = process.env.MONGO_SERVER;
