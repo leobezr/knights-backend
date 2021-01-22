@@ -13,7 +13,8 @@
   },
   "scripts": {
     "run": "node main.js",
-    "start": "yarn run run",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js",
     "dev": "nodemon src/server.js"
   },
   "devDependencies": {
