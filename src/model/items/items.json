@@ -6,7 +6,7 @@
             "name": "Helmet",
             "sprite": "sprite/headgear/top/2229/2229.gif",
             "view": "sprite/headgear/top/2229/2229_view.gif",
-            "gold": 10000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -24,7 +24,7 @@
             "name": "GM Wing Hat",
             "sprite": "sprite/headgear/top/2254/2254.gif",
             "view": "sprite/headgear/top/2254/2254_view.gif",
-            "gold": 1000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 100,
@@ -42,7 +42,7 @@
             "name": "Chinese hat",
             "sprite": "sprite/headgear/top/2280/2280.gif",
             "view": "sprite/headgear/top/2280/2280_view.gif",
-            "gold": 10000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -62,7 +62,7 @@
             "name": "Fin",
             "sprite": "sprite/headgear/middle/5014/5014.gif",
             "view": "sprite/headgear/middle/5014/5014_view.gif",
-            "gold": 10000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -82,7 +82,7 @@
             "name": "Bandit scarf",
             "sprite": "sprite/headgear/lower/5361/5361.gif",
             "view": "sprite/headgear/lower/5361/5361_view.gif",
-            "gold": 20000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -101,7 +101,7 @@
             "sprite": "sprite/headgear/lower/5107/5107.gif",
             "view": "sprite/headgear/lower/5107/5107_view.gif",
             "refinement": 0,
-            "gold": 20000,
+            "gold": 100,
             "attr": {
                 "armor": 30,
                 "luk": 30,
@@ -137,7 +137,7 @@
             "name": "Diamond Ring",
             "sprite": "sprite/accessories/2613.gif",
             "refinement": 0,
-            "gold": 200,
+            "gold": 100,
             "attr": {
                 "armor": 3,
                 "luk": 1,
@@ -154,7 +154,7 @@
             "name": "Leather belt",
             "sprite": "sprite/accessories/2627.gif",
             "refinement": 0,
-            "gold": 300,
+            "gold": 100,
             "attr": {
                 "armor": 3,
                 "luk": 1,
@@ -171,7 +171,7 @@
             "name": "Pink scarf",
             "sprite": "sprite/accessories/2664.gif",
             "refinement": 0,
-            "gold": 400,
+            "gold": 100,
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -188,7 +188,7 @@
             "name": "Gold ring",
             "sprite": "sprite/accessories/2672.gif",
             "refinement": 0,
-            "gold": 500,
+            "gold": 100,
             "attr": {
                 "armor": 5,
                 "luk": 2,
@@ -205,7 +205,7 @@
             "name": "Lucky horn",
             "sprite": "sprite/accessories/2702.gif",
             "refinement": 0,
-            "gold": 2000,
+            "gold": 100,
             "attr": {
                 "armor": 8,
                 "luk": 8,
@@ -222,7 +222,7 @@
             "name": "Gold emblem",
             "sprite": "sprite/accessories/2708.gif",
             "refinement": 0,
-            "gold": 5000,
+            "gold": 100,
             "attr": {
                 "armor": 2,
                 "luk": 0,
@@ -239,7 +239,7 @@
             "name": "Richman scarf",
             "sprite": "sprite/accessories/2727.gif",
             "refinement": 0,
-            "gold": 10000,
+            "gold": 100,
             "attr": {
                 "armor": 10,
                 "luk": 5,
@@ -256,7 +256,7 @@
             "name": "Cult ring",
             "sprite": "sprite/accessories/2729.gif",
             "refinement": 0,
-            "gold": 20000,
+            "gold": 100,
             "attr": {
                 "armor": 2,
                 "luk": 0,
@@ -273,7 +273,7 @@
             "name": "Necklace of fortune",
             "sprite": "sprite/accessories/2741.gif",
             "refinement": 0,
-            "gold": 30000,
+            "gold": 100,
             "attr": {
                 "armor": 0,
                 "luk": 10,
@@ -292,7 +292,7 @@
             "name": "Shirt",
             "sprite": "sprite/armor/5000.gif",
             "refinement": 0,
-            "gold": 5,
+            "gold": 100,
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -309,7 +309,7 @@
             "name": "Pirate Shirt",
             "sprite": "sprite/armor/5001.gif",
             "refinement": 0,
-            "gold": 50,
+            "gold": 100,
             "attr": {
                 "armor": 2,
                 "luk": 0,
@@ -326,7 +326,7 @@
             "name": "Scale armor",
             "sprite": "sprite/armor/5016.gif",
             "refinement": 0,
-            "gold": 80,
+            "gold": 100,
             "attr": {
                 "armor": 4,
                 "luk": 0,
@@ -343,7 +343,7 @@
             "name": "Studded armor",
             "sprite": "sprite/armor/5002.gif",
             "refinement": 0,
-            "gold": 200,
+            "gold": 100,
             "attr": {
                 "armor": 5,
                 "luk": 0,
@@ -360,7 +360,7 @@
             "name": "Brass armor",
             "sprite": "sprite/armor/5017.gif",
             "refinement": 0,
-            "gold": 500,
+            "gold": 100,
             "attr": {
                 "armor": 7,
                 "luk": 0,
@@ -377,7 +377,7 @@
             "name": "Plate armor",
             "sprite": "sprite/armor/5004.gif",
             "refinement": 0,
-            "gold": 1000,
+            "gold": 100,
             "attr": {
                 "armor": 12,
                 "luk": 0,
@@ -394,7 +394,7 @@
             "name": "Magic tunic",
             "sprite": "sprite/armor/5015.gif",
             "refinement": 0,
-            "gold": 3500,
+            "gold": 100,
             "attr": {
                 "armor": 12,
                 "luk": 0,
@@ -411,7 +411,7 @@
             "name": "Native armor",
             "sprite": "sprite/armor/5021.gif",
             "refinement": 0,
-            "gold": 50000,
+            "gold": 100,
             "attr": {
                 "armor": 21,
                 "luk": 0,
@@ -427,7 +427,7 @@
             "type": "armor",
             "name": "Blue robe",
             "sprite": "sprite/armor/5005.gif",
-            "gold": 65000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 23,
@@ -444,7 +444,7 @@
             "type": "armor",
             "name": "Elven mail",
             "sprite": "sprite/armor/5003.gif",
-            "gold": 125000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 25,
@@ -461,7 +461,7 @@
             "type": "armor",
             "name": "Knight armor",
             "sprite": "sprite/armor/5010.gif",
-            "gold": 137000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 27,
@@ -478,7 +478,7 @@
             "type": "armor",
             "name": "Golden armor",
             "sprite": "sprite/armor/5008.gif",
-            "gold": 500000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 25,
@@ -495,7 +495,7 @@
             "type": "armor",
             "name": "Dragon scale mail",
             "sprite": "sprite/armor/5020.gif",
-            "gold": 500000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -512,7 +512,7 @@
             "type": "armor",
             "name": "Crown armor",
             "sprite": "sprite/armor/5007.gif",
-            "gold": 700000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 35,
@@ -529,7 +529,7 @@
             "type": "armor",
             "name": "Dwarven armor",
             "sprite": "sprite/armor/5022.gif",
-            "gold": 1500000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 40,
@@ -546,7 +546,7 @@
             "type": "armor",
             "name": "Nightmare armor",
             "sprite": "sprite/armor/5006.gif",
-            "gold": 2800000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 45,
@@ -563,7 +563,7 @@
             "type": "armor",
             "name": "Royal draken mail",
             "sprite": "sprite/armor/5018.gif",
-            "gold": 3850000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 69,
@@ -580,7 +580,7 @@
             "type": "armor",
             "name": "Ornate plate",
             "sprite": "sprite/armor/5009.gif",
-            "gold": 7800000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 75,
@@ -597,7 +597,7 @@
             "type": "armor",
             "name": "Demon armor",
             "sprite": "sprite/armor/5014.gif",
-            "gold": 10000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 90,
@@ -614,7 +614,7 @@
             "type": "armor",
             "name": "Samurai plate",
             "sprite": "sprite/armor/5023.gif",
-            "gold": 11000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 90,
@@ -631,7 +631,7 @@
             "type": "armor",
             "name": "Amazon armor",
             "sprite": "sprite/armor/5013.gif",
-            "gold": 25000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 90,
@@ -648,7 +648,7 @@
             "type": "armor",
             "name": "Soulshell",
             "sprite": "sprite/armor/5012.gif",
-            "gold": 25000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 150,
@@ -664,8 +664,8 @@
             "id": 5011,
             "type": "armor",
             "name": "Falcon plate",
-            "sprite": "sprite/armor/5012.gif",
-            "gold": 50000000,
+            "sprite": "sprite/armor/5011.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 300,
@@ -683,8 +683,8 @@
             "id": 6000,
             "type": "legs",
             "name": "Leather legs",
-            "sprite": "sprite/footgear/6000.gif",
-            "gold": 5,
+            "sprite": "sprite/legs/6000.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 1,
@@ -700,8 +700,8 @@
             "id": 6013,
             "type": "legs",
             "name": "Pirate legs",
-            "sprite": "sprite/footgear/6013.gif",
-            "gold": 50,
+            "sprite": "sprite/legs/6013.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 1,
@@ -717,8 +717,8 @@
             "id": 6001,
             "type": "legs",
             "name": "Chain legs",
-            "sprite": "sprite/footgear/6001.gif",
-            "gold": 80,
+            "sprite": "sprite/legs/6001.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 3,
@@ -734,8 +734,8 @@
             "id": 6014,
             "type": "legs",
             "name": "Plate legs",
-            "sprite": "sprite/footgear/6014.gif",
-            "gold": 1000,
+            "sprite": "sprite/legs/6014.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 6,
@@ -751,8 +751,8 @@
             "id": 6016,
             "type": "legs",
             "name": "Chain legs",
-            "sprite": "sprite/footgear/6016.gif",
-            "gold": 8000,
+            "sprite": "sprite/legs/6016.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 12,
@@ -768,8 +768,8 @@
             "id": 6008,
             "type": "legs",
             "name": "Blue legs",
-            "sprite": "sprite/footgear/6008.gif",
-            "gold": 50000,
+            "sprite": "sprite/legs/6008.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 22,
@@ -785,8 +785,8 @@
             "id": 6005,
             "type": "legs",
             "name": "Knight legs",
-            "sprite": "sprite/footgear/6005.gif",
-            "gold": 100000,
+            "sprite": "sprite/legs/6005.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 25,
@@ -802,8 +802,8 @@
             "id": 6009,
             "type": "legs",
             "name": "Golden legs",
-            "sprite": "sprite/footgear/6009.gif",
-            "gold": 500000,
+            "sprite": "sprite/legs/6009.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 25,
@@ -819,8 +819,8 @@
             "id": 6015,
             "type": "legs",
             "name": "Dragon scale legs",
-            "sprite": "sprite/footgear/6015.gif",
-            "gold": 500000,
+            "sprite": "sprite/legs/6015.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 28,
@@ -836,8 +836,8 @@
             "id": 6006,
             "type": "legs",
             "name": "Crown legs",
-            "sprite": "sprite/footgear/6006.gif",
-            "gold": 700000,
+            "sprite": "sprite/legs/6006.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 35,
@@ -853,8 +853,8 @@
             "id": 6003,
             "type": "legs",
             "name": "Dwarven legs",
-            "sprite": "sprite/footgear/6003.gif",
-            "gold": 1500000,
+            "sprite": "sprite/legs/6003.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 40,
@@ -870,8 +870,8 @@
             "id": 6004,
             "type": "legs",
             "name": "Ornate Legs",
-            "sprite": "sprite/footgear/6004.gif",
-            "gold": 5000000,
+            "sprite": "sprite/legs/6004.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 70,
@@ -884,11 +884,11 @@
             "tier": 8
         },
         {
-            "id": 6004,
+            "id": 6010,
             "type": "legs",
             "name": "Demon Legs",
-            "sprite": "sprite/footgear/6004.gif",
-            "gold": 10000000,
+            "sprite": "sprite/legs/6010.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 80,
@@ -904,8 +904,8 @@
             "id": 6012,
             "type": "legs",
             "name": "Soulstrider",
-            "sprite": "sprite/footgear/6012.gif",
-            "gold": 25000000,
+            "sprite": "sprite/legs/6012.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 150,
@@ -921,8 +921,8 @@
             "id": 6011,
             "type": "legs",
             "name": "Soulstrider",
-            "sprite": "sprite/footgear/6011.gif",
-            "gold": 50000000,
+            "sprite": "sprite/legs/6011.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 300,
@@ -941,7 +941,7 @@
             "type": "footgear",
             "name": "Leather boots",
             "sprite": "sprite/footgear/8000.gif",
-            "gold": 5,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 1,
@@ -959,7 +959,7 @@
             "name": "Yetislippers",
             "sprite": "sprite/footgear/8001.gif",
             "epic": true,
-            "gold": 90000000,
+            "gold": 100,
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -976,7 +976,7 @@
             "name": "Yetislippers",
             "sprite": "sprite/footgear/8002.gif",
             "epic": true,
-            "gold": 90000000,
+            "gold": 100,
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -992,7 +992,7 @@
             "type": "footgear",
             "name": "Boots of haste",
             "sprite": "sprite/footgear/8003.gif",
-            "gold": 30000,
+            "gold": 100,
             "attr": {
                 "armor": -10,
                 "luk": 0,
@@ -1008,7 +1008,7 @@
             "type": "footgear",
             "name": "Pirate boots",
             "sprite": "sprite/footgear/8010.gif",
-            "gold": 50000,
+            "gold": 100,
             "attr": {
                 "armor": 25,
                 "luk": 0,
@@ -1024,7 +1024,7 @@
             "type": "footgear",
             "name": "Steel boots",
             "sprite": "sprite/footgear/8013.gif",
-            "gold": 68000,
+            "gold": 100,
             "attr": {
                 "armor": 30,
                 "luk": 0,
@@ -1040,7 +1040,7 @@
             "type": "footgear",
             "name": "Winged boots",
             "sprite": "sprite/footgear/8004.gif",
-            "gold": 150000,
+            "gold": 100,
             "attr": {
                 "armor": 35,
                 "luk": 0,
@@ -1056,7 +1056,7 @@
             "type": "footgear",
             "name": "Void boots",
             "sprite": "sprite/footgear/8009.gif",
-            "gold": 1790000,
+            "gold": 100,
             "attr": {
                 "armor": 40,
                 "luk": 0,
@@ -1072,7 +1072,7 @@
             "type": "footgear",
             "name": "Badger Boots",
             "sprite": "sprite/footgear/8014.gif",
-            "gold": 2000000,
+            "gold": 100,
             "attr": {
                 "armor": 43,
                 "luk": 0,
@@ -1088,7 +1088,7 @@
             "type": "footgear",
             "name": "Enchanted boots",
             "sprite": "sprite/footgear/8020.gif",
-            "gold": 9000000,
+            "gold": 100,
             "attr": {
                 "armor": 50,
                 "luk": 20,
@@ -1100,11 +1100,11 @@
             "tier": 7
         },
         {
-            "id": 8017,
+            "id": 8018,
             "type": "footgear",
             "name": "Pair of Soulstalkers",
-            "sprite": "sprite/footgear/8017.gif",
-            "gold": 11000000,
+            "sprite": "sprite/footgear/8018.gif",
+            "gold": 100,
             "attr": {
                 "armor": 90,
                 "luk": 0,
@@ -1120,7 +1120,7 @@
             "type": "footgear",
             "name": "Pair of Soulwalkers",
             "sprite": "sprite/footgear/8016.gif",
-            "gold": 22000000,
+            "gold": 100,
             "attr": {
                 "armor": 120,
                 "luk": 0,
@@ -1136,7 +1136,7 @@
             "type": "footgear",
             "name": "Firewalker boots",
             "sprite": "sprite/footgear/8012.gif",
-            "gold": 35000000,
+            "gold": 100,
             "attr": {
                 "armor": 200,
                 "luk": 25,
@@ -1152,7 +1152,7 @@
             "type": "footgear",
             "name": "Golden boots",
             "sprite": "sprite/footgear/8017.gif",
-            "gold": 50000000,
+            "gold": 100,
             "attr": {
                 "armor": 300,
                 "luk": 50,
@@ -1170,7 +1170,7 @@
             "type": "shield",
             "name": "Wood shield",
             "sprite": "sprite/shields/7000.gif",
-            "gold": 50,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 10,
@@ -1204,7 +1204,7 @@
             "type": "shield",
             "name": "Brass shield",
             "sprite": "sprite/shields/7002.gif",
-            "gold": 5000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 30,
@@ -1221,7 +1221,7 @@
             "type": "shield",
             "name": "Knight shield",
             "sprite": "sprite/shields/7003.gif",
-            "gold": 8000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 35,
@@ -1238,7 +1238,7 @@
             "type": "shield",
             "name": "Dwarven shield",
             "sprite": "sprite/shields/7004.gif",
-            "gold": 50000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 40,
@@ -1255,7 +1255,7 @@
             "type": "shield",
             "name": "Castle shield",
             "sprite": "sprite/shields/7005.gif",
-            "gold": 200000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 50,
@@ -1272,7 +1272,7 @@
             "type": "shield",
             "name": "Crown shield",
             "sprite": "sprite/shields/7008.gif",
-            "gold": 700000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 65,
@@ -1289,7 +1289,7 @@
             "type": "shield",
             "name": "Nightmare shield",
             "sprite": "sprite/shields/7012.gif",
-            "gold": 3850000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 95,
@@ -1306,7 +1306,7 @@
             "type": "shield",
             "name": "Demon shield",
             "sprite": "sprite/shields/7010.gif",
-            "gold": 10000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 110,
@@ -1323,7 +1323,7 @@
             "type": "shield",
             "name": "Blessed shield",
             "sprite": "sprite/shields/7016.gif",
-            "gold": 25000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 150,
@@ -1340,7 +1340,7 @@
             "type": "shield",
             "name": "Soulbastion",
             "sprite": "sprite/shields/7017.gif",
-            "gold": 50000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 300,
@@ -1359,7 +1359,7 @@
             "type": "weapon",
             "name": "Rapier",
             "sprite": "sprite/weapons/1000.gif",
-            "gold": 5,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1376,7 +1376,7 @@
             "type": "weapon",
             "name": "Broadsword",
             "sprite": "sprite/weapons/1001.gif",
-            "gold": 50,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1393,7 +1393,7 @@
             "type": "weapon",
             "name": "Knight axe",
             "sprite": "sprite/weapons/1010.gif",
-            "gold": 3000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1410,7 +1410,7 @@
             "type": "weapon",
             "name": "Halberd",
             "sprite": "sprite/weapons/1009.gif",
-            "gold": 8000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1427,7 +1427,7 @@
             "type": "weapon",
             "name": "Guardian Halberd",
             "sprite": "sprite/weapons/1012.gif",
-            "gold": 25000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1444,7 +1444,7 @@
             "type": "weapon",
             "name": "Fire sword",
             "sprite": "sprite/weapons/1002.gif",
-            "gold": 200000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1460,8 +1460,8 @@
             "id": 1017,
             "type": "weapon",
             "name": "Blessed Sceptre",
-            "sprite": "sprite/weapons/1002.gif",
-            "gold": 1500000,
+            "sprite": "sprite/weapons/1017.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 20,
@@ -1478,7 +1478,7 @@
             "type": "weapon",
             "name": "Chopper of Destruction",
             "sprite": "sprite/weapons/1013.gif",
-            "gold": 15000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1495,7 +1495,7 @@
             "type": "weapon",
             "name": "Slayer of Destruction",
             "sprite": "sprite/weapons/1005.gif",
-            "gold": 25000000,
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 0,
@@ -1511,8 +1511,8 @@
             "id": 1006,
             "type": "weapon",
             "name": "Phantasmal Axe",
-            "sprite": "sprite/weapons/1005.gif",
-            "gold": 70000000,
+            "sprite": "sprite/weapons/1006.gif",
+            "gold": 100,
             "refinement": 0,
             "attr": {
                 "armor": 100,
