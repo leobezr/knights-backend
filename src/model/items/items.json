@@ -1,15 +1,132 @@
 {
+    "headgear-top": [
+        {
+            "id": 2229,
+            "type": "headgear-top",
+            "name": "Helmet",
+            "sprite": "sprite/headgear/top/2229/2229.gif",
+            "view": "sprite/headgear/top/2229/2229_view.gif",
+            "gold": 10000,
+            "refinement": 0,
+            "attr": {
+                "armor": 30,
+                "luk": 30,
+                "str": 30,
+                "agi": 30,
+                "dex": 0,
+                "vit": 30
+            },
+            "tier": 5
+        },
+        {
+            "id": 2254,
+            "type": "headgear-top",
+            "name": "GM Wing Hat",
+            "sprite": "sprite/headgear/top/2254/2254.gif",
+            "view": "sprite/headgear/top/2254/2254_view.gif",
+            "gold": 1000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 100,
+                "luk": 100,
+                "str": 100,
+                "agi": 100,
+                "dex": 0,
+                "vit": 100
+            },
+            "tier": 10
+        },
+        {
+            "id": 2280,
+            "type": "headgear-top",
+            "name": "Chinese hat",
+            "sprite": "sprite/headgear/top/2280/2280.gif",
+            "view": "sprite/headgear/top/2280/2280_view.gif",
+            "gold": 10000,
+            "refinement": 0,
+            "attr": {
+                "armor": 30,
+                "luk": 30,
+                "str": 30,
+                "agi": 30,
+                "dex": 0,
+                "vit": 30
+            },
+            "tier": 5
+        }
+    ],
+    "headgear-middle": [
+        {
+            "id": 5014,
+            "type": "headgear-middle",
+            "name": "Fin",
+            "sprite": "sprite/headgear/middle/5014/5014.gif",
+            "view": "sprite/headgear/middle/5014/5014_view.gif",
+            "gold": 10000,
+            "refinement": 0,
+            "attr": {
+                "armor": 30,
+                "luk": 30,
+                "str": 30,
+                "agi": 30,
+                "dex": 0,
+                "vit": 30
+            },
+            "tier": 5
+        }
+    ],
+    "headgear-lower": [
+        {
+            "id": 5361,
+            "type": "headgear-lower",
+            "name": "Bandit scarf",
+            "sprite": "sprite/headgear/lower/5361/5361.gif",
+            "view": "sprite/headgear/lower/5361/5361_view.gif",
+            "gold": 20000,
+            "refinement": 0,
+            "attr": {
+                "armor": 30,
+                "luk": 30,
+                "str": 30,
+                "agi": 30,
+                "dex": 0,
+                "vit": 30
+            },
+            "tier": 8
+        },
+        {
+            "id": 5107,
+            "type": "headgear-lower",
+            "name": "Toast",
+            "sprite": "sprite/headgear/lower/5107/5107.gif",
+            "view": "sprite/headgear/lower/5107/5107_view.gif",
+            "refinement": 0,
+            "gold": 20000,
+            "attr": {
+                "armor": 30,
+                "luk": 30,
+                "str": 30,
+                "agi": 30,
+                "dex": 0,
+                "vit": 30
+            },
+            "tier": 10
+        }
+    ],
     "accessories": [
         {
             "id": 2602,
             "type": "accessories",
             "name": "Gold earing",
-            "sprite": "/sprite/accessories/2602.gif",
+            "sprite": "sprite/accessories/2602.gif",
+            "refinement": 0,
+            "gold": 100,
             "attr": {
                 "armor": 1,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
@@ -18,54 +135,66 @@
             "id": 2613,
             "type": "accessories",
             "name": "Diamond Ring",
-            "sprite": "/sprite/accessories/2613.gif",
+            "sprite": "sprite/accessories/2613.gif",
+            "refinement": 0,
+            "gold": 200,
             "attr": {
                 "armor": 3,
                 "luk": 1,
                 "str": 0,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 1
-        },
-        {
-            "id": 2627,
-            "type": "accessories",
-            "name": "Leather belt",
-            "sprite": "/sprite/accessories/2627.gif",
-            "attr": {
-                "armor": 3,
-                "luk": 1,
-                "str": 0,
-                "agi": 0,
-                "vit": 0
-            },
-            "tier": 1
-        },
-        {
-            "id": 2664,
-            "type": "accessories",
-            "name": "Pink scarf",
-            "sprite": "/sprite/accessories/2664.gif",
-            "attr": {
-                "armor": 1,
-                "luk": 0,
-                "str": 0,
-                "agi": 5,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 2
         },
         {
+            "id": 2627,
+            "type": "accessories",
+            "name": "Leather belt",
+            "sprite": "sprite/accessories/2627.gif",
+            "refinement": 0,
+            "gold": 300,
+            "attr": {
+                "armor": 3,
+                "luk": 1,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 2664,
+            "type": "accessories",
+            "name": "Pink scarf",
+            "sprite": "sprite/accessories/2664.gif",
+            "refinement": 0,
+            "gold": 400,
+            "attr": {
+                "armor": 1,
+                "luk": 0,
+                "str": 0,
+                "agi": 5,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
             "id": 2672,
             "type": "accessories",
             "name": "Gold ring",
-            "sprite": "/sprite/accessories/2672.gif",
+            "sprite": "sprite/accessories/2672.gif",
+            "refinement": 0,
+            "gold": 500,
             "attr": {
                 "armor": 5,
                 "luk": 2,
                 "str": 5,
                 "agi": 5,
+                "dex": 0,
                 "vit": 1
             },
             "tier": 5
@@ -74,138 +203,83 @@
             "id": 2702,
             "type": "accessories",
             "name": "Lucky horn",
-            "sprite": "/sprite/accessories/2702.gif",
+            "sprite": "sprite/accessories/2702.gif",
+            "refinement": 0,
+            "gold": 2000,
             "attr": {
                 "armor": 8,
                 "luk": 8,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
-            "tier": 5
+            "tier": 6
         },
         {
             "id": 2708,
             "type": "accessories",
             "name": "Gold emblem",
-            "sprite": "/sprite/accessories/2708.gif",
+            "sprite": "sprite/accessories/2708.gif",
+            "refinement": 0,
+            "gold": 5000,
             "attr": {
                 "armor": 2,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
-            "tier": 1
+            "tier": 7
         },
         {
             "id": 2727,
             "type": "accessories",
             "name": "Richman scarf",
-            "sprite": "/sprite/accessories/2727.gif",
+            "sprite": "sprite/accessories/2727.gif",
+            "refinement": 0,
+            "gold": 10000,
             "attr": {
                 "armor": 10,
                 "luk": 5,
                 "str": 5,
                 "agi": 5,
+                "dex": 0,
                 "vit": 5
             },
-            "tier": 7
+            "tier": 8
         },
         {
             "id": 2729,
             "type": "accessories",
             "name": "Cult ring",
-            "sprite": "/sprite/accessories/2729.gif",
+            "sprite": "sprite/accessories/2729.gif",
+            "refinement": 0,
+            "gold": 20000,
             "attr": {
                 "armor": 2,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 3
             },
-            "tier": 3
+            "tier": 9
         },
         {
             "id": 2741,
             "type": "accessories",
             "name": "Necklace of fortune",
-            "sprite": "/sprite/accessories/2741.gif",
+            "sprite": "sprite/accessories/2741.gif",
+            "refinement": 0,
+            "gold": 30000,
             "attr": {
                 "armor": 0,
                 "luk": 10,
                 "str": 5,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 8
-        },
-        {
-            "id": 2743,
-            "type": "accessories",
-            "name": "Bunny ring",
-            "sprite": "/sprite/accessories/2743.gif",
-            "attr": {
-                "armor": 5,
-                "luk": 0,
-                "str": 0,
-                "agi": 15,
-                "vit": 0
-            },
-            "tier": 8
-        },
-        {
-            "id": 2746,
-            "type": "accessories",
-            "name": "Dagger necklace",
-            "sprite": "/sprite/accessories/2746.gif",
-            "attr": {
-                "armor": 1,
-                "luk": 0,
-                "str": 20,
-                "agi": 0,
-                "vit": 0
-            },
-            "tier": 10
-        },
-        {
-            "id": 2780,
-            "type": "accessories",
-            "name": "Dark knight's glove",
-            "sprite": "/sprite/accessories/2708.gif",
-            "attr": {
-                "armor": 10,
-                "luk": 5,
-                "str": 15,
-                "agi": 10,
-                "vit": 8
-            },
-            "tier": 10
-        },
-        {
-            "id": 2781,
-            "type": "accessories",
-            "name": "Bone necklace",
-            "sprite": "/sprite/accessories/2781.gif",
-            "attr": {
-                "armor": 5,
-                "luk": 0,
-                "str": 0,
-                "agi": 0,
-                "vit": 0
-            },
-            "tier": 5
-        },
-        {
-            "id": 2784,
-            "type": "accessories",
-            "name": "Lucky charm",
-            "sprite": "/sprite/accessories/2784.gif",
-            "attr": {
-                "armor": 1,
-                "luk": 30,
-                "str": -5,
-                "agi": -5,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 10
@@ -213,712 +287,1242 @@
     ],
     "armor": [
         {
-            "id": 2301,
+            "id": 5000,
             "type": "armor",
             "name": "Shirt",
-            "sprite": "/sprite/armor/2301.gif",
+            "sprite": "sprite/armor/5000.gif",
+            "refinement": 0,
+            "gold": 5,
             "attr": {
-                "armor": 10,
+                "armor": 1,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
         },
         {
-            "id": 2305,
+            "id": 5001,
             "type": "armor",
-            "name": "Tunic",
-            "sprite": "/sprite/armor/2305.gif",
+            "name": "Pirate Shirt",
+            "sprite": "sprite/armor/5001.gif",
+            "refinement": 0,
+            "gold": 50,
             "attr": {
-                "armor": 15,
-                "luk": 2,
-                "str": 0,
-                "agi": 5,
-                "vit": 0
-            },
-            "tier": 3
-        },
-        {
-            "id": 2310,
-            "type": "armor",
-            "name": "Coat",
-            "sprite": "/sprite/armor/2310.gif",
-            "attr": {
-                "armor": 15,
+                "armor": 2,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 5016,
+            "type": "armor",
+            "name": "Scale armor",
+            "sprite": "sprite/armor/5016.gif",
+            "refinement": 0,
+            "gold": 80,
+            "attr": {
+                "armor": 4,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 5002,
+            "type": "armor",
+            "name": "Studded armor",
+            "sprite": "sprite/armor/5002.gif",
+            "refinement": 0,
+            "gold": 200,
+            "attr": {
+                "armor": 5,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 2
         },
         {
-            "id": 2312,
+            "id": 5017,
             "type": "armor",
-            "name": "Leather plate",
-            "sprite": "/sprite/armor/2312.gif",
+            "name": "Brass armor",
+            "sprite": "sprite/armor/5017.gif",
+            "refinement": 0,
+            "gold": 500,
+            "attr": {
+                "armor": 7,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 2
+        },
+        {
+            "id": 5004,
+            "type": "armor",
+            "name": "Plate armor",
+            "sprite": "sprite/armor/5004.gif",
+            "refinement": 0,
+            "gold": 1000,
+            "attr": {
+                "armor": 12,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 5015,
+            "type": "armor",
+            "name": "Magic tunic",
+            "sprite": "sprite/armor/5015.gif",
+            "refinement": 0,
+            "gold": 3500,
+            "attr": {
+                "armor": 12,
+                "luk": 0,
+                "str": 5,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 5021,
+            "type": "armor",
+            "name": "Native armor",
+            "sprite": "sprite/armor/5021.gif",
+            "refinement": 0,
+            "gold": 50000,
+            "attr": {
+                "armor": 21,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
+            "id": 5005,
+            "type": "armor",
+            "name": "Blue robe",
+            "sprite": "sprite/armor/5005.gif",
+            "gold": 65000,
+            "refinement": 0,
+            "attr": {
+                "armor": 23,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
+            "id": 5003,
+            "type": "armor",
+            "name": "Elven mail",
+            "sprite": "sprite/armor/5003.gif",
+            "gold": 125000,
+            "refinement": 0,
             "attr": {
                 "armor": 25,
                 "luk": 0,
-                "str": 5,
-                "agi": 5,
-                "vit": 15
-            },
-            "tier": 4
-        },
-        {
-            "id": 2318,
-            "type": "armor",
-            "name": "Nomad Coat",
-            "sprite": "/sprite/armor/2318.gif",
-            "attr": {
-                "armor": 10,
-                "luk": 0,
-                "str": 0,
-                "agi": 5,
-                "vit": 5
-            },
-            "tier": 2
-        },
-        {
-            "id": 2322,
-            "type": "armor",
-            "name": "Silk shirt",
-            "sprite": "/sprite/armor/2322.gif",
-            "attr": {
-                "armor": 10,
-                "luk": 10,
-                "str": 0,
-                "agi": 15,
-                "vit": 10
-            },
-            "tier": 4
-        },
-        {
-            "id": 2338,
-            "type": "armor",
-            "name": "Wedding dress",
-            "sprite": "/sprite/armor/2338.gif",
-            "attr": {
-                "armor": 5,
-                "luk": 20,
                 "str": 0,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 3
-        },
-        {
-            "id": 2348,
-            "type": "armor",
-            "name": "Stone plate",
-            "sprite": "/sprite/armor/2348.gif",
-            "attr": {
-                "armor": 35,
-                "luk": 0,
-                "str": 0,
-                "agi": -10,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 5
         },
         {
-            "id": 2357,
+            "id": 5010,
             "type": "armor",
-            "name": "High honor plate",
-            "sprite": "/sprite/armor/2357.gif",
+            "name": "Knight armor",
+            "sprite": "sprite/armor/5010.gif",
+            "gold": 137000,
+            "refinement": 0,
             "attr": {
-                "armor": 50,
-                "luk": 15,
-                "str": 15,
-                "agi": 15,
-                "vit": 30
+                "armor": 27,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
-            "tier": 9
+            "tier": 5
         },
         {
-            "id": 2358,
+            "id": 5008,
             "type": "armor",
-            "name": "Noble suit",
-            "sprite": "/sprite/armor/2358.gif",
+            "name": "Golden armor",
+            "sprite": "sprite/armor/5008.gif",
+            "gold": 500000,
+            "refinement": 0,
             "attr": {
-                "armor": 20,
-                "luk": 30,
-                "str": 15,
-                "agi": 15,
-                "vit": 30
+                "armor": 25,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
-            "tier": 8
+            "tier": 5
         },
         {
-            "id": 2359,
+            "id": 5020,
             "type": "armor",
-            "name": "Ninja suit",
-            "sprite": "/sprite/armor/2359.gif",
+            "name": "Dragon scale mail",
+            "sprite": "sprite/armor/5020.gif",
+            "gold": 500000,
+            "refinement": 0,
             "attr": {
-                "armor": 20,
-                "luk": 15,
-                "str": 30,
-                "agi": 50,
-                "vit": 30
+                "armor": 30,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
-            "tier": 8
+            "tier": 6
         },
         {
-            "id": 2366,
+            "id": 5007,
             "type": "armor",
-            "name": "Kimono",
-            "sprite": "/sprite/armor/2366.gif",
+            "name": "Crown armor",
+            "sprite": "sprite/armor/5007.gif",
+            "gold": 700000,
+            "refinement": 0,
             "attr": {
-                "armor": 2,
-                "luk": 25,
-                "str": 15,
-                "agi": 15,
+                "armor": 35,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 5022,
+            "type": "armor",
+            "name": "Dwarven armor",
+            "sprite": "sprite/armor/5022.gif",
+            "gold": 1500000,
+            "refinement": 0,
+            "attr": {
+                "armor": 40,
+                "luk": 0,
+                "str": 5,
+                "agi": 5,
+                "dex": 5,
+                "vit": 5
+            },
+            "tier": 7
+        },
+        {
+            "id": 5006,
+            "type": "armor",
+            "name": "Nightmare armor",
+            "sprite": "sprite/armor/5006.gif",
+            "gold": 2800000,
+            "refinement": 0,
+            "attr": {
+                "armor": 45,
+                "luk": 0,
+                "str": 10,
+                "agi": 10,
+                "dex": 10,
                 "vit": 10
             },
             "tier": 7
         },
         {
-            "id": 2368,
+            "id": 5018,
             "type": "armor",
-            "name": "Titanium plate",
-            "sprite": "/sprite/armor/2368.gif",
+            "name": "Royal draken mail",
+            "sprite": "sprite/armor/5018.gif",
+            "gold": 3850000,
+            "refinement": 0,
+            "attr": {
+                "armor": 69,
+                "luk": 0,
+                "str": 18,
+                "agi": 18,
+                "dex": 18,
+                "vit": 18
+            },
+            "tier": 7
+        },
+        {
+            "id": 5009,
+            "type": "armor",
+            "name": "Ornate plate",
+            "sprite": "sprite/armor/5009.gif",
+            "gold": 7800000,
+            "refinement": 0,
             "attr": {
                 "armor": 75,
-                "luk": 25,
-                "str": 25,
-                "agi": 30,
-                "vit": 110
-            },
-            "tier": 10
-        },
-        {
-            "id": 2375,
-            "type": "armor",
-            "name": "Black knight armor",
-            "sprite": "/sprite/armor/2375.gif",
-            "attr": {
-                "armor": 80,
-                "luk": 20,
-                "str": 30,
-                "agi": 10,
-                "vit": 90
-            },
-            "tier": 10
-        },
-        {
-            "id": 2376,
-            "type": "armor",
-            "name": "Iron plate",
-            "sprite": "/sprite/armor/2376.gif",
-            "attr": {
-                "armor": 35,
-                "luk": 10,
-                "str": 5,
-                "agi": 0,
+                "luk": 0,
+                "str": 55,
+                "agi": 20,
+                "dex": 20,
                 "vit": 20
             },
             "tier": 8
         },
         {
-            "id": 2382,
+            "id": 5014,
             "type": "armor",
-            "name": "Festival Royal silk",
-            "sprite": "/sprite/armor/2382.gif",
+            "name": "Demon armor",
+            "sprite": "sprite/armor/5014.gif",
+            "gold": 10000000,
+            "refinement": 0,
             "attr": {
-                "armor": 10,
-                "luk": 100,
-                "str": 10,
-                "agi": 10,
-                "vit": 5
+                "armor": 90,
+                "luk": 0,
+                "str": 65,
+                "agi": 0,
+                "dex": 0,
+                "vit": 40
+            },
+            "tier": 8
+        },
+        {
+            "id": 5023,
+            "type": "armor",
+            "name": "Samurai plate",
+            "sprite": "sprite/armor/5023.gif",
+            "gold": 11000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 90,
+                "luk": 0,
+                "str": 0,
+                "agi": 70,
+                "dex": 70,
+                "vit": 40
+            },
+            "tier": 8
+        },
+        {
+            "id": 5013,
+            "type": "armor",
+            "name": "Amazon armor",
+            "sprite": "sprite/armor/5013.gif",
+            "gold": 25000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 90,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 110,
+                "vit": 0
+            },
+            "tier": 9
+        },
+        {
+            "id": 5012,
+            "type": "armor",
+            "name": "Soulshell",
+            "sprite": "sprite/armor/5012.gif",
+            "gold": 25000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 150,
+                "luk": 0,
+                "str": 20,
+                "agi": 0,
+                "dex": 20,
+                "vit": 60
+            },
+            "tier": 9
+        },
+        {
+            "id": 5011,
+            "type": "armor",
+            "name": "Falcon plate",
+            "sprite": "sprite/armor/5012.gif",
+            "gold": 50000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 300,
+                "luk": 50,
+                "str": 100,
+                "agi": 0,
+                "dex": 100,
+                "vit": 100
             },
             "tier": 10
-        },
+        }
+    ],
+    "legs": [
         {
-            "id": 2385,
-            "type": "armor",
-            "name": "Odins suit",
-            "sprite": "/sprite/armor/2385.gif",
+            "id": 6000,
+            "type": "legs",
+            "name": "Leather legs",
+            "sprite": "sprite/footgear/6000.gif",
+            "gold": 5,
+            "refinement": 0,
             "attr": {
-                "armor": 45,
-                "luk": 10,
-                "str": 10,
-                "agi": 10,
-                "vit": 20
-            },
-            "tier": 6
-        },
-        {
-            "id": 2386,
-            "type": "armor",
-            "name": "Jacket",
-            "sprite": "/sprite/armor/2386.gif",
-            "attr": {
-                "armor": 50,
-                "luk": 10,
-                "str": 10,
-                "agi": 5,
-                "vit": 20
-            },
-            "tier": 6
-        },
-        {
-            "id": 2397,
-            "type": "armor",
-            "name": "Red Robe",
-            "sprite": "/sprite/armor/2397.gif",
-            "attr": {
-                "armor": 15,
-                "luk": 10,
+                "armor": 1,
+                "luk": 0,
                 "str": 0,
-                "agi": 15,
-                "vit": 10
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 6013,
+            "type": "legs",
+            "name": "Pirate legs",
+            "sprite": "sprite/footgear/6013.gif",
+            "gold": 50,
+            "refinement": 0,
+            "attr": {
+                "armor": 1,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 6001,
+            "type": "legs",
+            "name": "Chain legs",
+            "sprite": "sprite/footgear/6001.gif",
+            "gold": 80,
+            "refinement": 0,
+            "attr": {
+                "armor": 3,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 6014,
+            "type": "legs",
+            "name": "Plate legs",
+            "sprite": "sprite/footgear/6014.gif",
+            "gold": 1000,
+            "refinement": 0,
+            "attr": {
+                "armor": 6,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 2
+        },
+        {
+            "id": 6016,
+            "type": "legs",
+            "name": "Chain legs",
+            "sprite": "sprite/footgear/6016.gif",
+            "gold": 8000,
+            "refinement": 0,
+            "attr": {
+                "armor": 12,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 6008,
+            "type": "legs",
+            "name": "Blue legs",
+            "sprite": "sprite/footgear/6008.gif",
+            "gold": 50000,
+            "refinement": 0,
+            "attr": {
+                "armor": 22,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
             "tier": 4
+        },
+        {
+            "id": 6005,
+            "type": "legs",
+            "name": "Knight legs",
+            "sprite": "sprite/footgear/6005.gif",
+            "gold": 100000,
+            "refinement": 0,
+            "attr": {
+                "armor": 25,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
+            "id": 6009,
+            "type": "legs",
+            "name": "Golden legs",
+            "sprite": "sprite/footgear/6009.gif",
+            "gold": 500000,
+            "refinement": 0,
+            "attr": {
+                "armor": 25,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 5
+        },
+        {
+            "id": 6015,
+            "type": "legs",
+            "name": "Dragon scale legs",
+            "sprite": "sprite/footgear/6015.gif",
+            "gold": 500000,
+            "refinement": 0,
+            "attr": {
+                "armor": 28,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 6006,
+            "type": "legs",
+            "name": "Crown legs",
+            "sprite": "sprite/footgear/6006.gif",
+            "gold": 700000,
+            "refinement": 0,
+            "attr": {
+                "armor": 35,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 6003,
+            "type": "legs",
+            "name": "Dwarven legs",
+            "sprite": "sprite/footgear/6003.gif",
+            "gold": 1500000,
+            "refinement": 0,
+            "attr": {
+                "armor": 40,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 5,
+                "vit": 5
+            },
+            "tier": 7
+        },
+        {
+            "id": 6004,
+            "type": "legs",
+            "name": "Ornate Legs",
+            "sprite": "sprite/footgear/6004.gif",
+            "gold": 5000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 70,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 10,
+                "vit": 10
+            },
+            "tier": 8
+        },
+        {
+            "id": 6004,
+            "type": "legs",
+            "name": "Demon Legs",
+            "sprite": "sprite/footgear/6004.gif",
+            "gold": 10000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 80,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 10
+            },
+            "tier": 8
+        },
+        {
+            "id": 6012,
+            "type": "legs",
+            "name": "Soulstrider",
+            "sprite": "sprite/footgear/6012.gif",
+            "gold": 25000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 150,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 60
+            },
+            "tier": 9
+        },
+        {
+            "id": 6011,
+            "type": "legs",
+            "name": "Soulstrider",
+            "sprite": "sprite/footgear/6011.gif",
+            "gold": 50000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 300,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 100
+            },
+            "tier": 10
         }
     ],
     "footgear": [
         {
-            "id": 2405,
+            "id": 8000,
             "type": "footgear",
-            "name": "Snow boots",
-            "sprite": "/sprite/footgear/2405.gif",
+            "name": "Leather boots",
+            "sprite": "sprite/footgear/8000.gif",
+            "gold": 5,
+            "refinement": 0,
             "attr": {
-                "armor": 10,
-                "luk": 0,
-                "str": 0,
-                "agi": -5,
-                "vit": 0
-            },
-            "tier": 2
-        },
-        {
-            "id": 2415,
-            "type": "footgear",
-            "name": "Bunny shoes",
-            "sprite": "/sprite/footgear/2415.gif",
-            "attr": {
-                "armor": 5,
-                "luk": 20,
-                "str": 0,
-                "agi": 0,
-                "vit": 0
-            },
-            "tier": 10
-        },
-        {
-            "id": 2434,
-            "type": "footgear",
-            "name": "Elegant boots",
-            "sprite": "/sprite/footgear/2434.gif",
-            "attr": {
-                "armor": 20,
+                "armor": 1,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 3
-        },
-        {
-            "id": 2435,
-            "type": "footgear",
-            "name": "Steel boots",
-            "sprite": "/sprite/footgear/2435.gif",
-            "attr": {
-                "armor": 60,
-                "luk": 0,
-                "str": 30,
-                "agi": 15,
-                "vit": 80
-            },
-            "tier": 10
-        },
-        {
-            "id": 2437,
-            "type": "footgear",
-            "name": "Sneakers",
-            "sprite": "/sprite/footgear/2437.gif",
-            "attr": {
-                "armor": 15,
-                "luk": 0,
-                "str": 0,
-                "agi": 20,
-                "vit": 0
-            },
-            "tier": 4
-        },
-        {
-            "id": 2441,
-            "type": "footgear",
-            "name": "Sandals",
-            "sprite": "/sprite/footgear/2441.gif",
-            "attr": {
-                "armor": 5,
-                "luk": 0,
-                "str": 0,
-                "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
         },
         {
-            "id": 2447,
+            "id": 8001,
             "type": "footgear",
-            "name": "Dark knight boots",
-            "sprite": "/sprite/footgear/2447.gif",
+            "name": "Yetislippers",
+            "sprite": "sprite/footgear/8001.gif",
+            "epic": true,
+            "gold": 90000000,
             "attr": {
-                "armor": 55,
-                "luk": 15,
-                "str": 20,
-                "agi": 20,
-                "vit": 60
-            },
-            "tier": 10
-        },
-        {
-            "id": 2448,
-            "type": "footgear",
-            "name": "High honor boots",
-            "sprite": "/sprite/footgear/2448.gif",
-            "attr": {
-                "armor": 30,
-                "luk": 15,
-                "str": 15,
-                "agi": 15,
-                "vit": 30
-            },
-            "tier": 9
-        }
-    ],
-    "garments": [
-        {
-            "id": 2504,
-            "type": "garment",
-            "name": "Leather garment",
-            "sprite": "/sprite/garments/2504.gif",
-            "attr": {
-                "armor": 5,
+                "armor": 1,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
         },
         {
-            "id": 2507,
-            "type": "garment",
-            "name": "Thief cape",
-            "sprite": "/sprite/garments/2507.gif",
+            "id": 8002,
+            "type": "footgear",
+            "name": "Yetislippers",
+            "sprite": "sprite/footgear/8002.gif",
+            "epic": true,
+            "gold": 90000000,
             "attr": {
-                "armor": 10,
+                "armor": 1,
                 "luk": 0,
                 "str": 0,
-                "agi": 5,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
+            "id": 8003,
+            "type": "footgear",
+            "name": "Boots of haste",
+            "sprite": "sprite/footgear/8003.gif",
+            "gold": 30000,
+            "attr": {
+                "armor": -10,
+                "luk": 0,
+                "str": 0,
+                "agi": 30,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 2
         },
         {
-            "id": 2514,
-            "type": "garment",
-            "name": "Shoulder pad",
-            "sprite": "/sprite/garments/2514.gif",
+            "id": 8010,
+            "type": "footgear",
+            "name": "Pirate boots",
+            "sprite": "sprite/footgear/8010.gif",
+            "gold": 50000,
             "attr": {
                 "armor": 25,
                 "luk": 0,
                 "str": 10,
-                "agi": 15,
-                "vit": 0
-            },
-            "tier": 5
-        },
-        {
-            "id": 2516,
-            "type": "garment",
-            "name": "Night-gown",
-            "sprite": "/sprite/garments/2516.gif",
-            "attr": {
-                "armor": 10,
-                "luk": 60,
-                "str": 0,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 10
-        },
-        {
-            "id": 2528,
-            "type": "garment",
-            "name": "Silk scarf",
-            "sprite": "/sprite/garments/2528.gif",
-            "attr": {
-                "armor": 20,
-                "luk": 0,
-                "str": 0,
-                "agi": 25,
-                "vit": 0
-            },
-            "tier": 5
-        },
-        {
-            "id": 2535,
-            "type": "garment",
-            "name": "Nomad garment",
-            "sprite": "/sprite/garments/2535.gif",
-            "attr": {
-                "armor": 20,
-                "luk": 0,
-                "str": 0,
-                "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 3
         },
         {
-            "id": 2538,
-            "type": "garment",
-            "name": "High honor garment",
-            "sprite": "/sprite/garments/2538.gif",
+            "id": 8013,
+            "type": "footgear",
+            "name": "Steel boots",
+            "sprite": "sprite/footgear/8013.gif",
+            "gold": 68000,
             "attr": {
-                "armor": 45,
-                "luk": 0,
-                "str": 5,
-                "agi": 10,
-                "vit": 15
-            },
-            "tier": 9
-        },
-        {
-            "id": 2540,
-            "type": "garment",
-            "name": "Old garment",
-            "sprite": "/sprite/garments/2540.gif",
-            "attr": {
-                "armor": 5,
+                "armor": 30,
                 "luk": 0,
                 "str": 0,
-                "agi": 10,
+                "agi": 0,
+                "dex": -10,
                 "vit": 0
-            },
-            "tier": 2
-        },
-        {
-            "id": 2546,
-            "type": "garment",
-            "name": "Hood",
-            "sprite": "/sprite/garments/2546.gif",
-            "attr": {
-                "armor": 20,
-                "luk": 0,
-                "str": 0,
-                "agi": 15,
-                "vit": 10
             },
             "tier": 4
         },
         {
-            "id": 2554,
-            "type": "garment",
-            "name": "Black knight garment",
-            "sprite": "/sprite/garments/2554.gif",
+            "id": 8004,
+            "type": "footgear",
+            "name": "Winged boots",
+            "sprite": "sprite/footgear/8004.gif",
+            "gold": 150000,
+            "attr": {
+                "armor": 35,
+                "luk": 0,
+                "str": 0,
+                "agi": 50,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 5
+        },
+        {
+            "id": 8009,
+            "type": "footgear",
+            "name": "Void boots",
+            "sprite": "sprite/footgear/8009.gif",
+            "gold": 1790000,
+            "attr": {
+                "armor": 40,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 8014,
+            "type": "footgear",
+            "name": "Badger Boots",
+            "sprite": "sprite/footgear/8014.gif",
+            "gold": 2000000,
+            "attr": {
+                "armor": 43,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 8020,
+            "type": "footgear",
+            "name": "Enchanted boots",
+            "sprite": "sprite/footgear/8020.gif",
+            "gold": 9000000,
             "attr": {
                 "armor": 50,
                 "luk": 20,
-                "str": 30,
-                "agi": 10,
-                "vit": 15
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 7
+        },
+        {
+            "id": 8017,
+            "type": "footgear",
+            "name": "Pair of Soulstalkers",
+            "sprite": "sprite/footgear/8017.gif",
+            "gold": 11000000,
+            "attr": {
+                "armor": 90,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 20
+            },
+            "tier": 8
+        },
+        {
+            "id": 8016,
+            "type": "footgear",
+            "name": "Pair of Soulwalkers",
+            "sprite": "sprite/footgear/8016.gif",
+            "gold": 22000000,
+            "attr": {
+                "armor": 120,
+                "luk": 0,
+                "str": 25,
+                "agi": 0,
+                "dex": 25,
+                "vit": 25
+            },
+            "tier": 9
+        },
+        {
+            "id": 8012,
+            "type": "footgear",
+            "name": "Firewalker boots",
+            "sprite": "sprite/footgear/8012.gif",
+            "gold": 35000000,
+            "attr": {
+                "armor": 200,
+                "luk": 25,
+                "str": 50,
+                "agi": 50,
+                "dex": 150,
+                "vit": 50
+            },
+            "tier": 9
+        },
+        {
+            "id": 8017,
+            "type": "footgear",
+            "name": "Golden boots",
+            "sprite": "sprite/footgear/8017.gif",
+            "gold": 50000000,
+            "attr": {
+                "armor": 300,
+                "luk": 50,
+                "str": 100,
+                "agi": 0,
+                "dex": 100,
+                "vit": 100
             },
             "tier": 10
         }
     ],
     "shields": [
         {
-            "id": 2101,
+            "id": 7000,
             "type": "shield",
-            "name": "The defender",
-            "sprite": "/sprite/shields/2101.gif",
+            "name": "Wood shield",
+            "sprite": "sprite/shields/7000.gif",
+            "gold": 50,
+            "refinement": 0,
             "attr": {
-                "armor": 25,
+                "armor": 10,
                 "luk": 0,
                 "str": 0,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 2
-        },
-        {
-            "id": 2103,
-            "type": "shield",
-            "name": "Iron shield",
-            "sprite": "/sprite/shields/2103.gif",
-            "attr": {
-                "armor": 15,
-                "luk": 0,
-                "str": 0,
-                "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
         },
         {
-            "id": 2110,
+            "id": 7001,
             "type": "shield",
-            "name": "Mirror shield",
-            "sprite": "/sprite/shields/2110.gif",
+            "name": "The defender",
+            "sprite": "sprite/shields/7001.gif",
+            "gold": 100,
+            "refinement": 0,
             "attr": {
-                "armor": 40,
-                "luk": 10,
+                "armor": 15,
+                "luk": 0,
                 "str": 0,
                 "agi": 0,
-                "vit": 30
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 2
+        },
+        {
+            "id": 7002,
+            "type": "shield",
+            "name": "Brass shield",
+            "sprite": "sprite/shields/7002.gif",
+            "gold": 5000,
+            "refinement": 0,
+            "attr": {
+                "armor": 30,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 7003,
+            "type": "shield",
+            "name": "Knight shield",
+            "sprite": "sprite/shields/7003.gif",
+            "gold": 8000,
+            "refinement": 0,
+            "attr": {
+                "armor": 35,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
+            "id": 7004,
+            "type": "shield",
+            "name": "Dwarven shield",
+            "sprite": "sprite/shields/7004.gif",
+            "gold": 50000,
+            "refinement": 0,
+            "attr": {
+                "armor": 40,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
             "tier": 5
         },
         {
-            "id": 2116,
+            "id": 7005,
             "type": "shield",
-            "name": "Angelic shield",
-            "sprite": "/sprite/shields/2116.gif",
+            "name": "Castle shield",
+            "sprite": "sprite/shields/7005.gif",
+            "gold": 200000,
+            "refinement": 0,
             "attr": {
-                "armor": 60,
+                "armor": 50,
                 "luk": 0,
                 "str": 0,
-                "agi": 20,
-                "vit": 40
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 6
+        },
+        {
+            "id": 7008,
+            "type": "shield",
+            "name": "Crown shield",
+            "sprite": "sprite/shields/7008.gif",
+            "gold": 700000,
+            "refinement": 0,
+            "attr": {
+                "armor": 65,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 7
+        },
+        {
+            "id": 7012,
+            "type": "shield",
+            "name": "Nightmare shield",
+            "sprite": "sprite/shields/7012.gif",
+            "gold": 3850000,
+            "refinement": 0,
+            "attr": {
+                "armor": 95,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
             },
             "tier": 8
         },
         {
-            "id": 2137,
+            "id": 7010,
             "type": "shield",
-            "name": "High honor shield",
-            "sprite": "/sprite/shields/2137.gif",
+            "name": "Demon shield",
+            "sprite": "sprite/shields/7010.gif",
+            "gold": 10000000,
+            "refinement": 0,
             "attr": {
-                "armor": 90,
-                "luk": 10,
-                "str": 5,
-                "agi": 25,
-                "vit": 80
+                "armor": 110,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 40
             },
             "tier": 9
         },
         {
-            "id": 2138,
+            "id": 7016,
             "type": "shield",
             "name": "Blessed shield",
-            "sprite": "/sprite/shields/2138.gif",
+            "sprite": "sprite/shields/7016.gif",
+            "gold": 25000000,
+            "refinement": 0,
             "attr": {
-                "armor": 120,
-                "luk": 90,
-                "str": 30,
-                "agi": 30,
-                "vit": 110
+                "armor": 150,
+                "luk": 0,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 60
+            },
+            "tier": 9
+        },
+        {
+            "id": 7017,
+            "type": "shield",
+            "name": "Soulbastion",
+            "sprite": "sprite/shields/7017.gif",
+            "gold": 50000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 300,
+                "luk": 50,
+                "str": 0,
+                "agi": 0,
+                "dex": 0,
+                "vit": 100
             },
             "tier": 10
         }
     ],
     "weapons": [
         {
-            "id": 1109,
+            "id": 1000,
             "type": "weapon",
-            "name": "Blade",
-            "sprite": "/sprite/weapons/1109.gif",
+            "name": "Rapier",
+            "sprite": "sprite/weapons/1000.gif",
+            "gold": 5,
+            "refinement": 0,
             "attr": {
-                "armor": 10,
+                "armor": 0,
                 "luk": 0,
-                "str": 30,
+                "str": 10,
                 "agi": 0,
-                "vit": 0
-            },
-            "tier": 3
-        },
-        {
-            "id": 1154,
-            "type": "weapon",
-            "name": "Broadsword",
-            "sprite": "/sprite/weapons/1154.gif",
-            "attr": {
-                "armor": 10,
-                "luk": 0,
-                "str": 15,
-                "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
             "tier": 1
         },
         {
-            "id": 1160,
+            "id": 1001,
             "type": "weapon",
-            "name": "Titan sword",
-            "sprite": "/sprite/weapons/1160.gif",
+            "name": "Broadsword",
+            "sprite": "sprite/weapons/1001.gif",
+            "gold": 50,
+            "refinement": 0,
             "attr": {
-                "armor": 40,
+                "armor": 0,
                 "luk": 0,
-                "str": 110,
-                "agi": 20,
-                "vit": 0
-            },
-            "tier": 10
-        },
-        {
-            "id": 1175,
-            "type": "weapon",
-            "name": "Giant sword",
-            "sprite": "/sprite/weapons/1175.gif",
-            "attr": {
-                "armor": 35,
-                "luk": 0,
-                "str": 80,
+                "str": 15,
                 "agi": 0,
+                "dex": 0,
                 "vit": 0
             },
-            "tier": 8
+            "tier": 2
         },
         {
-            "id": 1183,
+            "id": 1010,
             "type": "weapon",
-            "name": "Relic sword",
-            "sprite": "/sprite/weapons/1183.gif",
+            "name": "Knight axe",
+            "sprite": "sprite/weapons/1010.gif",
+            "gold": 3000,
+            "refinement": 0,
             "attr": {
-                "armor": 20,
+                "armor": 0,
                 "luk": 0,
-                "str": 45,
-                "agi": 20,
+                "str": 30,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 3
+        },
+        {
+            "id": 1009,
+            "type": "weapon",
+            "name": "Halberd",
+            "sprite": "sprite/weapons/1009.gif",
+            "gold": 8000,
+            "refinement": 0,
+            "attr": {
+                "armor": 0,
+                "luk": 0,
+                "str": 40,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 4
+        },
+        {
+            "id": 1012,
+            "type": "weapon",
+            "name": "Guardian Halberd",
+            "sprite": "sprite/weapons/1012.gif",
+            "gold": 25000,
+            "refinement": 0,
+            "attr": {
+                "armor": 0,
+                "luk": 0,
+                "str": 50,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 5
+        },
+        {
+            "id": 1002,
+            "type": "weapon",
+            "name": "Fire sword",
+            "sprite": "sprite/weapons/1002.gif",
+            "gold": 200000,
+            "refinement": 0,
+            "attr": {
+                "armor": 0,
+                "luk": 0,
+                "str": 60,
+                "agi": 0,
+                "dex": 20,
                 "vit": 0
             },
             "tier": 6
         },
         {
-            "id": 1190,
+            "id": 1017,
             "type": "weapon",
-            "name": "Claymore",
-            "sprite": "/sprite/weapons/1190.gif",
+            "name": "Blessed Sceptre",
+            "sprite": "sprite/weapons/1002.gif",
+            "gold": 1500000,
+            "refinement": 0,
             "attr": {
-                "armor": 25,
+                "armor": 20,
                 "luk": 0,
-                "str": 75,
-                "agi": -10,
+                "str": 70,
+                "agi": 0,
+                "dex": 20,
                 "vit": 0
             },
             "tier": 7
         },
         {
-            "id": 1520,
+            "id": 1013,
             "type": "weapon",
-            "name": "Chain",
-            "sprite": "/sprite/weapons/1520.gif",
+            "name": "Chopper of Destruction",
+            "sprite": "sprite/weapons/1013.gif",
+            "gold": 15000000,
+            "refinement": 0,
             "attr": {
                 "armor": 0,
-                "luk": 0,
-                "str": 40,
-                "agi": 30,
+                "luk": 50,
+                "str": 120,
+                "agi": 20,
+                "dex": 50,
                 "vit": 0
             },
-            "tier": 5
+            "tier": 8
+        },
+        {
+            "id": 1005,
+            "type": "weapon",
+            "name": "Slayer of Destruction",
+            "sprite": "sprite/weapons/1005.gif",
+            "gold": 25000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 0,
+                "luk": 50,
+                "str": 225,
+                "agi": 20,
+                "dex": 50,
+                "vit": 0
+            },
+            "tier": 9
+        },
+        {
+            "id": 1006,
+            "type": "weapon",
+            "name": "Phantasmal Axe",
+            "sprite": "sprite/weapons/1005.gif",
+            "gold": 70000000,
+            "refinement": 0,
+            "attr": {
+                "armor": 100,
+                "luk": 50,
+                "str": 450,
+                "agi": 200,
+                "dex": 100,
+                "vit": 100
+            },
+            "tier": 10
         }
     ]
 }
