@@ -35,3 +35,5 @@ ITEMS
          - buying: (goldValue * tier) / .1 @done
             - selling(30000, 10) = 30000 || selling(100, 1) = 10 @done
             - buying(30000, 10) = 3000000  || buying(100, 1) = 1000 @done
+INFRA
+   - HEROKU

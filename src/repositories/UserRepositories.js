@@ -2,9 +2,9 @@ import fs from "fs";
 import path from "path";
 import KnightFactory from "../lib/knightGenerator.js";
 import KnightEditor from "../lib/knightEditor.js";
-import noviceItemGenerator from "../lib//noviceItemGenerator.js";
+import noviceItemGenerator from "../lib/noviceItemGenerator.js";
+import { getItemList } from "../service/controllers/itemController.js";
 
-import { getItemList } from "../service/controllers/itemController";
 
 /**
  * Public functions

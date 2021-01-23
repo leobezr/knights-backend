@@ -1,0 +1,5 @@
+module.name_mapper='^repositories\/\(.*\)$' -> '<PROJECT_ROOT>/src/repositories/\1'
+
+module.name_mapper='^repositories$' -> '<PROJECT_ROOT>/src/repositories'
+
+module.system.node.resolve_dirname='<PROJECT_ROOT>/src/'

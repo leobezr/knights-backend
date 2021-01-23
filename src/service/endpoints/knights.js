@@ -1,11 +1,11 @@
-import { getUsers, addUser, gearHandler } from "../../repositories/UserRepositories";
+import { getUsers, addUser, gearHandler } from "../../repositories/UserRepositories.js";
 import * as yup from "yup";
 
 import mongo from "mongodb";
 import assert from "assert";
 
-const yupSchema = yup.object().shape({
-   body: yup.object().required()
+const yupSchema = yup.default.object().shape({
+   body: yup.default.object().required()
 })
 
 const KNIGHT_API = "/api/v1/knights/";
@@ -24,12 +24,13 @@ export default function (app) {
     */
    app.get(KNIGHT_API + ":id", async (req, res) => {
       const DB = process.env.MONGO_SERVER;
+      const DB_NAME = process.env.MONGO_DB_NAME;
       var knightUser = null;
 
       mongo.connect(DB, (err, client) => {
          assert.strictEqual(null, err);
 
-         const db = client.db("test");
+         const db = client.db(DB_NAME);
          const cursor = db.collection("knights").find({ id: req.params.id });
 
          cursor.forEach((doc, error) => {
@@ -55,11 +56,12 @@ export default function (app) {
          if (yupSchema.validate(req)) {
             const newUser = await addUser(req);
             const DB = process.env.MONGO_SERVER
+            const DB_NAME = process.env.MONGO_DB_NAME;
 
             mongo.connect(DB, (err, client) => {
                assert.strictEqual(null, err);
 
-               const db = client.db("test");
+               const db = client.db(DB_NAME);
                const cursor = db.collection("knights");
 
                cursor.insertOne(newUser, () => {

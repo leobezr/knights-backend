@@ -3,8 +3,13 @@ import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import Routes from "./route.js";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
+const PORT = process.env.PORT || 5000;
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 dotenv.config();
 
@@ -19,7 +24,9 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.listen(3333);
+app.listen(PORT, () => {
+   console.log("Using port: " + PORT);
+});
 
 // Sets routes
 Routes(app);

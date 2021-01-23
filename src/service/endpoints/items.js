@@ -4,8 +4,8 @@ import { gearHandler } from "../../repositories/UserRepositories.js";
 
 import * as yup from "yup";
 
-const yupSchema = yup.object().shape({
-   body: yup.object().required()
+const yupSchema = yup.default.object().shape({
+   body: yup.default.object().required()
 })
 
 export default function (app) {
