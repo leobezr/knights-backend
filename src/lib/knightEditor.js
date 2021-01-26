@@ -237,4 +237,10 @@ export default class {
    sellItem(item) {
       this.config = sellItem(this, item);
    }
+   /**
+    * @param {Number} id
+    */
+   receiveReward(bag) {
+      this.config.reward.push(bag);
+   }
 }

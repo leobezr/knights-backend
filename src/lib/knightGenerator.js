@@ -53,6 +53,7 @@ export default class Knight {
          accessory_3: null,
          accessory_4: null,
       };
+      this.reward = [];
 
       this.modifier = { ...Modifier() };
 
