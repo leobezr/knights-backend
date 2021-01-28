@@ -5,12 +5,26 @@
     "loot": [
       {
         "id": 1000,
-        "chance": 100
+        "chance": 1
       }
     ],
     "gold": {
       "min": 0,
       "max": 5
+    }
+  },
+  {
+    "id": 10002,
+    "name": "Zombie",
+    "loot": [
+      {
+        "id": 1001,
+        "chance": 1
+      }
+    ],
+    "gold": {
+      "min": 6,
+      "max": 15
     }
   }
 ]
