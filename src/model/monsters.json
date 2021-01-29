@@ -1,18 +1,30 @@
 [
-   {
-     "name": "dragon",
-     "description": "A Dragon",
-     "race": "dragon",
-     "weapons": [],
-     "attributes": {
-       "strength": 25,
-       "defense": 15,
-       "dexterity": 11,
-       "constitution": 0,
-       "intelligence": 5,
-       "wisdom": 3,
-       "charisma": 0
-     },
-     "keyAttribute": "strength"
-   }
- ]
+  {
+    "id": 10001,
+    "name": "Poring",
+    "loot": [
+      {
+        "id": 1000,
+        "chance": 1
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 5
+    }
+  },
+  {
+    "id": 10002,
+    "name": "Zombie",
+    "loot": [
+      {
+        "id": 1001,
+        "chance": 1
+      }
+    ],
+    "gold": {
+      "min": 6,
+      "max": 15
+    }
+  }
+]

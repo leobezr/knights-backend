@@ -230,11 +230,37 @@ export default class {
     */
    buyItem(item) {
       this.config = buyItem(this, item);
+      return this;
    }
    /**
     * @param {Object} item
     */
    sellItem(item) {
       this.config = sellItem(this, item);
+      return this;
+   }
+   /**
+    * @param {Number} id
+    */
+   receiveReward(bag, gold) {
+      if (bag.length) {
+         this.config.reward.items.push(...bag);
+      }
+      this.config.reward.gold += gold;
+      return this;
+   }
+   /**
+    * Get rewards in loot bag
+    */
+   getRewards(itemList) {
+      const LOOT_BAG = this.config.reward;
+
+      if (LOOT_BAG.items.length) {
+         this.config.inventory = [...this.config.inventory, ...LOOT_BAG.items];
+      }
+      this.config.gold += LOOT_BAG.gold;
+      this.config.reward = { items: [], gold: 0 };
+
+      return this;
    }
 }

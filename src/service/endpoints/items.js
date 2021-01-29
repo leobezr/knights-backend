@@ -18,25 +18,29 @@ export default function (app) {
 
       var itemList = {};
 
-      mongo.connect(DB, (err, client) => {
-         assert.strictEqual(null, err);
+      try {
+         mongo.connect(DB, (err, client) => {
+            assert.strictEqual(null, err);
 
-         const db = client.db(DB_NAME);
-         const cursor = db.collection("items").find();
+            const db = client.db(DB_NAME);
+            const cursor = db.collection("items").find();
 
-         cursor.forEach((doc, err) => {
-            assert.strictEqual(undefined, err);
-            itemList = doc;
-         }, () => {
-            client.close();
+            cursor.forEach((doc, err) => {
+               assert.strictEqual(undefined, err);
+               itemList = doc;
+            }, () => {
+               client.close();
 
-            if (itemList) {
-               res.status(200).json({ ...itemList });
-            } else {
-               res.status(404).json({ detail: "Item list not found" })
-            }
+               if (itemList) {
+                  res.status(200).json({ ...itemList });
+               } else {
+                  res.status(404).json({ detail: "Item list not found" })
+               }
+            })
          })
-      })
+      } catch (err) {
+         throw Error(err);
+      }
    })
 
    app.post("/api/v1/items/sell", async (req, res) => {
