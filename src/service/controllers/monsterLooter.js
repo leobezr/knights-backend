@@ -49,9 +49,11 @@ export default async function (monsterId) {
 
    let lootbag = drop.loot.filter(item => item.chance >= rng());
    let gold = goldRng();
+   let experience = drop.experience;
 
    return {
       lootbag,
-      gold
+      gold,
+      experience
    }
 }
