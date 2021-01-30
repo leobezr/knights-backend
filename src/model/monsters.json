@@ -2,10 +2,11 @@
   {
     "id": 10001,
     "name": "Poring",
+    "experience": 50,
     "loot": [
       {
         "id": 1000,
-        "chance": 1
+        "chance": 5
       }
     ],
     "gold": {
@@ -16,15 +17,50 @@
   {
     "id": 10002,
     "name": "Zombie",
+    "experience": 250,
     "loot": [
       {
-        "id": 1001,
-        "chance": 1
+        "id": 7001,
+        "chance": 15
+      },
+      {
+        "id": 5001,
+        "chance": 25
       }
     ],
     "gold": {
       "min": 6,
       "max": 15
+    }
+  },
+  {
+    "id": 10000,
+    "name": "Doppelganger",
+    "experience": 2000,
+    "loot": [
+      {
+        "id": 1012,
+        "chance": 20
+      }
+    ],
+    "gold": {
+      "min": 100,
+      "max": 215
+    }
+  },
+  {
+    "id": 10003,
+    "name": "Loki",
+    "experience": 2000,
+    "loot": [
+      {
+        "id": 1012,
+        "chance": 20
+      }
+    ],
+    "gold": {
+      "min": 100,
+      "max": 215
     }
   }
 ]
