@@ -10,10 +10,12 @@ const MAX_STATUS_POINTS = 200;
 const Modifier = () => {
    return {
       armor: 0,
-      luk: 0,
+
       str: 0,
       agi: 0,
       vit: 0,
+      dex: 0,
+      luk: 0,
 
       hit: 0,
       atk: 0,
@@ -45,6 +47,56 @@ export default class {
    constructor(knight) {
       this.config = { ...knight };
    }
+   _calculateLevel() {
+      let a = (exp) => Math.cbrt(
+         Math.sqrt(3) * Math.sqrt((243 * Math.pow(exp, 2)) - (48600 * exp) + 3680000) + (27 * exp) - 2700
+      );
+
+      let exp = this.config.experience;
+      let result = ((a(exp) / Math.pow(30, 2 / 3)) - ((5 * Math.pow(10, 2 / 3)) / Math.cbrt(3) / a(exp))) + 2;
+
+      this.config.level = Math.round(result);
+   }
+   _calculateTotalDef() {
+      var { vit, agi } = this.config.attributes;
+      let attr = { vit, agi };
+
+      var { vit, agi, armor } = this.config.modifier;
+      let modAttr = { vit, agi, armor };
+
+      const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.config.level / 2));
+      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + modAttr.armor / 10));
+   }
+   /**
+    * Max health calculation
+    */
+   _calculateHealth() {
+      var { vit } = this.config.attributes;
+      let attr = { vit };
+
+      var { vit } = this.config.modifier;
+      let modAttr = { vit };
+
+      var BASE_HP = 100;
+      var BASE_LEVEL = this.config.level;
+
+      BASE_HP += this.config.level;
+
+      for (var i = 2; i <= BASE_LEVEL; i++) {
+         BASE_HP += Math.round((BASE_LEVEL * i) * .1);
+      }
+
+      var MAX_HP = BASE_HP;
+      var VIT = attr.vit + modAttr.vit;
+
+      var REDUCER_MOD = .01;
+
+      MAX_HP = Math.floor(MAX_HP * (1 + VIT * 0.01) * REDUCER_MOD);
+      this.config.attributes.hp = BASE_HP + MAX_HP;
+   }
+   /**
+    * Character power calculation
+    */
    _calculateCP() {
       let { cp, ...attr } = this.config.attributes;
       let mods = { ...this.config.modifier };
@@ -64,20 +116,43 @@ export default class {
 
       this.config.attributes.cp = cp + this.config.level * 100;
    }
+   /**
+    * Calculates total stats added
+    */
    _calculateAttrPoints() {
-      let { str, agi, vit, luk } = this.config.attributes;
-      let attr = { str, agi, vit, luk };
+      let { str, agi, vit, luk, dex } = this.config.attributes;
+      let attr = { str, agi, vit, luk, dex };
 
-      let statusPoints = -40;
+      let statusPoints = -50;
 
       for (let value in attr) {
          let val = parseFloat(attr[value]) || 0;
 
          statusPoints += val;
       }
-
       return statusPoints;
    }
+   /**
+    * Calculate hit based on stats and mods
+    */
+   _calculateHit() {
+      var { str, luk, dex } = this.config.attributes;
+      let attr = { str, luk, dex };
+
+      var { str, luk, dex } = this.config.modifier;
+      let modAttr = { str, luk, dex };
+
+      let totalStr = Math.floor(attr.str + modAttr.str);
+      let totalLuk = Math.floor(attr.luk + modAttr.luk);
+      let totalDex = Math.floor(attr.dex + modAttr.dex);
+
+      this.config.attributes.hit = Math.round(Math.floor(
+         (this.config.level / 4) + totalStr + (totalDex / 5) + (totalLuk / 3)
+      ));
+   }
+   /**
+    * Apply all mods and calculate final scores
+    */
    _applyMod() {
       let itemsEquipped = {};
       let attr = { ...Modifier() };
@@ -95,7 +170,11 @@ export default class {
       }
 
       this.config.modifier = { ...attr };
+
       this._calculateCP();
+      this._calculateHit();
+      this._calculateHealth();
+      this._calculateTotalDef();
    }
    /**
     * Adds status to attr
@@ -107,15 +186,15 @@ export default class {
 
       let statusName = this.config.attributes[status]
 
-      if (hasPoints && statusName < MAX_STATUS_POINTS) {
+      if (Boolean(hasPoints && statusName < MAX_STATUS_POINTS)) {
          this.config.attributes[status] += 1;
       }
-      this._calculateCP();
+      this._applyMod();
       return this;
    }
    /**
     * Finds item inside knight config
-    * @param {Object} item 
+    * @param {Object} item
     * @returns {Object}
     */
    findItem(item) {
@@ -125,8 +204,8 @@ export default class {
    }
    /**
     * Un-equips item
-    * @param {Object} item 
-    * @param {String} slot 
+    * @param {Object} item
+    * @param {String} slot
     * @returns {Object}
     */
    unequip(item, slot) {
@@ -138,7 +217,7 @@ export default class {
    }
    /**
     * Equips item
-    * @param {Object} item 
+    * @param {Object} item
     * @returns {Object}
     */
    equip(item) {
@@ -184,22 +263,22 @@ export default class {
    }
    /**
     * Object setter
-    * @param {String} key 
-    * @param {void} value 
+    * @param {String} key
+    * @param {void} value
     */
    set(key, value) {
       this.config[key] = value;
    }
    /**
     * Gold setter, as sums
-    * @param {Number} amount 
+    * @param {Number} amount
     */
    addGold(amount) {
       this.config.gold += amount;
    }
    /**
     * Gold setter, as sub
-    * @param {Number} amount 
+    * @param {Number} amount
     */
    removeGold(amount) {
       if (this.config.gold > amount) {
@@ -210,7 +289,7 @@ export default class {
    }
    /**
     * Send item to inventory
-    * @param {Object} item 
+    * @param {Object} item
     */
    sendToInventory(item) {
       this.config.inventory.push(item);
@@ -218,7 +297,7 @@ export default class {
    }
    /**
     * Removes item from inventory
-    * @param {Object} item 
+    * @param {Object} item
     */
    removeFromInventory(item) {
       this.config.inventory = _removeItem(this.config.inventory, item);
@@ -252,7 +331,7 @@ export default class {
    /**
     * Get rewards in loot bag
     */
-   getRewards(itemList) {
+   getRewards() {
       const LOOT_BAG = this.config.reward;
 
       if (LOOT_BAG.items.length) {
@@ -262,5 +341,12 @@ export default class {
       this.config.reward = { items: [], gold: 0 };
 
       return this;
+   }
+   /**
+    * Receive experience after killing monster
+    */
+   receiveExp(amount) {
+      this.config.experience += amount;
+      this._calculateLevel();
    }
 }
