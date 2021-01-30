@@ -3,10 +3,12 @@ import uniqid from "uniqid"
 const Modifier = () => {
    return {
       armor: 0,
-      luk: 0,
+
       str: 0,
       agi: 0,
       vit: 0,
+      dex: 0,
+      luk: 0,
 
       hit: 0,
       atk: 0,
@@ -67,17 +69,66 @@ export default class Knight {
       this.attributes = {
          cp: 0,
          hit: 10,
+
          str: 10,
-         vit: 10,
          agi: 10,
+         vit: 10,
+         dex: 10,
          luk: 10,
-         atk: 10,
-         def: 10,
-         hp: {
-            value: 10,
-            total: 10
-         }
+
+         def: 0,
+
+         hp: 100
       }
+   }
+   _calculateTotalDef() {
+      var { vit, agi } = this.attributes;
+      let attr = { vit, agi };
+
+      var { vit, agi, armor } = this.modifier;
+      let modAttr = { vit, agi, armor };
+
+      const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.level / 2));
+      this.attributes.def = Math.round((SOFT_DEF) * (1 + modAttr.armor / 100));
+   }
+   _calculateHealth() {
+      var { vit } = this.attributes;
+      let attr = { vit };
+
+      var { vit } = this.modifier;
+      let modAttr = { vit };
+
+      var BASE_HP = 100;
+      var BASE_LEVEL = this.level;
+
+      BASE_HP += this.level;
+
+      for (var i = 2; i <= BASE_LEVEL; i++) {
+         BASE_HP += Math.round((BASE_LEVEL * i) * .1);
+      }
+
+      var MAX_HP = BASE_HP;
+      var VIT = attr.vit + modAttr.vit;
+
+      var REDUCER_MOD = .01;
+
+      MAX_HP = Math.floor(MAX_HP * (1 + VIT * 0.01) * REDUCER_MOD);
+      this.attributes.hp = BASE_HP + MAX_HP;
+   }
+   _calculateHit() {
+      var { str, luk, dex } = this.attributes;
+      let attr = { str, luk, dex };
+
+      var { str, luk, dex } = this.modifier;
+      let modAttr = { str, luk, dex };
+
+      let totalStr = Math.floor(attr.str + modAttr.str);
+      let totalLuk = Math.floor(attr.luk + modAttr.luk);
+      let totalDex = Math.floor(attr.dex + modAttr.dex);
+
+      this.attributes.hit = Math.round(Math.floor(
+         (this.level / 4) + totalStr + (totalDex / 5) + (totalLuk / 3)
+      ));
    }
    _applyMod() {
       let itemsEquipped = {};
@@ -97,6 +148,9 @@ export default class Knight {
 
       this.modifier = { ...attr };
       this._calculateCP();
+      this._calculateHit();
+      this._calculateHealth();
+      this._calculateTotalDef();
    }
    _calculateCP() {
       let { cp, ...attr } = this.attributes;

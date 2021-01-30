@@ -40,6 +40,7 @@ export default function (app) {
                   })
 
                   knightUser.receiveReward(itemSprites, reward.gold);
+                  knightUser.receiveExp(reward.experience);
 
                   let { _id, ...knightData } = knightUser.config;
 

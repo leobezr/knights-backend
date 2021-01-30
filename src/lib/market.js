@@ -4,7 +4,7 @@ const itemPriceModifier = {
 }
 
 const itemLevelRule = (level, itemTier) => {
-   return level > Math.round(itemTier * (itemTier - 1) + ((itemTier - 1) / .3));
+   return level >= Math.round(itemTier * (itemTier - 1) + ((itemTier - 1) / .3));
 }
 
 export function sellItem(knight, item) {
