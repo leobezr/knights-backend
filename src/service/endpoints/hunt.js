@@ -9,7 +9,7 @@ export default function (app) {
       try {
          const DB = process.env.MONGO_SERVER;
          const DB_NAME = process.env.MONGO_DB_NAME;
-         const reward = await monsterLooter(req.body.id);
+         const reward = await monsterLooter(req.body);
          const itemList = await getItemList();
          var knightUser = null;
 

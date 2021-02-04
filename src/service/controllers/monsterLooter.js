@@ -28,7 +28,7 @@ async function getMonsterData(monsterId) {
                   if (monster) {
                      resolve(monster);
                   } else {
-                     reject("User not found");
+                     reject("Monster not found with the provided ID");
                   }
                })
             })
@@ -41,15 +41,23 @@ async function getMonsterData(monsterId) {
    })
 }
 
-export default async function (monsterId) {
-   let drop = await getMonsterData(monsterId);
+export default async function (reward) {
+   let lootbag = [];
+   let gold = 0;
+   let experience = 0;
 
    const rng = () => Math.random() * 100;
-   const goldRng = () => Math.floor(Math.random() * (drop.gold.max - drop.gold.min) + drop.gold.min);
+   const goldRng = (drop) => Math.floor(Math.random() * (drop.gold.max - drop.gold.min) + drop.gold.min);
 
-   let lootbag = drop.loot.filter(item => item.chance >= rng());
-   let gold = goldRng();
-   let experience = drop.experience;
+   for (let monsterId in reward) {
+      let drop = await getMonsterData(Number(monsterId));
+
+      for (let count = 0; count < reward[monsterId]; count++) {
+         lootbag = [...lootbag, ...drop.loot.filter(item => item.chance >= rng())];
+         gold += goldRng(drop);
+         experience += drop.experience;
+      }
+   }
 
    return {
       lootbag,
