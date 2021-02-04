@@ -36,7 +36,7 @@ export default class Knight {
          brew: Date.now(),
       }
 
-      this.honor = 0;
+      this.honor = 250;
 
       this.events = {
          dungeon: Date.now(),
@@ -61,6 +61,9 @@ export default class Knight {
       };
 
       this.modifier = { ...Modifier() };
+      this.misc = {
+         attackRange: 15
+      }
 
       this.inventory = [];
 
