@@ -8,6 +8,9 @@
             "view": "sprite/headgear/top/2229/2229_view.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 30,
@@ -26,6 +29,9 @@
             "view": "sprite/headgear/top/2254/2254_view.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 100,
                 "luk": 100,
@@ -44,6 +50,9 @@
             "view": "sprite/headgear/top/2280/2280_view.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 30,
@@ -64,6 +73,9 @@
             "view": "sprite/headgear/middle/5014/5014_view.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 30,
@@ -84,6 +96,9 @@
             "view": "sprite/headgear/lower/5361/5361_view.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 30,
@@ -101,6 +116,9 @@
             "sprite": "sprite/headgear/lower/5107/5107.gif",
             "view": "sprite/headgear/lower/5107/5107_view.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 30,
@@ -120,6 +138,9 @@
             "name": "Gold earing",
             "sprite": "sprite/accessories/2602.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 1,
@@ -137,6 +158,9 @@
             "name": "Diamond Ring",
             "sprite": "sprite/accessories/2613.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 3,
@@ -154,6 +178,9 @@
             "name": "Leather belt",
             "sprite": "sprite/accessories/2627.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 3,
@@ -171,6 +198,9 @@
             "name": "Pink scarf",
             "sprite": "sprite/accessories/2664.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 1,
@@ -188,6 +218,9 @@
             "name": "Gold ring",
             "sprite": "sprite/accessories/2672.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 5,
@@ -205,6 +238,9 @@
             "name": "Lucky horn",
             "sprite": "sprite/accessories/2702.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 8,
@@ -222,6 +258,9 @@
             "name": "Gold emblem",
             "sprite": "sprite/accessories/2708.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 2,
@@ -239,6 +278,9 @@
             "name": "Richman scarf",
             "sprite": "sprite/accessories/2727.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 10,
@@ -256,6 +298,9 @@
             "name": "Cult ring",
             "sprite": "sprite/accessories/2729.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 2,
@@ -273,6 +318,9 @@
             "name": "Necklace of fortune",
             "sprite": "sprite/accessories/2741.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 20
+            },
             "gold": 100,
             "attr": {
                 "armor": 0,
@@ -292,6 +340,9 @@
             "name": "Shirt",
             "sprite": "sprite/armor/5000.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 1,
@@ -309,6 +360,9 @@
             "name": "Pirate Shirt",
             "sprite": "sprite/armor/5001.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 2,
@@ -326,6 +380,9 @@
             "name": "Scale armor",
             "sprite": "sprite/armor/5016.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 4,
@@ -343,6 +400,9 @@
             "name": "Studded armor",
             "sprite": "sprite/armor/5002.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 5,
@@ -360,6 +420,9 @@
             "name": "Brass armor",
             "sprite": "sprite/armor/5017.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 7,
@@ -377,6 +440,9 @@
             "name": "Plate armor",
             "sprite": "sprite/armor/5004.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 12,
@@ -394,6 +460,9 @@
             "name": "Magic tunic",
             "sprite": "sprite/armor/5015.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 12,
@@ -411,6 +480,9 @@
             "name": "Native armor",
             "sprite": "sprite/armor/5021.gif",
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "gold": 100,
             "attr": {
                 "armor": 21,
@@ -429,6 +501,9 @@
             "sprite": "sprite/armor/5005.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 23,
                 "luk": 0,
@@ -446,6 +521,9 @@
             "sprite": "sprite/armor/5003.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 25,
                 "luk": 0,
@@ -463,6 +541,9 @@
             "sprite": "sprite/armor/5010.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 27,
                 "luk": 0,
@@ -480,6 +561,9 @@
             "sprite": "sprite/armor/5008.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 25,
                 "luk": 0,
@@ -497,6 +581,9 @@
             "sprite": "sprite/armor/5020.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 0,
@@ -514,6 +601,9 @@
             "sprite": "sprite/armor/5007.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 35,
                 "luk": 0,
@@ -531,6 +621,9 @@
             "sprite": "sprite/armor/5022.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 40,
                 "luk": 0,
@@ -548,6 +641,9 @@
             "sprite": "sprite/armor/5006.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 45,
                 "luk": 0,
@@ -565,6 +661,9 @@
             "sprite": "sprite/armor/5018.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 69,
                 "luk": 0,
@@ -582,6 +681,9 @@
             "sprite": "sprite/armor/5009.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 75,
                 "luk": 0,
@@ -599,6 +701,9 @@
             "sprite": "sprite/armor/5014.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 90,
                 "luk": 0,
@@ -616,6 +721,9 @@
             "sprite": "sprite/armor/5023.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 90,
                 "luk": 0,
@@ -633,6 +741,9 @@
             "sprite": "sprite/armor/5013.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 90,
                 "luk": 0,
@@ -650,6 +761,9 @@
             "sprite": "sprite/armor/5012.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 150,
                 "luk": 0,
@@ -667,6 +781,9 @@
             "sprite": "sprite/armor/5011.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 300,
                 "luk": 50,
@@ -686,6 +803,9 @@
             "sprite": "sprite/legs/6000.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -703,6 +823,9 @@
             "sprite": "sprite/legs/6013.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -720,6 +843,9 @@
             "sprite": "sprite/legs/6001.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 3,
                 "luk": 0,
@@ -737,6 +863,9 @@
             "sprite": "sprite/legs/6014.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 6,
                 "luk": 0,
@@ -754,6 +883,9 @@
             "sprite": "sprite/legs/6016.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 12,
                 "luk": 0,
@@ -771,6 +903,9 @@
             "sprite": "sprite/legs/6008.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 22,
                 "luk": 0,
@@ -788,6 +923,9 @@
             "sprite": "sprite/legs/6005.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 25,
                 "luk": 0,
@@ -805,6 +943,9 @@
             "sprite": "sprite/legs/6009.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 25,
                 "luk": 0,
@@ -822,6 +963,9 @@
             "sprite": "sprite/legs/6015.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 28,
                 "luk": 0,
@@ -839,6 +983,9 @@
             "sprite": "sprite/legs/6006.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 35,
                 "luk": 0,
@@ -856,6 +1003,9 @@
             "sprite": "sprite/legs/6003.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 40,
                 "luk": 0,
@@ -873,6 +1023,9 @@
             "sprite": "sprite/legs/6004.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 70,
                 "luk": 0,
@@ -890,6 +1043,9 @@
             "sprite": "sprite/legs/6010.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 80,
                 "luk": 0,
@@ -907,6 +1063,9 @@
             "sprite": "sprite/legs/6012.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 150,
                 "luk": 0,
@@ -924,6 +1083,9 @@
             "sprite": "sprite/legs/6011.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 300,
                 "luk": 0,
@@ -943,6 +1105,9 @@
             "sprite": "sprite/footgear/8000.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 1,
                 "luk": 0,
@@ -1172,6 +1337,9 @@
             "sprite": "sprite/shields/7000.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 10,
                 "luk": 0,
@@ -1189,6 +1357,9 @@
             "sprite": "sprite/shields/7001.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 15,
                 "luk": 0,
@@ -1206,6 +1377,9 @@
             "sprite": "sprite/shields/7002.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 30,
                 "luk": 0,
@@ -1223,6 +1397,9 @@
             "sprite": "sprite/shields/7003.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 35,
                 "luk": 0,
@@ -1240,6 +1417,9 @@
             "sprite": "sprite/shields/7004.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 40,
                 "luk": 0,
@@ -1257,6 +1437,9 @@
             "sprite": "sprite/shields/7005.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 50,
                 "luk": 0,
@@ -1274,6 +1457,9 @@
             "sprite": "sprite/shields/7008.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 65,
                 "luk": 0,
@@ -1291,6 +1477,9 @@
             "sprite": "sprite/shields/7012.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 95,
                 "luk": 0,
@@ -1308,6 +1497,9 @@
             "sprite": "sprite/shields/7010.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 110,
                 "luk": 0,
@@ -1325,6 +1517,9 @@
             "sprite": "sprite/shields/7016.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 150,
                 "luk": 0,
@@ -1342,6 +1537,9 @@
             "sprite": "sprite/shields/7017.gif",
             "gold": 100,
             "refinement": 0,
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 300,
                 "luk": 50,
@@ -1355,12 +1553,37 @@
     ],
     "weapons": [
         {
+            "id": 3000,
+            "type": "weapon",
+            "name": "Bow",
+            "sprite": "sprite/archery/3000.gif",
+            "gold": 100,
+            "refinement": 0,
+            "combat": "ranged",
+            "misc": {
+                "attackRange": 300
+            },
+            "attr": {
+                "armor": 0,
+                "luk": 0,
+                "str": 10,
+                "agi": 0,
+                "dex": 0,
+                "vit": 0
+            },
+            "tier": 1
+        },
+        {
             "id": 1000,
             "type": "weapon",
             "name": "Rapier",
             "sprite": "sprite/weapons/1000.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1378,6 +1601,10 @@
             "sprite": "sprite/weapons/1001.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1395,6 +1622,10 @@
             "sprite": "sprite/weapons/1010.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1412,6 +1643,10 @@
             "sprite": "sprite/weapons/1009.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1429,6 +1664,10 @@
             "sprite": "sprite/weapons/1012.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1446,6 +1685,10 @@
             "sprite": "sprite/weapons/1002.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 0,
@@ -1463,6 +1706,10 @@
             "sprite": "sprite/weapons/1017.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 20,
                 "luk": 0,
@@ -1480,6 +1727,10 @@
             "sprite": "sprite/weapons/1013.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 50,
@@ -1497,6 +1748,10 @@
             "sprite": "sprite/weapons/1005.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 0,
                 "luk": 50,
@@ -1514,6 +1769,10 @@
             "sprite": "sprite/weapons/1006.gif",
             "gold": 100,
             "refinement": 0,
+            "combat": "melee",
+            "misc": {
+                "attackRange": 0
+            },
             "attr": {
                 "armor": 100,
                 "luk": 50,

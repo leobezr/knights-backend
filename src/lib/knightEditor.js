@@ -64,8 +64,8 @@ export default class {
       var { vit, agi, armor } = this.config.modifier;
       let modAttr = { vit, agi, armor };
 
-      const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.config.level / 2));
-      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + modAttr.armor / 10));
+      const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.config.level / 10));
+      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + (modAttr.armor * .01)));
    }
    /**
     * Max health calculation
@@ -83,7 +83,7 @@ export default class {
       BASE_HP += this.config.level;
 
       for (var i = 2; i <= BASE_LEVEL; i++) {
-         BASE_HP += Math.round((BASE_LEVEL * i) * .1);
+         BASE_HP += Math.round((BASE_LEVEL * i) * .03);
       }
 
       var MAX_HP = BASE_HP;
@@ -151,6 +151,19 @@ export default class {
       ));
    }
    /**
+    * @returns Amount of attack speed equipped
+    */
+   _calculateAR(equipped) {
+      let totalAR = 15;
+
+      if (equipped) {
+         for (let item in equipped) {
+            if (equipped[item].misc) totalAR += equipped[item].misc.attackRange;
+         }
+      }
+      return totalAR;
+   }
+   /**
     * Apply all mods and calculate final scores
     */
    _applyMod() {
@@ -170,6 +183,7 @@ export default class {
       }
 
       this.config.modifier = { ...attr };
+      this.config.misc.attackRange = this._calculateAR(itemsEquipped);
 
       this._calculateCP();
       this._calculateHit();
