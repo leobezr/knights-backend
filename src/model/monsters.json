@@ -2,50 +2,73 @@
   {
     "id": 10001,
     "name": "Poring",
-    "experience": 150,
+    "experience": 20,
     "loot": [
       {
-        "id": 1000,
-        "chance": 5
+        "id": 5016,
+        "chance": 1
       }
     ],
     "gold": {
-      "min": 15,
-      "max": 35
+      "min": 0,
+      "max": 3
     }
   },
   {
     "id": 10002,
-    "name": "Zombie",
-    "experience": 550,
+    "name": "Drops",
+    "experience": 50,
     "loot": [
       {
-        "id": 7001,
-        "chance": 10
+        "id": 5016,
+        "chance": 3
       },
       {
-        "id": 5001,
-        "chance": 8
+        "id": 6001,
+        "chance": 3
       }
     ],
     "gold": {
-      "min": 35,
-      "max": 60
+      "min": 3,
+      "max": 9
     }
   },
   {
     "id": 10003,
-    "name": "Loki",
-    "experience": 2000,
+    "name": "Arc Angeling",
+    "experience": 150,
     "loot": [
       {
-        "id": 1012,
-        "chance": 20
+        "id": 1001,
+        "chance": 5
+      },
+      {
+        "id": 3001,
+        "chance": 5
       }
     ],
     "gold": {
-      "min": 100,
-      "max": 215
+      "min": 9,
+      "max": 15
+    }
+  },
+  {
+    "id": 10004,
+    "name": "King Poring",
+    "experience": 1,
+    "loot": [
+      {
+        "id": 5004,
+        "chance": 5
+      },
+      {
+        "id": 6014,
+        "chance": 5
+      }
+    ],
+    "gold": {
+      "min": 50,
+      "max": 100
     }
   }
 ]
