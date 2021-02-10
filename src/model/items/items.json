@@ -15,14 +15,17 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 80,
-            "luk": 0,
-            "str": 50,
-            "agi": 10,
-            "dex": 0,
-            "vit": 80
+            "armor": 30,
+            "luk": 12,
+            "str": 12,
+            "agi": 12,
+            "dex": 12,
+            "vit": 12
          },
-         "vocationRequired": ["knight", "swordman"],
+         "vocationRequired": [
+            "knight",
+            "swordman"
+         ],
          "tier": 6
       },
       {
@@ -40,12 +43,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 40,
-            "luk": 0,
-            "str": 15,
-            "agi": 40,
-            "dex": 40,
-            "vit": 0
+            "armor": 15,
+            "luk": 8,
+            "str": 8,
+            "agi": 8,
+            "dex": 8,
+            "vit": 8
          },
          "vocationRequired": false,
          "tier": 3
@@ -58,7 +61,7 @@
          "name": "Fin",
          "sprite": "sprite/headgear/middle/5014/5014.gif",
          "view": "sprite/headgear/middle/5014/5014_view.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "headgear-middle"
          ],
@@ -67,12 +70,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 30,
-            "luk": 30,
-            "str": 30,
-            "agi": 30,
-            "dex": 0,
-            "vit": 30
+            "armor": 15,
+            "luk": 8,
+            "str": 8,
+            "agi": 8,
+            "dex": 8,
+            "vit": 8
          },
          "vocationRequired": false,
          "tier": 5
@@ -85,7 +88,7 @@
          "name": "Bandit scarf",
          "sprite": "sprite/headgear/lower/5361/5361.gif",
          "view": "sprite/headgear/lower/5361/5361_view.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "headgear-lower"
          ],
@@ -94,12 +97,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 30,
-            "luk": 30,
-            "str": 30,
-            "agi": 30,
-            "dex": 0,
-            "vit": 30
+            "armor": 0,
+            "luk": 12,
+            "str": 12,
+            "agi": 12,
+            "dex": 12,
+            "vit": 12
          },
          "vocationRequired": false,
          "tier": 8
@@ -114,17 +117,17 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "headgear-lower"
          ],
          "attr": {
-            "armor": 30,
-            "luk": 30,
-            "str": 30,
-            "agi": 30,
-            "dex": 0,
-            "vit": 30
+            "armor": 0,
+            "luk": 15,
+            "str": 15,
+            "agi": 15,
+            "dex": 15,
+            "vit": 15
          },
          "vocationRequired": false,
          "tier": 10
@@ -147,9 +150,9 @@
          "attr": {
             "armor": 5,
             "luk": 0,
-            "str": 5,
+            "str": 1,
             "agi": 0,
-            "dex": 5,
+            "dex": 1,
             "vit": 0
          },
          "vocationRequired": false,
@@ -169,12 +172,12 @@
             "accessories"
          ],
          "attr": {
-            "armor": 20,
-            "luk": 0,
-            "str": 5,
-            "agi": 5,
-            "dex": 5,
-            "vit": 0
+            "armor": 5,
+            "luk": 1,
+            "str": 1,
+            "agi": 1,
+            "dex": 1,
+            "vit": 1
          },
          "vocationRequired": false,
          "tier": 2
@@ -193,12 +196,12 @@
             "accessories"
          ],
          "attr": {
-            "armor": 35,
-            "luk": 0,
-            "str": 8,
-            "agi": 8,
-            "dex": 8,
-            "vit": 0
+            "armor": 5,
+            "luk": 2,
+            "str": 2,
+            "agi": 2,
+            "dex": 2,
+            "vit": 2
          },
          "vocationRequired": false,
          "tier": 3
@@ -212,17 +215,17 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "accessories"
          ],
          "attr": {
-            "armor": 45,
-            "luk": 0,
-            "str": 12,
-            "agi": 12,
-            "dex": 12,
-            "vit": 0
+            "armor": 7,
+            "luk": 3,
+            "str": 3,
+            "agi": 3,
+            "dex": 3,
+            "vit": 3
          },
          "vocationRequired": false,
          "tier": 4
@@ -236,17 +239,17 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "accessories"
          ],
          "attr": {
-            "armor": 65,
-            "luk": 0,
-            "str": 15,
-            "agi": 15,
-            "dex": 15,
-            "vit": 1
+            "armor": 7,
+            "luk": 5,
+            "str": 5,
+            "agi": 5,
+            "dex": 5,
+            "vit": 5
          },
          "vocationRequired": false,
          "tier": 5
@@ -260,17 +263,17 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 10000,
          "slot": [
             "accessories"
          ],
          "attr": {
-            "armor": 75,
-            "luk": 0,
-            "str": 18,
-            "agi": 18,
-            "dex": 18,
-            "vit": 0
+            "armor": 9,
+            "luk": 5,
+            "str": 7,
+            "agi": 5,
+            "dex": 7,
+            "vit": 5
          },
          "vocationRequired": false,
          "tier": 6
@@ -284,17 +287,17 @@
          "misc": {
             "attackRange": 8
          },
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "accessories"
          ],
          "attr": {
-            "armor": 80,
-            "luk": 0,
-            "str": 21,
-            "agi": 21,
-            "dex": 21,
-            "vit": 0
+            "armor": 15,
+            "luk": 5,
+            "str": 10,
+            "agi": 8,
+            "dex": 10,
+            "vit": 5
          },
          "vocationRequired": false,
          "tier": 7
@@ -308,17 +311,17 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 18000,
          "slot": [
             "accessories"
          ],
          "attr": {
-            "armor": 80,
-            "luk": 0,
-            "str": 24,
-            "agi": 24,
-            "dex": 24,
-            "vit": 0
+            "armor": 18,
+            "luk": 8,
+            "str": 13,
+            "agi": 8,
+            "dex": 13,
+            "vit": 8
          },
          "vocationRequired": false,
          "tier": 8
@@ -337,12 +340,12 @@
             "accessories"
          ],
          "attr": {
-            "armor": 80,
-            "luk": 0,
-            "str": 27,
-            "agi": 27,
-            "dex": 27,
-            "vit": 0
+            "armor": 20,
+            "luk": 13,
+            "str": 15,
+            "agi": 13,
+            "dex": 15,
+            "vit": 13
          },
          "vocationRequired": false,
          "tier": 9
@@ -361,14 +364,19 @@
             "accessories"
          ],
          "attr": {
-            "armor": 50,
-            "luk": 0,
-            "str": 0,
-            "agi": 40,
-            "dex": 40,
-            "vit": 0
+            "armor": 20,
+            "luk": 25,
+            "str": 8,
+            "agi": 25,
+            "dex": 25,
+            "vit": 8
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 10
       },
       {
@@ -385,12 +393,12 @@
             "accessories"
          ],
          "attr": {
-            "armor": 90,
-            "luk": 0,
-            "str": 40,
-            "agi": 40,
-            "dex": 0,
-            "vit": 30
+            "armor": 35,
+            "luk": 10,
+            "str": 25,
+            "agi": 25,
+            "dex": 10,
+            "vit": 25
          },
          "vocationRequired": false,
          "tier": 10
@@ -483,10 +491,10 @@
             "armor"
          ],
          "attr": {
-            "armor": 25,
+            "armor": 28,
             "luk": 0,
-            "str": 8,
-            "agi": 8,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -502,19 +510,24 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "armor"
          ],
          "attr": {
-            "armor": 25,
+            "armor": 18,
             "luk": 0,
             "str": 0,
-            "agi": 12,
-            "dex": 12,
+            "agi": 5,
+            "dex": 5,
             "vit": 0
          },
-         "vocationRequired": false,
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 3
       },
       {
@@ -526,15 +539,15 @@
          "misc": {
             "attackRange": 0
          },
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "armor"
          ],
          "attr": {
-            "armor": 40,
+            "armor": 35,
             "luk": 0,
-            "str": 15,
-            "agi": 15,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -546,7 +559,7 @@
          "type": "armor",
          "name": "Blue robe",
          "sprite": "sprite/armor/5005.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "armor"
          ],
@@ -555,11 +568,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 20,
+            "armor": 25,
             "luk": 0,
             "str": 0,
-            "agi": 18,
-            "dex": 18,
+            "agi": 0,
+            "dex": 5,
             "vit": 0
          },
          "vocationRequired": false,
@@ -570,7 +583,36 @@
          "type": "armor",
          "name": "Elven mail",
          "sprite": "sprite/armor/5003.gif",
-         "gold": 100,
+         "gold": 5500,
+         "slot": [
+            "armor"
+         ],
+         "refinement": 0,
+         "misc": {
+            "attackRange": 0
+         },
+         "attr": {
+            "armor": 25,
+            "luk": 0,
+            "str": 0,
+            "agi": 8,
+            "dex": 8,
+            "vit": 0
+         },
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
+         "tier": 5
+      },
+      {
+         "id": 5010,
+         "type": "armor",
+         "name": "Knight armor",
+         "sprite": "sprite/armor/5010.gif",
+         "gold": 5000,
          "slot": [
             "armor"
          ],
@@ -581,34 +623,10 @@
          "attr": {
             "armor": 45,
             "luk": 0,
-            "str": 0,
-            "agi": 24,
-            "dex": 24,
-            "vit": 0
-         },
-         "vocationRequired": false,
-         "tier": 5
-      },
-      {
-         "id": 5010,
-         "type": "armor",
-         "name": "Knight armor",
-         "sprite": "sprite/armor/5010.gif",
-         "gold": 100,
-         "slot": [
-            "armor"
-         ],
-         "refinement": 0,
-         "misc": {
-            "attackRange": 0
-         },
-         "attr": {
-            "armor": 60,
-            "luk": 0,
-            "str": 21,
-            "agi": 21,
+            "str": 5,
+            "agi": 0,
             "dex": 0,
-            "vit": 0
+            "vit": 5
          },
          "vocationRequired": false,
          "tier": 5
@@ -618,7 +636,7 @@
          "type": "armor",
          "name": "Golden armor",
          "sprite": "sprite/armor/5008.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "armor"
          ],
@@ -627,12 +645,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 50,
+            "armor": 55,
             "luk": 0,
-            "str": 15,
-            "agi": 15,
-            "dex": 15,
-            "vit": 15
+            "str": 0,
+            "agi": 0,
+            "dex": 0,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 5
@@ -642,7 +660,7 @@
          "type": "armor",
          "name": "Dragon scale mail",
          "sprite": "sprite/armor/5020.gif",
-         "gold": 100,
+         "gold": 6500,
          "slot": [
             "armor"
          ],
@@ -651,11 +669,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 60,
+            "armor": 30,
             "luk": 0,
             "str": 0,
-            "agi": 25,
-            "dex": 25,
+            "agi": 12,
+            "dex": 8,
             "vit": 0
          },
          "vocationRequired": false,
@@ -666,7 +684,7 @@
          "type": "armor",
          "name": "Crown armor",
          "sprite": "sprite/armor/5007.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "armor"
          ],
@@ -675,12 +693,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 90,
+            "armor": 60,
             "luk": 0,
-            "str": 22,
-            "agi": 22,
+            "str": 5,
+            "agi": 8,
             "dex": 0,
-            "vit": 22
+            "vit": 8
          },
          "vocationRequired": false,
          "tier": 6
@@ -690,31 +708,7 @@
          "type": "armor",
          "name": "Dwarven armor",
          "sprite": "sprite/armor/5022.gif",
-         "gold": 100,
-         "slot": [
-            "armor"
-         ],
-         "refinement": 0,
-         "misc": {
-            "attackRange": 0
-         },
-         "attr": {
-            "armor": 90,
-            "luk": 0,
-            "str": 35,
-            "agi": 35,
-            "dex": 35,
-            "vit": 35
-         },
-         "vocationRequired": false,
-         "tier": 7
-      },
-      {
-         "id": 5006,
-         "type": "armor",
-         "name": "Nightmare armor",
-         "sprite": "sprite/armor/5006.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "armor"
          ],
@@ -725,10 +719,34 @@
          "attr": {
             "armor": 70,
             "luk": 0,
-            "str": 65,
-            "agi": 65,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
             "vit": 0
+         },
+         "vocationRequired": false,
+         "tier": 7
+      },
+      {
+         "id": 5006,
+         "type": "armor",
+         "name": "Nightmare armor",
+         "sprite": "sprite/armor/5006.gif",
+         "gold": 8500,
+         "slot": [
+            "armor"
+         ],
+         "refinement": 0,
+         "misc": {
+            "attackRange": 0
+         },
+         "attr": {
+            "armor": 65,
+            "luk": 5,
+            "str": 9,
+            "agi": 9,
+            "dex": 5,
+            "vit": 9
          },
          "vocationRequired": false,
          "tier": 7
@@ -738,7 +756,7 @@
          "type": "armor",
          "name": "Royal draken mail",
          "sprite": "sprite/armor/5018.gif",
-         "gold": 100,
+         "gold": 8500,
          "slot": [
             "armor"
          ],
@@ -747,12 +765,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 125,
+            "armor": 35,
             "luk": 0,
-            "str": 40,
-            "agi": 40,
-            "dex": 0,
-            "vit": 20
+            "str": 0,
+            "agi": 12,
+            "dex": 12,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 7
@@ -762,7 +780,7 @@
          "type": "armor",
          "name": "Ornate plate",
          "sprite": "sprite/armor/5009.gif",
-         "gold": 100,
+         "gold": 9500,
          "slot": [
             "armor"
          ],
@@ -771,12 +789,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 120,
-            "luk": 0,
-            "str": 50,
-            "agi": 50,
-            "dex": 50,
-            "vit": 50
+            "armor": 78,
+            "luk": 9,
+            "str": 9,
+            "agi": 9,
+            "dex": 9,
+            "vit": 9
          },
          "vocationRequired": false,
          "tier": 8
@@ -786,7 +804,7 @@
          "type": "armor",
          "name": "Demon armor",
          "sprite": "sprite/armor/5014.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "armor"
          ],
@@ -795,12 +813,12 @@
             "attackRange": 50
          },
          "attr": {
-            "armor": 90,
+            "armor": 45,
             "luk": 0,
-            "str": 80,
-            "agi": 80,
-            "dex": 0,
-            "vit": 10
+            "str": 0,
+            "agi": 12,
+            "dex": 15,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 8
@@ -810,7 +828,7 @@
          "type": "armor",
          "name": "Samurai plate",
          "sprite": "sprite/armor/5023.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "armor"
          ],
@@ -819,12 +837,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 165,
+            "armor": 9500,
             "luk": 0,
-            "str": 65,
-            "agi": 65,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
-            "vit": 45
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 8
@@ -834,7 +852,7 @@
          "type": "armor",
          "name": "Amazon armor",
          "sprite": "sprite/armor/5013.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "armor"
          ],
@@ -843,12 +861,12 @@
             "attackRange": 50
          },
          "attr": {
-            "armor": 120,
-            "luk": 0,
+            "armor": 58,
+            "luk": 12,
             "str": 0,
-            "agi": 150,
-            "dex": 150,
-            "vit": 50
+            "agi": 12,
+            "dex": 25,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 9
@@ -858,7 +876,7 @@
          "type": "armor",
          "name": "Soulshell",
          "sprite": "sprite/armor/5012.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "armor"
          ],
@@ -867,12 +885,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 250,
-            "luk": 0,
-            "str": 80,
-            "agi": 80,
-            "dex": 0,
-            "vit": 80
+            "armor": 110,
+            "luk": 15,
+            "str": 15,
+            "agi": 15,
+            "dex": 15,
+            "vit": 15
          },
          "vocationRequired": false,
          "tier": 9
@@ -882,21 +900,21 @@
          "type": "armor",
          "name": "Falcon plate",
          "sprite": "sprite/armor/5011.gif",
-         "gold": 100,
+         "gold": 20000,
          "slot": [
             "armor"
          ],
          "refinement": 0,
          "misc": {
-            "attackRange": 0
+            "attackRange": 80
          },
          "attr": {
-            "armor": 300,
-            "luk": 0,
-            "str": 200,
-            "agi": 200,
-            "dex": 200,
-            "vit": 200
+            "armor": 110,
+            "luk": 25,
+            "str": 25,
+            "agi": 25,
+            "dex": 25,
+            "vit": 25
          },
          "vocationRequired": false,
          "tier": 10
@@ -965,7 +983,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 15,
+            "armor": 18,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -989,11 +1007,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 15,
+            "armor": 18,
             "luk": 0,
             "str": 0,
-            "agi": 12,
-            "dex": 12,
+            "agi": 2,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1004,7 +1022,7 @@
          "type": "legs",
          "name": "Plate legs",
          "sprite": "sprite/legs/6014.gif",
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "legs"
          ],
@@ -1015,9 +1033,9 @@
          "attr": {
             "armor": 25,
             "luk": 0,
-            "str": 8,
-            "agi": 8,
-            "dex": 8,
+            "str": 0,
+            "agi": 0,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1028,7 +1046,7 @@
          "type": "legs",
          "name": "Blue legs",
          "sprite": "sprite/legs/6008.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "legs"
          ],
@@ -1037,11 +1055,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 20,
+            "armor": 26,
             "luk": 0,
             "str": 0,
-            "agi": 21,
-            "dex": 21,
+            "agi": 3,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1052,7 +1070,7 @@
          "type": "legs",
          "name": "Knight legs",
          "sprite": "sprite/legs/6005.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "legs"
          ],
@@ -1061,10 +1079,10 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 60,
+            "armor": 32,
             "luk": 0,
-            "str": 18,
-            "agi": 18,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -1076,7 +1094,7 @@
          "type": "legs",
          "name": "Golden legs",
          "sprite": "sprite/legs/6009.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "legs"
          ],
@@ -1085,11 +1103,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 75,
-            "luk": 0,
-            "str": 15,
-            "agi": 15,
-            "dex": 24,
+            "armor": 35,
+            "luk": 5,
+            "str": 0,
+            "agi": 5,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1100,7 +1118,7 @@
          "type": "legs",
          "name": "Dragon scale legs",
          "sprite": "sprite/legs/6015.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "legs"
          ],
@@ -1109,11 +1127,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 60,
+            "armor": 32,
             "luk": 0,
             "str": 0,
-            "agi": 25,
-            "dex": 25,
+            "agi": 5,
+            "dex": 8,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1124,7 +1142,7 @@
          "type": "legs",
          "name": "Crown legs",
          "sprite": "sprite/legs/6006.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "legs"
          ],
@@ -1133,12 +1151,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 90,
+            "armor": 45,
             "luk": 0,
-            "str": 22,
-            "agi": 22,
+            "str": 0,
+            "agi": 0,
             "dex": 0,
-            "vit": 22
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 6
@@ -1148,7 +1166,7 @@
          "type": "legs",
          "name": "Dwarven legs",
          "sprite": "sprite/legs/6003.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "legs"
          ],
@@ -1157,12 +1175,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 200,
+            "armor": 48,
             "luk": 0,
-            "str": 35,
-            "agi": 35,
-            "dex": 35,
-            "vit": 35
+            "str": 0,
+            "agi": 8,
+            "dex": 0,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 7
@@ -1172,7 +1190,7 @@
          "type": "legs",
          "name": "Ornate Legs",
          "sprite": "sprite/legs/6004.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "legs"
          ],
@@ -1181,12 +1199,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 165,
+            "armor": 52,
             "luk": 0,
-            "str": 65,
-            "agi": 65,
-            "dex": 0,
-            "vit": 45
+            "str": 9,
+            "agi": 9,
+            "dex": 9,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 8
@@ -1196,7 +1214,7 @@
          "type": "legs",
          "name": "Demon Legs",
          "sprite": "sprite/legs/6010.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "legs"
          ],
@@ -1205,11 +1223,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 90,
+            "armor": 58,
             "luk": 0,
-            "str": 0,
-            "agi": 80,
-            "dex": 80,
+            "str": 9,
+            "agi": 11,
+            "dex": 9,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1220,21 +1238,21 @@
          "type": "legs",
          "name": "Soulstrider",
          "sprite": "sprite/legs/6012.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "legs"
          ],
          "refinement": 0,
          "misc": {
-            "attackRange": 0
+            "attackRange": 20
          },
          "attr": {
-            "armor": 150,
+            "armor": 62,
             "luk": 0,
-            "str": 80,
-            "agi": 150,
-            "dex": 150,
-            "vit": 40
+            "str": 9,
+            "agi": 18,
+            "dex": 9,
+            "vit": 9
          },
          "vocationRequired": false,
          "tier": 9
@@ -1242,9 +1260,9 @@
       {
          "id": 6011,
          "type": "legs",
-         "name": "Soulstrider",
+         "name": "Falcon Legs",
          "sprite": "sprite/legs/6011.gif",
-         "gold": 100,
+         "gold": 20000,
          "slot": [
             "legs"
          ],
@@ -1253,12 +1271,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 300,
-            "luk": 0,
-            "str": 200,
-            "agi": 200,
-            "dex": 200,
-            "vit": 200
+            "armor": 70,
+            "luk": 25,
+            "str": 25,
+            "agi": 25,
+            "dex": 25,
+            "vit": 25
          },
          "vocationRequired": false,
          "tier": 10
@@ -1279,7 +1297,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 5,
+            "armor": 2,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1300,14 +1318,19 @@
             "footgear"
          ],
          "attr": {
-            "armor": 5,
+            "armor": 900,
             "luk": 0,
             "str": 0,
             "agi": 900,
             "dex": 900,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 10
       },
       {
@@ -1321,7 +1344,7 @@
             "footgear"
          ],
          "attr": {
-            "armor": 5,
+            "armor": 900,
             "luk": 0,
             "str": 900,
             "agi": 900,
@@ -1341,11 +1364,11 @@
             "footgear"
          ],
          "attr": {
-            "armor": 10,
+            "armor": 5,
             "luk": 0,
-            "str": 20,
-            "agi": 20,
-            "dex": 20,
+            "str": 5,
+            "agi": 0,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1356,16 +1379,16 @@
          "type": "footgear",
          "name": "Pirate boots",
          "sprite": "sprite/footgear/8010.gif",
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 30,
+            "armor": 8,
             "luk": 0,
-            "str": 25,
-            "agi": 25,
-            "dex": 25,
+            "str": 0,
+            "agi": 8,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1376,16 +1399,16 @@
          "type": "footgear",
          "name": "Steel boots",
          "sprite": "sprite/footgear/8013.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 50,
+            "armor": 10,
             "luk": 0,
-            "str": 30,
-            "agi": 30,
-            "dex": 30,
+            "str": 0,
+            "agi": 12,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1396,16 +1419,16 @@
          "type": "footgear",
          "name": "Winged boots",
          "sprite": "sprite/footgear/8004.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 65,
+            "armor": 12,
             "luk": 0,
-            "str": 35,
-            "agi": 35,
-            "dex": 35,
+            "str": 0,
+            "agi": 15,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1416,16 +1439,16 @@
          "type": "footgear",
          "name": "Void boots",
          "sprite": "sprite/footgear/8009.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 70,
+            "armor": 18,
             "luk": 0,
-            "str": 40,
-            "agi": 40,
-            "dex": 40,
+            "str": 0,
+            "agi": 18,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1436,16 +1459,16 @@
          "type": "footgear",
          "name": "Badger Boots",
          "sprite": "sprite/footgear/8014.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 80,
+            "armor": 30,
             "luk": 0,
-            "str": 45,
-            "agi": 45,
-            "dex": 45,
+            "str": 0,
+            "agi": 0,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1456,17 +1479,17 @@
          "type": "footgear",
          "name": "Enchanted boots",
          "sprite": "sprite/footgear/8020.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 90,
-            "luk": 0,
-            "str": 50,
-            "agi": 50,
-            "dex": 50,
-            "vit": 15
+            "armor": 18,
+            "luk": 10,
+            "str": 0,
+            "agi": 25,
+            "dex": 0,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 7
@@ -1476,17 +1499,17 @@
          "type": "footgear",
          "name": "Pair of Soulstalkers",
          "sprite": "sprite/footgear/8018.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "footgear"
          ],
          "attr": {
-            "armor": 120,
-            "luk": 0,
-            "str": 70,
-            "agi": 70,
-            "dex": 70,
-            "vit": 35
+            "armor": 35,
+            "luk": 5,
+            "str": 0,
+            "agi": 18,
+            "dex": 0,
+            "vit": 5
          },
          "vocationRequired": false,
          "tier": 8
@@ -1501,14 +1524,19 @@
             "footgear"
          ],
          "attr": {
-            "armor": 150,
+            "armor": 30,
             "luk": 0,
-            "str": 90,
-            "agi": 90,
-            "dex": 0,
-            "vit": 60
+            "str": 0,
+            "agi": 22,
+            "dex": 10,
+            "vit": 0
          },
-         "vocationRequired": false,
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 9
       },
       {
@@ -1521,11 +1549,11 @@
             "footgear"
          ],
          "attr": {
-            "armor": 80,
+            "armor": 60,
             "luk": 0,
             "str": 0,
-            "agi": 90,
-            "dex": 120,
+            "agi": 12,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1541,12 +1569,12 @@
             "footgear"
          ],
          "attr": {
-            "armor": 300,
-            "luk": 200,
-            "str": 200,
-            "agi": 200,
-            "dex": 200,
-            "vit": 200
+            "armor": 65,
+            "luk": 18,
+            "str": 18,
+            "agi": 18,
+            "dex": 18,
+            "vit": 18
          },
          "vocationRequired": false,
          "tier": 10
@@ -1567,7 +1595,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 35,
+            "armor": 18,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1591,7 +1619,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 50,
+            "armor": 22,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1606,7 +1634,7 @@
          "type": "shield",
          "name": "Brass shield",
          "sprite": "sprite/shields/7002.gif",
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "shield"
          ],
@@ -1615,7 +1643,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 75,
+            "armor": 25,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1630,7 +1658,7 @@
          "type": "shield",
          "name": "Knight shield",
          "sprite": "sprite/shields/7003.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "shield"
          ],
@@ -1639,7 +1667,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 90,
+            "armor": 28,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1654,7 +1682,7 @@
          "type": "shield",
          "name": "Dwarven shield",
          "sprite": "sprite/shields/7004.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "shield"
          ],
@@ -1663,7 +1691,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 115,
+            "armor": 35,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1678,7 +1706,7 @@
          "type": "shield",
          "name": "Castle shield",
          "sprite": "sprite/shields/7005.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "shield"
          ],
@@ -1687,7 +1715,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 130,
+            "armor": 38,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1702,7 +1730,7 @@
          "type": "shield",
          "name": "Crown shield",
          "sprite": "sprite/shields/7008.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "shield"
          ],
@@ -1711,7 +1739,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 145,
+            "armor": 45,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1726,7 +1754,7 @@
          "type": "shield",
          "name": "Nightmare shield",
          "sprite": "sprite/shields/7012.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "shield"
          ],
@@ -1735,7 +1763,7 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 160,
+            "armor": 60,
             "luk": 0,
             "str": 0,
             "agi": 0,
@@ -1750,7 +1778,7 @@
          "type": "shield",
          "name": "Demon shield",
          "sprite": "sprite/shields/7010.gif",
-         "gold": 100,
+         "gold": 9000,
          "slot": [
             "shield"
          ],
@@ -1759,12 +1787,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 220,
+            "armor": 68,
             "luk": 0,
             "str": 0,
-            "agi": 0,
+            "agi": 8,
             "dex": 0,
-            "vit": 40
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 9
@@ -1774,7 +1802,7 @@
          "type": "shield",
          "name": "Blessed shield",
          "sprite": "sprite/shields/7016.gif",
-         "gold": 100,
+         "gold": 9000,
          "slot": [
             "shield"
          ],
@@ -1783,12 +1811,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 280,
+            "armor": 75,
             "luk": 0,
             "str": 0,
             "agi": 0,
             "dex": 0,
-            "vit": 60
+            "vit": 8
          },
          "vocationRequired": false,
          "tier": 9
@@ -1798,7 +1826,7 @@
          "type": "shield",
          "name": "Soulbastion",
          "sprite": "sprite/shields/7017.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "shield"
          ],
@@ -1807,12 +1835,12 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 400,
+            "armor": 110,
             "luk": 0,
             "str": 0,
-            "agi": 0,
+            "agi": 15,
             "dex": 0,
-            "vit": 90
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 10
@@ -1834,9 +1862,9 @@
             "attackRange": 20
          },
          "attr": {
-            "armor": 15,
+            "armor": 8,
             "luk": 0,
-            "str": 10,
+            "str": 12,
             "agi": 0,
             "dex": 0,
             "vit": 0
@@ -1863,11 +1891,16 @@
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 10,
+            "agi": 0,
             "dex": 10,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 1
       },
       {
@@ -1885,9 +1918,9 @@
             "attackRange": 20
          },
          "attr": {
-            "armor": 25,
+            "armor": 12,
             "luk": 0,
-            "str": 15,
+            "str": 18,
             "agi": 0,
             "dex": 0,
             "vit": 0
@@ -1914,11 +1947,16 @@
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 30,
-            "dex": 30,
+            "agi": 0,
+            "dex": 22,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 2
       },
       {
@@ -1926,7 +1964,7 @@
          "type": "weapon",
          "name": "Knight axe",
          "sprite": "sprite/weapons/1010.gif",
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "weapon"
          ],
@@ -1936,9 +1974,9 @@
             "attackRange": 20
          },
          "attr": {
-            "armor": 35,
+            "armor": 18,
             "luk": 0,
-            "str": 45,
+            "str": 25,
             "agi": 0,
             "dex": 0,
             "vit": 0
@@ -1951,7 +1989,7 @@
          "type": "weapon",
          "name": "Elf Bow",
          "sprite": "sprite/archery/3002.gif",
-         "gold": 100,
+         "gold": 1000,
          "slot": [
             "weapon",
             "shield"
@@ -1959,17 +1997,22 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 500
+            "attackRange": 300
          },
          "attr": {
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 50,
-            "dex": 50,
+            "agi": 0,
+            "dex": 28,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 3
       },
       {
@@ -1977,9 +2020,10 @@
          "type": "weapon",
          "name": "Halberd",
          "sprite": "sprite/weapons/1009.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
-            "weapon"
+            "weapon",
+            "shield"
          ],
          "refinement": 0,
          "combat": "melee",
@@ -1987,10 +2031,10 @@
             "attackRange": 50
          },
          "attr": {
-            "armor": 50,
+            "armor": 12,
             "luk": 0,
-            "str": 50,
-            "agi": 40,
+            "str": 35,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -2002,7 +2046,7 @@
          "type": "weapon",
          "name": "Horn Bow",
          "sprite": "sprite/archery/3005.gif",
-         "gold": 100,
+         "gold": 4000,
          "slot": [
             "weapon",
             "shield"
@@ -2016,11 +2060,16 @@
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 70,
-            "dex": 70,
+            "agi": 0,
+            "dex": 40,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 4
       },
       {
@@ -2028,9 +2077,10 @@
          "type": "weapon",
          "name": "Guardian Halberd",
          "sprite": "sprite/weapons/1012.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
-            "weapon"
+            "weapon",
+            "shield"
          ],
          "refinement": 0,
          "combat": "melee",
@@ -2038,10 +2088,10 @@
             "attackRange": 50
          },
          "attr": {
-            "armor": 60,
+            "armor": 28,
             "luk": 0,
-            "str": 70,
-            "agi": 50,
+            "str": 47,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -2053,7 +2103,7 @@
          "type": "weapon",
          "name": "Sniper Bow",
          "sprite": "sprite/archery/3003.gif",
-         "gold": 100,
+         "gold": 5000,
          "slot": [
             "weapon",
             "shield"
@@ -2067,11 +2117,16 @@
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 90,
-            "dex": 90,
+            "agi": 10,
+            "dex": 50,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 5
       },
       {
@@ -2079,21 +2134,21 @@
          "type": "weapon",
          "name": "Fire sword",
          "sprite": "sprite/weapons/1002.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "weapon"
          ],
          "refinement": 0,
          "combat": "melee",
          "misc": {
-            "attackRange": 50
+            "attackRange": 30
          },
          "attr": {
-            "armor": 70,
+            "armor": 28,
             "luk": 0,
-            "str": 80,
-            "agi": 80,
-            "dex": 20,
+            "str": 49,
+            "agi": 0,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -2104,7 +2159,7 @@
          "type": "weapon",
          "name": "Arbalest",
          "sprite": "sprite/archery/3009.gif",
-         "gold": 100,
+         "gold": 6000,
          "slot": [
             "weapon",
             "shield"
@@ -2112,17 +2167,22 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 650
+            "attackRange": 300
          },
          "attr": {
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 110,
-            "dex": 110,
+            "agi": 12,
+            "dex": 55,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 6
       },
       {
@@ -2130,20 +2190,20 @@
          "type": "weapon",
          "name": "Blessed Sceptre",
          "sprite": "sprite/weapons/1017.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "weapon"
          ],
          "refinement": 0,
          "combat": "melee",
          "misc": {
-            "attackRange": 80
+            "attackRange": 20
          },
          "attr": {
-            "armor": 80,
+            "armor": 32,
             "luk": 0,
-            "str": 110,
-            "agi": 90,
+            "str": 55,
+            "agi": 0,
             "dex": 0,
             "vit": 0
          },
@@ -2155,7 +2215,7 @@
          "type": "weapon",
          "name": "Royal Crossbow",
          "sprite": "sprite/archery/3011.gif",
-         "gold": 100,
+         "gold": 7000,
          "slot": [
             "weapon",
             "shield"
@@ -2163,17 +2223,22 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 650
+            "attackRange": 300
          },
          "attr": {
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 130,
-            "dex": 130,
+            "agi": 0,
+            "dex": 68,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 7
       },
       {
@@ -2181,22 +2246,22 @@
          "type": "weapon",
          "name": "Chopper of Destruction",
          "sprite": "sprite/weapons/1013.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "weapon"
          ],
          "refinement": 0,
          "combat": "melee",
          "misc": {
-            "attackRange": 80
+            "attackRange": 30
          },
          "attr": {
-            "armor": 80,
-            "luk": 50,
-            "str": 150,
-            "agi": 80,
-            "dex": 50,
-            "vit": 50
+            "armor": 38,
+            "luk": 0,
+            "str": 65,
+            "agi": 0,
+            "dex": 0,
+            "vit": 0
          },
          "vocationRequired": false,
          "tier": 8
@@ -2206,7 +2271,7 @@
          "type": "weapon",
          "name": "Crossbow of Power",
          "sprite": "sprite/archery/3013.gif",
-         "gold": 100,
+         "gold": 8000,
          "slot": [
             "weapon",
             "shield"
@@ -2214,17 +2279,22 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 650
+            "attackRange": 300
          },
          "attr": {
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 200,
-            "dex": 200,
+            "agi": 12,
+            "dex": 72,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 8
       },
       {
@@ -2232,7 +2302,7 @@
          "type": "weapon",
          "name": "Slayer of Destruction",
          "sprite": "sprite/weapons/1005.gif",
-         "gold": 100,
+         "gold": 9000,
          "slot": [
             "weapon"
          ],
@@ -2242,11 +2312,11 @@
             "attackRange": 80
          },
          "attr": {
-            "armor": 80,
-            "luk": 50,
-            "str": 225,
-            "agi": 80,
-            "dex": 50,
+            "armor": 42,
+            "luk": 0,
+            "str": 70,
+            "agi": 0,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -2257,7 +2327,7 @@
          "type": "weapon",
          "name": "Bow of Power",
          "sprite": "sprite/archery/3006.gif",
-         "gold": 100,
+         "gold": 9000,
          "slot": [
             "weapon",
             "shield"
@@ -2271,11 +2341,16 @@
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 250,
-            "dex": 250,
+            "agi": 12,
+            "dex": 88,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 9
       },
       {
@@ -2283,22 +2358,22 @@
          "type": "weapon",
          "name": "Phantasmal Axe",
          "sprite": "sprite/weapons/1006.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "weapon"
          ],
          "refinement": 0,
          "combat": "melee",
          "misc": {
-            "attackRange": 120
+            "attackRange": 80
          },
          "attr": {
-            "armor": 150,
-            "luk": 50,
-            "str": 250,
-            "agi": 250,
-            "dex": 50,
-            "vit": 250
+            "armor": 50,
+            "luk": 0,
+            "str": 95,
+            "agi": 0,
+            "dex": 0,
+            "vit": 20
          },
          "vocationRequired": false,
          "tier": 10
@@ -2308,7 +2383,7 @@
          "type": "weapon",
          "name": "Angel Bow",
          "sprite": "sprite/archery/3007.gif",
-         "gold": 100,
+         "gold": 15000,
          "slot": [
             "weapon",
             "shield"
@@ -2316,17 +2391,22 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 800
+            "attackRange": 650
          },
          "attr": {
             "armor": 0,
             "luk": 0,
             "str": 0,
-            "agi": 350,
-            "dex": 350,
+            "agi": 18,
+            "dex": 100,
             "vit": 0
          },
-         "vocationRequired": ["archer", "hunter", "sniper", "ranger"],
+         "vocationRequired": [
+            "archer",
+            "hunter",
+            "sniper",
+            "ranger"
+         ],
          "tier": 10
       }
    ]
