@@ -24,8 +24,9 @@ export async function addUser(req) {
 
    let knight = new KnightFactory(req.body);
    knight.equip(NOVICE_SET);
-   
-   knight.giveItem(itemList.accessories[2]);
+
+   knight.giveItem(itemList.weapons[0]);
+   knight.giveItem(itemList.weapons[1]);
    knight.giveItem(itemList.footgear[0]);
 
    return knight;
