@@ -1,4 +1,6 @@
-import uniqid from "uniqid"
+import uniqid from "uniqid";
+import vocationSpell from "./vocationSpells.js";
+import vocationModifiers from "./vocationModifiers.js";
 
 const Modifier = () => {
    return {
@@ -11,12 +13,14 @@ const Modifier = () => {
       luk: 0,
 
       hit: 0,
-      atk: 0,
+      flee: 0
    };
 }
 
 export default class Knight {
    constructor(options) {
+      options.vocation = options.vocation || "swordman";
+
       this.id = uniqid(this.resolveName(options.name) + "-");
       this.name = this.resolveName(options.name);
       this.nickname = options.name || null;
@@ -25,16 +29,26 @@ export default class Knight {
 
       this.experience = 0;
       this.level = 1;
-      this.job = "Knight";
-      this.vocation = "Squire";
+      this.vocation = "swordman";
+      this.vocationLevel = 0;
 
       this.lastBattles = [];
+      this.unlocked = {
+         hunt: ["0-15"],
+         quest: [],
+      }
+
+      this.bestiary = {
+         monsters: {},
+         coins: 0
+      }
 
       this.cooldown = {
          train: Date.now(),
          hunt: Date.now(),
          brew: Date.now(),
       }
+      this.spells = vocationSpell[this.vocation];
 
       this.honor = 250;
 
@@ -66,8 +80,13 @@ export default class Knight {
       }
 
       this.inventory = [];
+      this.chest = [];
 
       this.gold = 200;
+      this.buffs = {
+         vocation: vocationModifiers[this.vocation],
+         misc: []
+      }
 
       this.attributes = {
          cp: 0,
@@ -133,6 +152,14 @@ export default class Knight {
          (this.level / 4) + totalStr + (totalDex / 5) + (totalLuk / 3)
       ));
    }
+   _applyVocationBuff(attr) {
+      const BUFFS = this.buffs.vocation;
+
+      for (let stat in BUFFS) {
+         attr[stat] += BUFFS[stat];
+      }
+      return attr;
+   }
    _applyMod() {
       let itemsEquipped = {};
       let attr = { ...Modifier() };
@@ -149,7 +176,9 @@ export default class Knight {
          }
       }
 
+      attr = this._applyVocationBuff(attr);
       this.modifier = { ...attr };
+
       this._calculateCP();
       this._calculateHit();
       this._calculateHealth();

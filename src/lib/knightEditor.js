@@ -1,4 +1,5 @@
 import { buyItem, sellItem } from "./market.js";
+import vocationModifiers from "./vocationModifiers.js";
 
 const GAIN_STATUS_PER_LEVEL = 5;
 const MAX_STATUS_POINTS = 200;
@@ -24,23 +25,6 @@ const Modifier = () => {
 
 const _compare = (item1, item2) => {
    return JSON.stringify(item1) == JSON.stringify(item2);
-}
-const _removeItem = (list, item) => {
-   item = JSON.stringify(item);
-   let itemIndex = null;
-
-   for (let $index in list) {
-      let listItem = JSON.stringify(list[$index]);
-
-      if (listItem == item) {
-         itemIndex = $index;
-         break;
-      }
-   }
-   if (itemIndex) {
-      list.splice(itemIndex, 1);
-   }
-   return list;
 }
 
 export default class {
@@ -146,9 +130,19 @@ export default class {
       let totalLuk = Math.floor(attr.luk + modAttr.luk);
       let totalDex = Math.floor(attr.dex + modAttr.dex);
 
-      this.config.attributes.hit = Math.round(Math.floor(
-         (this.config.level / 4) + totalStr + (totalDex / 5) + (totalLuk / 3)
-      ));
+      switch (this.config.vocation) {
+         case "archer":
+            this.config.attributes.hit = Math.round(Math.floor(
+               (this.config.level / 4) + (totalDex + totalDex * .1) + (totalStr / 5) + (totalLuk / 3)
+            ));
+            break;
+         case "swordman":
+         case "knight":
+         default:
+            this.config.attributes.hit = Math.round(Math.floor(
+               (this.config.level / 4) + totalStr + (totalDex / 5) + (totalLuk / 3)
+            ));
+      }
    }
    /**
     * @returns Amount of attack speed equipped
@@ -162,6 +156,27 @@ export default class {
          }
       }
       return totalAR;
+   }
+   _evolveVocation() {
+      // TODO: Only evolve if has level
+      // Voucher to evolve
+      this.config.vocationLevel += 1;
+   }
+   _updateVocationBuff() {
+      this.config.buffs.vocation = vocationModifiers[this.config.vocation]
+   }
+   /**
+    * Apply vocation buff
+    * @param {*} attr
+    * @returns attr modified
+    */
+   _applyVocationBuff(attr) {
+      const BUFFS = this.config.buffs.vocation;
+
+      for (let stat in BUFFS) {
+         attr[stat] += BUFFS[stat];
+      }
+      return attr;
    }
    /**
     * Apply all mods and calculate final scores
@@ -182,13 +197,34 @@ export default class {
          }
       }
 
+      this._updateVocationBuff();
+      attr = this._applyVocationBuff(attr);
       this.config.modifier = { ...attr };
+
       this.config.misc.attackRange = this._calculateAR(itemsEquipped);
 
       this._calculateCP();
       this._calculateHit();
       this._calculateHealth();
       this._calculateTotalDef();
+   }
+   _removeItem(itemId) {
+      const INVENTORY = this.config.inventory;
+
+      for (let index in INVENTORY) {
+         if (INVENTORY[index].id == itemId) {
+            INVENTORY.splice(index, 1);
+            break;
+         }
+      }
+
+      return INVENTORY
+   }
+   _vocationCanUseItem(item) {
+      if (item.vocationRequired) {
+         return item.vocationRequired.includes(this.config.vocation);
+      }
+      return true
    }
    /**
     * Adds status to attr
@@ -212,9 +248,15 @@ export default class {
     * @returns {Object}
     */
    findItem(item) {
+      let typeOfItem = typeof item;
       const INVENTORY = this.config.inventory;
 
-      return INVENTORY.filter(search => _compare(item, search))[0];
+      if (typeOfItem == "object") {
+         return INVENTORY.filter(search => _compare(item, search))[0];
+      } else if (typeOfItem == "number") {
+         return INVENTORY.filter(search => search.id == item)[0];
+      }
+
    }
    /**
     * Un-equips item
@@ -222,10 +264,21 @@ export default class {
     * @param {String} slot
     * @returns {Object}
     */
-   unequip(item, slot) {
-      this.config.equipped[slot] = null;
-      this.sendToInventory(item);
+   unequip(slot) {
+      let itemRemovedFromEquip = this.config.equipped[slot];
+      if (!itemRemovedFromEquip) return this;
 
+      if (itemRemovedFromEquip.slot.includes("accessories")) {
+         this.config.equipped[slot] = null;
+      } else {
+         for (let slotName of itemRemovedFromEquip.slot) {
+            if (this.config.equipped[slotName]) {
+               this.config.equipped[slotName] = null;
+            }
+         }
+      }
+
+      this.sendToInventory(itemRemovedFromEquip);
       this._applyMod();
       return this;
    }
@@ -238,9 +291,29 @@ export default class {
       const EQUIPPED = { ...this.config.equipped };
       var equipRemovedFromSlot = null;
 
+      let hasItemInInventory = this.config.inventory.filter(equipment => equipment.id == item.id);
+
+      if (!hasItemInInventory.length || !this._vocationCanUseItem(item)) return this;
+
       this.removeFromInventory(item);
 
-      if (item.type == "accessories") {
+      item = hasItemInInventory[0];
+
+      const equipItemsNormal = (item) => {
+         let itemSlot = item.slot;
+
+         for (let slot in itemSlot) {
+            if (this.config.equipped[itemSlot[slot]]) {
+               this.unequip(itemSlot[slot]);
+               this.config.equipped[itemSlot[slot]] = item;
+            } else {
+
+               this.config.equipped[itemSlot[slot]] = item;
+            }
+         }
+      }
+
+      if (item.slot.includes("accessories")) {
          let equippedEmptySlot = false;
 
          for (let i = 1; i < 5; i++) {
@@ -254,18 +327,22 @@ export default class {
          if (equippedEmptySlot) {
             this.config.equipped = EQUIPPED;
          } else {
-            equipRemovedFromSlot = { ...this.config.equipped.accessory_1 };
+            this.unequip("accessory_1");
             this.config.equipped.accessory_1 = item;
          }
-      } else {
-         let itemType = item.type;
-
-         if (this.config.equipped[itemType]) {
-            equipRemovedFromSlot = this.config.equipped[itemType];
-            this.config.equipped[itemType] = item;
+      } else if (item.slot.includes("weapon") || item.slot.includes("shield")) {
+         if (item.type == "shield" || item.slot.includes("weapon") && item.combat == "melee") {
+            if (this.config.equipped.weapon?.combat == "ranged") {
+               this.unequip("weapon");
+               equipItemsNormal(item);
+            } else {
+               equipItemsNormal(item);
+            }
          } else {
-            this.config.equipped[itemType] = item;
+            equipItemsNormal(item);
          }
+      } else {
+         equipItemsNormal(item);
       }
 
       if (equipRemovedFromSlot) {
@@ -314,7 +391,7 @@ export default class {
     * @param {Object} item
     */
    removeFromInventory(item) {
-      this.config.inventory = _removeItem(this.config.inventory, item);
+      this.config.inventory = [...this._removeItem(item.id)];
       return this;
    }
    /**
@@ -362,5 +439,30 @@ export default class {
    receiveExp(amount) {
       this.config.experience += amount;
       this._calculateLevel();
+   }
+   /**
+    * Sell all inventory items
+    * TODO: Add chest
+    */
+   sellInventoryItems() {
+      const ITEMS = this.config.inventory.map(item => item.id);
+
+      for (let item in ITEMS) {
+         this.sellItem(ITEMS[item])
+      }
+      return this;
+   }
+   /**
+    * Unlocks hunting arena
+    * @param {String} level
+    */
+   unlockLevel(level) {
+      if (level) {
+         const UNLOCKED = this.config.unlocked.hunt;
+
+         if (!UNLOCKED.includes(level)) {
+            this.config.unlocked.hunt.push(level);
+         }
+      }
    }
 }
