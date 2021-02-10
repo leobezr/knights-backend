@@ -137,7 +137,7 @@ export default function (app) {
                const cursor = db.collection("knights").find({ id: req.body.id });
 
                cursor.forEach((doc) => {
-                  knightData = gearHandler(doc).unequip(req.body.item, req.body.slot).config;
+                  knightData = gearHandler(doc).unequip(req.body.slot).config;
                   let { _id, ...char } = knightData;
 
                   db.collection("knights").updateOne({ id: req.body.id }, {
