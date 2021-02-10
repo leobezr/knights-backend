@@ -81,6 +81,44 @@ export default function (app) {
       }
    })
 
+   app.post("/api/v1/items/sell/inventory", async (req, res) => {
+      try {
+         const DB = process.env.MONGO_SERVER;
+         const DB_NAME = process.env.MONGO_DB_NAME;
+         var knightUser = null;
+
+         if (yupSchema.validate(req)) {
+            mongo.connect(DB, (err, client) => {
+               assert.strictEqual(err, null);
+
+               const db = client.db(DB_NAME);
+               const cursor = db.collection("knights").find({ id: req.body.id });
+
+               cursor.forEach((doc) => {
+                  knightUser = gearHandler(doc);
+                  knightUser.sellInventoryItems();
+
+                  let { _id, ...knightData } = knightUser.config;
+
+                  db.collection("knights").updateOne({ id: req.body.id }, {
+                     $set: { ...knightData }
+                  })
+               }, () => {
+                  client.close();
+
+                  if (knightUser) {
+                     res.status(200).json({ user: knightUser.config })
+                  } else {
+                     res.status(400).json({ detail: "User not found" })
+                  }
+               })
+            })
+         }
+      } catch (err) {
+         throw Error(err);
+      }
+   })
+
    app.post("/api/v1/items/buy", async (req, res) => {
       try {
          const DB = process.env.MONGO_SERVER;
