@@ -9,9 +9,11 @@ const itemLevelRule = (level, itemTier) => {
 
 export function sellItem(knight, item) {
 
-   if (knight.findItem(item)) {
-      knight.removeFromInventory(item);
-      knight.addGold(itemPriceModifier.selling(item.gold, item.tier, knight.config.honor || 0))
+   let itemBeingSelled = knight.findItem(item);
+
+   if (itemBeingSelled) {
+      knight.removeFromInventory(itemBeingSelled);
+      knight.addGold(itemPriceModifier.selling(itemBeingSelled.gold, itemBeingSelled.tier, knight.config.honor || 0))
    }
 
    return knight.config;

@@ -2,50 +2,289 @@
   {
     "id": 10001,
     "name": "Poring",
-    "experience": 150,
+    "experience": 20,
     "loot": [
       {
-        "id": 1000,
-        "chance": 5
+        "id": 5016,
+        "chance": 1
       }
     ],
     "gold": {
-      "min": 15,
-      "max": 35
+      "min": 0,
+      "max": 3
     }
   },
   {
     "id": 10002,
-    "name": "Zombie",
-    "experience": 550,
+    "name": "Drops",
+    "experience": 50,
     "loot": [
       {
-        "id": 7001,
-        "chance": 10
+        "id": 5016,
+        "chance": 3
       },
       {
-        "id": 5001,
-        "chance": 8
+        "id": 6001,
+        "chance": 3
       }
     ],
     "gold": {
-      "min": 35,
-      "max": 60
+      "min": 0,
+      "max": 9
     }
   },
   {
     "id": 10003,
-    "name": "Loki",
-    "experience": 2000,
+    "name": "Arc Angeling",
+    "experience": 150,
     "loot": [
       {
-        "id": 1012,
-        "chance": 20
+        "id": 1001,
+        "chance": 5
+      },
+      {
+        "id": 3001,
+        "chance": 5
       }
     ],
     "gold": {
-      "min": 100,
-      "max": 215
+      "min": 0,
+      "max": 15
+    }
+  },
+  {
+    "id": 10004,
+    "name": "King Poring",
+    "experience": 1,
+    "loot": [
+      {
+        "id": 5004,
+        "chance": 5
+      },
+      {
+        "id": 6014,
+        "chance": 5
+      }
+    ],
+    "gold": {
+      "min": 50,
+      "max": 100
+    }
+  },
+  {
+    "id": 10005,
+    "name": "Dokebi",
+    "experience": 250,
+    "loot": [
+      {
+        "id": 5015,
+        "chance": 5
+      },
+      {
+        "id": 5004,
+        "chance": 20
+      },
+      {
+        "id": 2664,
+        "chance": 2
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 80
+    }
+  },
+  {
+    "id": 10006,
+    "name": "Baby Orc",
+    "experience": 490,
+    "loot": [
+      {
+        "id": 5021,
+        "chance": 5
+      },
+      {
+        "id": 8004,
+        "chance": 5
+      },
+      {
+        "id": 3005,
+        "chance": 2
+      },
+      {
+        "id": 8003,
+        "chance": 15
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 110
+    }
+  },
+  {
+    "id": 10007,
+    "name": "Goblin Dagger",
+    "experience": 700,
+    "loot": [
+      {
+        "id": 6005,
+        "chance": 1
+      },
+      {
+        "id": 1010,
+        "chance": 15
+      },
+      {
+        "id": 1012,
+        "chance": 2
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 110
+    }
+  },
+  {
+    "id": 10008,
+    "name": "Goblin Leader",
+    "experience": 1,
+    "loot": [
+      {
+        "id": 5003,
+        "chance": 1
+      },
+      {
+        "id": 2672,
+        "chance": 1
+      },
+      {
+        "id": 8009,
+        "chance": 1
+      },
+      {
+        "id": 7004,
+        "chance": 1
+      }
+    ],
+    "gold": {
+      "min": 450,
+      "max": 500
+    }
+  },
+  {
+    "id": 10009,
+    "name": "Deleter",
+    "experience": 810,
+    "loot": [
+      {
+        "id": 5008,
+        "chance": 5
+      },
+      {
+        "id": 5021,
+        "chance": 11
+      },
+      {
+        "id": 5010,
+        "chance": 2
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 160
+    }
+  },
+  {
+    "id": 10010,
+    "name": "Deleter Sky",
+    "experience": 990,
+    "loot": [
+      {
+        "id": 5022,
+        "chance": 20
+      },
+      {
+        "id": 6015,
+        "chance": 1
+      },
+      {
+        "id": 6006,
+        "chance": 1
+      },
+      {
+        "id": 3009,
+        "chance": 15
+      },
+      {
+        "id": 1001,
+        "chance": 40
+      },
+      {
+        "id": 5004,
+        "chance": 40
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 210
+    }
+  },
+  {
+    "id": 10011,
+    "name": "Metal Dragon",
+    "experience": 1210,
+    "loot": [
+      {
+        "id": 8013,
+        "chance": 25
+      },
+      {
+        "id": 7005,
+        "chance": 5
+      },
+      {
+        "id": 1002,
+        "chance": 2
+      },
+      {
+        "id": 1001,
+        "chance": 40
+      },
+      {
+        "id": 5004,
+        "chance": 40
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 280
+    }
+  },
+  {
+    "id": 10012,
+    "name": "Harpy",
+    "experience": 1,
+    "loot": [
+      {
+        "id": 5003,
+        "chance": 1
+      },
+      {
+        "id": 2672,
+        "chance": 1
+      },
+      {
+        "id": 8009,
+        "chance": 1
+      },
+      {
+        "id": 7004,
+        "chance": 1
+      }
+    ],
+    "gold": {
+      "min": 450,
+      "max": 500
     }
   }
 ]
