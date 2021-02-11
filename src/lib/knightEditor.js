@@ -152,7 +152,9 @@ export default class {
 
       if (equipped) {
          for (let item in equipped) {
-            if (equipped[item].misc) totalAR += equipped[item].misc.attackRange;
+            if (equipped[item].misc && equipped[item].type == item) {
+               totalAR += equipped[item].misc.attackRange
+            };
          }
       }
       return totalAR;
@@ -193,7 +195,9 @@ export default class {
 
       for (let item in itemsEquipped) {
          for (let mod in itemsEquipped[item].attr) {
-            attr[mod] += itemsEquipped[item].attr[mod];
+            if (itemsEquipped[item].type == item) {
+               attr[mod] += itemsEquipped[item].attr[mod];
+            }
          }
       }
 
