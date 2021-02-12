@@ -2,7 +2,7 @@ import { buyItem, sellItem } from "./market.js";
 import vocationModifiers from "./vocationModifiers.js";
 
 const GAIN_STATUS_PER_LEVEL = 5;
-const MAX_STATUS_POINTS = 200;
+const MAX_STATUS_POINTS = 300;
 
 /**
  * Modifier boilerplate
