@@ -61,7 +61,7 @@ export default class {
       let modAttr = { vit, agi, armor };
 
       const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.config.level / 10));
-      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + (modAttr.armor * .01)));
+      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + (modAttr.armor * .05)));
    }
    /**
     * Max health calculation
@@ -323,7 +323,6 @@ export default class {
                this.unequip(itemSlot[slot]);
                this.config.equipped[itemSlot[slot]] = item;
             } else {
-
                this.config.equipped[itemSlot[slot]] = item;
             }
          }
@@ -455,6 +454,8 @@ export default class {
    receiveExp(amount) {
       this.config.experience += amount;
       this._calculateLevel();
+
+      return this
    }
    /**
     * Sell all inventory items
@@ -480,5 +481,6 @@ export default class {
             this.config.unlocked.hunt.push(level);
          }
       }
+      return this;
    }
 }

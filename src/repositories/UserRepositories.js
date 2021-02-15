@@ -1,6 +1,4 @@
-import fs from "fs";
-import path from "path";
-import KnightFactory from "../lib/knightGenerator.js";
+import KnightFactory from "../lib/knightFactory.js";
 import KnightEditor from "../lib/knightEditor.js";
 import noviceItemGenerator from "../lib/noviceItemGenerator.js";
 import { getItemList } from "../service/controllers/itemController.js";
@@ -9,15 +7,7 @@ import { getItemList } from "../service/controllers/itemController.js";
 /**
  * Public functions
  */
-
-export async function getUsers() {
-   const DB = fs.readFileSync(path.join(__dirname, "../model/knights.json"));
-
-   let data = JSON.parse(DB);
-   return data;
-}
-
-export async function addUser(req) {
+export async function characterFactory(req) {
    let itemList = await getItemList();
 
    const NOVICE_SET = noviceItemGenerator(itemList);

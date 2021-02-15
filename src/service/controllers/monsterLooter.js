@@ -1,5 +1,6 @@
 import mongo from "mongodb";
 import assert from "assert";
+import { getItemList } from "../controllers/itemController.js";
 
 import * as yup from "yup";
 
@@ -59,9 +60,26 @@ export default async function (reward) {
       }
    }
 
+   const itemList = await getItemList();
+   let items = lootbag.map(item => {
+      let filteredItem = null;
+
+      for (let scopeItem in itemList) {
+         if (Array.isArray(itemList[scopeItem])) {
+            filteredItem = itemList[scopeItem].filter(key => key.id == item.id);
+            if (filteredItem.length) {
+               filteredItem = filteredItem[0];
+               break;
+            };
+         }
+      }
+      return filteredItem;
+   })
+
    return {
       lootbag,
+      items,
       gold,
-      experience
+      exp: experience
    }
 }
