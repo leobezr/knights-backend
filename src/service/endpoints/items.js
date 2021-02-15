@@ -1,14 +1,56 @@
 import mongo from "mongodb";
 import assert from "assert";
-import { gearHandler } from "../../repositories/UserRepositories.js";
 
-import * as yup from "yup";
+import mongoose from "mongoose";
+import KnightClassController from "../controllers/knightClassController.js";
 
-const yupSchema = yup.default.object().shape({
-   body: yup.default.object().required()
-})
+const ITEMS_API = "/api/v1/items/";
 
 export default function (app) {
+   /**
+    * @method POST
+    * Sell item in shop
+    */
+   app.post(ITEMS_API + "sell", async (req, res) => {
+      await mongoose.connect(process.env.MONGO_SERVER);
+
+      try {
+         const char = await KnightClassController.sellItem(req);
+         res.status(200).json(char);
+      } catch (err) {
+         res.status(500).json({ detail: err.message });
+      }
+   })
+   /**
+    * @method POST
+    * Buy item in shop
+    */
+   app.post(ITEMS_API + "buy", async (req, res) => {
+      await mongoose.connect(process.env.MONGO_SERVER);
+
+      try {
+         const char = await KnightClassController.buyItem(req);
+         res.status(200).json(char);
+      } catch (err) {
+         res.status(500).json({ detail: err.message });
+      }
+   })
+
+   /**
+    * @method POST
+    * Sell entire inventory
+    */
+   app.post(ITEMS_API + "sell/inventory", async (req, res) => {
+      await mongoose.connect(process.env.MONGO_SERVER);
+
+      try {
+         const char = await KnightClassController.sellInventoryItems(req);
+         res.status(200).json(char);
+      } catch (err) {
+         res.status(500).json({ detail: err.message });
+      }
+   })
+
    /**
     * GET Item list
     */
@@ -43,117 +85,117 @@ export default function (app) {
       }
    })
 
-   app.post("/api/v1/items/sell", async (req, res) => {
-      try {
-         const DB = process.env.MONGO_SERVER;
-         const DB_NAME = process.env.MONGO_DB_NAME;
-         var knightUser = null;
+   // app.post("/api/v1/items/sell", async (req, res) => {
+   //    try {
+   //       const DB = process.env.MONGO_SERVER;
+   //       const DB_NAME = process.env.MONGO_DB_NAME;
+   //       var knightUser = null;
 
-         if (yupSchema.validate(req)) {
-            mongo.connect(DB, (err, client) => {
-               assert.strictEqual(err, null);
+   //       if (yupSchema.validate(req)) {
+   //          mongo.connect(DB, (err, client) => {
+   //             assert.strictEqual(err, null);
 
-               const db = client.db(DB_NAME);
-               const cursor = db.collection("knights").find({ id: req.body.id });
+   //             const db = client.db(DB_NAME);
+   //             const cursor = db.collection("knights").find({ id: req.body.id });
 
-               cursor.forEach((doc) => {
-                  knightUser = gearHandler(doc);
-                  knightUser.sellItem(req.body.item);
+   //             cursor.forEach((doc) => {
+   //                knightUser = gearHandler(doc);
+   //                knightUser.sellItem(req.body.item);
 
-                  let { _id, ...knightData } = knightUser.config;
+   //                let { _id, ...knightData } = knightUser.config;
 
-                  db.collection("knights").updateOne({ id: req.body.id }, {
-                     $set: { ...knightData }
-                  })
-               }, () => {
-                  client.close();
+   //                db.collection("knights").updateOne({ id: req.body.id }, {
+   //                   $set: { ...knightData }
+   //                })
+   //             }, () => {
+   //                client.close();
 
-                  if (knightUser) {
-                     res.status(200).json({ user: knightUser.config })
-                  } else {
-                     res.status(400).json({ detail: "User not found" })
-                  }
-               })
-            })
-         }
-      } catch (err) {
-         throw Error(err);
-      }
-   })
+   //                if (knightUser) {
+   //                   res.status(200).json({ user: knightUser.config })
+   //                } else {
+   //                   res.status(400).json({ detail: "User not found" })
+   //                }
+   //             })
+   //          })
+   //       }
+   //    } catch (err) {
+   //       throw Error(err);
+   //    }
+   // })
 
-   app.post("/api/v1/items/sell/inventory", async (req, res) => {
-      try {
-         const DB = process.env.MONGO_SERVER;
-         const DB_NAME = process.env.MONGO_DB_NAME;
-         var knightUser = null;
+   // app.post("/api/v1/items/sell/inventory", async (req, res) => {
+   //    try {
+   //       const DB = process.env.MONGO_SERVER;
+   //       const DB_NAME = process.env.MONGO_DB_NAME;
+   //       var knightUser = null;
 
-         if (yupSchema.validate(req)) {
-            mongo.connect(DB, (err, client) => {
-               assert.strictEqual(err, null);
+   //       if (yupSchema.validate(req)) {
+   //          mongo.connect(DB, (err, client) => {
+   //             assert.strictEqual(err, null);
 
-               const db = client.db(DB_NAME);
-               const cursor = db.collection("knights").find({ id: req.body.id });
+   //             const db = client.db(DB_NAME);
+   //             const cursor = db.collection("knights").find({ id: req.body.id });
 
-               cursor.forEach((doc) => {
-                  knightUser = gearHandler(doc);
-                  knightUser.sellInventoryItems();
+   //             cursor.forEach((doc) => {
+   //                knightUser = gearHandler(doc);
+   //                knightUser.sellInventoryItems();
 
-                  let { _id, ...knightData } = knightUser.config;
+   //                let { _id, ...knightData } = knightUser.config;
 
-                  db.collection("knights").updateOne({ id: req.body.id }, {
-                     $set: { ...knightData }
-                  })
-               }, () => {
-                  client.close();
+   //                db.collection("knights").updateOne({ id: req.body.id }, {
+   //                   $set: { ...knightData }
+   //                })
+   //             }, () => {
+   //                client.close();
 
-                  if (knightUser) {
-                     res.status(200).json({ user: knightUser.config })
-                  } else {
-                     res.status(400).json({ detail: "User not found" })
-                  }
-               })
-            })
-         }
-      } catch (err) {
-         throw Error(err);
-      }
-   })
+   //                if (knightUser) {
+   //                   res.status(200).json({ user: knightUser.config })
+   //                } else {
+   //                   res.status(400).json({ detail: "User not found" })
+   //                }
+   //             })
+   //          })
+   //       }
+   //    } catch (err) {
+   //       throw Error(err);
+   //    }
+   // })
 
-   app.post("/api/v1/items/buy", async (req, res) => {
-      try {
-         const DB = process.env.MONGO_SERVER;
-         const DB_NAME = process.env.MONGO_DB_NAME;
-         var knightUser = null;
+   // app.post("/api/v1/items/buy", async (req, res) => {
+   //    try {
+   //       const DB = process.env.MONGO_SERVER;
+   //       const DB_NAME = process.env.MONGO_DB_NAME;
+   //       var knightUser = null;
 
-         if (yupSchema.validate(req)) {
-            mongo.connect(DB, (err, client) => {
-               assert.strictEqual(err, null);
+   //       if (yupSchema.validate(req)) {
+   //          mongo.connect(DB, (err, client) => {
+   //             assert.strictEqual(err, null);
 
-               const db = client.db(DB_NAME);
-               const cursor = db.collection("knights").find({ id: req.body.id });
+   //             const db = client.db(DB_NAME);
+   //             const cursor = db.collection("knights").find({ id: req.body.id });
 
-               cursor.forEach((doc) => {
-                  knightUser = gearHandler(doc);
-                  knightUser.buyItem(req.body.item);
+   //             cursor.forEach((doc) => {
+   //                knightUser = gearHandler(doc);
+   //                knightUser.buyItem(req.body.item);
 
-                  let { _id, ...knightData } = knightUser.config;
+   //                let { _id, ...knightData } = knightUser.config;
 
-                  db.collection("knights").updateOne({ id: req.body.id }, {
-                     $set: { ...knightData }
-                  })
-               }, () => {
-                  client.close();
+   //                db.collection("knights").updateOne({ id: req.body.id }, {
+   //                   $set: { ...knightData }
+   //                })
+   //             }, () => {
+   //                client.close();
 
-                  if (knightUser) {
-                     res.status(200).json({ user: knightUser.config })
-                  } else {
-                     res.status(400).json({ detail: "User not found" })
-                  }
-               })
-            })
-         }
-      } catch (err) {
-         throw Error(err);
-      }
-   })
+   //                if (knightUser) {
+   //                   res.status(200).json({ user: knightUser.config })
+   //                } else {
+   //                   res.status(400).json({ detail: "User not found" })
+   //                }
+   //             })
+   //          })
+   //       }
+   //    } catch (err) {
+   //       throw Error(err);
+   //    }
+   // })
 }
