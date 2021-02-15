@@ -837,10 +837,10 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 9500,
+            "armor": 70,
             "luk": 0,
-            "str": 0,
-            "agi": 0,
+            "str": 10,
+            "agi": 10,
             "dex": 0,
             "vit": 0
          },
@@ -1199,11 +1199,11 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 52,
+            "armor": 58,
             "luk": 0,
             "str": 9,
             "agi": 9,
-            "dex": 9,
+            "dex": 0,
             "vit": 0
          },
          "vocationRequired": false,
@@ -1223,9 +1223,9 @@
             "attackRange": 0
          },
          "attr": {
-            "armor": 58,
+            "armor": 50,
             "luk": 0,
-            "str": 9,
+            "str": 0,
             "agi": 11,
             "dex": 9,
             "vit": 0
@@ -1885,7 +1885,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -1941,7 +1941,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -1997,7 +1997,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -2054,7 +2054,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 500
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -2167,7 +2167,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -2223,7 +2223,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -2279,7 +2279,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 300
+            "attackRange": 150
          },
          "attr": {
             "armor": 0,
@@ -2335,7 +2335,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 650
+            "attackRange": 250
          },
          "attr": {
             "armor": 0,
@@ -2391,7 +2391,7 @@
          "refinement": 0,
          "combat": "ranged",
          "misc": {
-            "attackRange": 650
+            "attackRange": 250
          },
          "attr": {
             "armor": 0,

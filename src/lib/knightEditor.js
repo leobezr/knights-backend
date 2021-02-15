@@ -2,7 +2,7 @@ import { buyItem, sellItem } from "./market.js";
 import vocationModifiers from "./vocationModifiers.js";
 
 const GAIN_STATUS_PER_LEVEL = 5;
-const MAX_STATUS_POINTS = 200;
+const MAX_STATUS_POINTS = 300;
 
 /**
  * Modifier boilerplate
@@ -35,11 +35,23 @@ export default class {
       let a = (exp) => Math.cbrt(
          Math.sqrt(3) * Math.sqrt((243 * Math.pow(exp, 2)) - (48600 * exp) + 3680000) + (27 * exp) - 2700
       );
+      const levelExp = (level) =>
+         Math.round((50 * Math.pow(level, 3)) / 3) -
+         Math.round(100 * Math.pow(level, 2)) +
+         Math.round((850 * Math.pow(level, 1)) / 3) -
+         200;
 
       let exp = this.config.experience;
       let result = ((a(exp) / Math.pow(30, 2 / 3)) - ((5 * Math.pow(10, 2 / 3)) / Math.cbrt(3) / a(exp))) + 2;
 
-      this.config.level = Math.round(result);
+      // this.config.level = Math.round(result);
+      let level = Math.round(result);
+
+      if (exp >= levelExp(level)) {
+         this.config.level = level;
+      } else {
+         this.config.level = level - 1;
+      }
    }
    _calculateTotalDef() {
       var { vit, agi } = this.config.attributes;
@@ -49,7 +61,7 @@ export default class {
       let modAttr = { vit, agi, armor };
 
       const SOFT_DEF = Math.floor(((attr.vit + modAttr.vit) / 2) + ((attr.agi + modAttr.agi) / 3) + (this.config.level / 10));
-      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + (modAttr.armor * .01)));
+      this.config.attributes.def = Math.round((SOFT_DEF) * (1 + (modAttr.armor * .05)));
    }
    /**
     * Max health calculation
@@ -152,7 +164,7 @@ export default class {
 
       if (equipped) {
          for (let item in equipped) {
-            if (equipped[item].misc && equipped[item].type == item) {
+            if (equipped[item].misc && equipped[item].type == item || item.includes("accessory")) {
                totalAR += equipped[item].misc.attackRange
             };
          }
@@ -195,7 +207,7 @@ export default class {
 
       for (let item in itemsEquipped) {
          for (let mod in itemsEquipped[item].attr) {
-            if (itemsEquipped[item].type == item) {
+            if (itemsEquipped[item].type == item || item.includes("accessory")) {
                attr[mod] += itemsEquipped[item].attr[mod];
             }
          }
@@ -311,7 +323,6 @@ export default class {
                this.unequip(itemSlot[slot]);
                this.config.equipped[itemSlot[slot]] = item;
             } else {
-
                this.config.equipped[itemSlot[slot]] = item;
             }
          }
@@ -443,6 +454,8 @@ export default class {
    receiveExp(amount) {
       this.config.experience += amount;
       this._calculateLevel();
+
+      return this
    }
    /**
     * Sell all inventory items
@@ -468,5 +481,6 @@ export default class {
             this.config.unlocked.hunt.push(level);
          }
       }
+      return this;
    }
 }

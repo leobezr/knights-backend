@@ -1,5 +1,7 @@
 import mongo from "mongodb";
+import mongoose from "mongoose";
 import assert from "assert";
+import { RawCharacterSchema } from "../../model/characterModel.js"
 
 async function getUserById(userId) {
    const DB_SERVER = process.env.MONGO_SERVER;
@@ -28,7 +30,19 @@ async function getUserById(userId) {
       })
    })
 }
+async function getCharacterByName(name) {
+   await mongoose.connect(process.env.MONGO_SERVER);
+
+   try {
+      const CharacterModel = mongoose.model("knights", RawCharacterSchema);
+      const character = await CharacterModel.findOne({ nickname: name });
+      return character;
+   } catch (err) {
+      throw Error(err);
+   }
+}
 
 export {
    getUserById,
+   getCharacterByName
 }

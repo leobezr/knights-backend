@@ -3,6 +3,7 @@ import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import Routes from "./route.js";
+import { updateDB } from "./config/databaseUpdate.js"
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -30,3 +31,6 @@ app.listen(PORT, () => {
 
 // Sets routes
 Routes(app);
+
+// Update DB
+updateDB();
