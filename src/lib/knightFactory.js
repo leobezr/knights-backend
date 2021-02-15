@@ -19,18 +19,13 @@ const Modifier = () => {
 
 export default class Knight {
    constructor(options) {
-      options.vocation = options.vocation || "swordman";
-
-      this.id = uniqid(this.resolveName(options.name) + "-");
-      this.name = this.resolveName(options.name);
+      this.characterId = null;
       this.nickname = options.name || null;
-      this.sprite = options.sprite || 0;
       this.gender = options.gender || "female";
 
       this.experience = 0;
       this.level = 1;
-      this.vocation = "swordman";
-      this.vocationLevel = 0;
+      this.vocation = options.vocation || "swordman";
 
       this.lastBattles = [];
       this.unlocked = {
@@ -64,6 +59,7 @@ export default class Knight {
          footgear: null,
          shield: null,
          weapon: null,
+         legs: null,
          accessory_1: null,
          accessory_2: null,
          accessory_3: null,
@@ -80,7 +76,6 @@ export default class Knight {
       }
 
       this.inventory = [];
-      this.chest = [];
 
       this.gold = 200;
       this.buffs = {
@@ -183,6 +178,7 @@ export default class Knight {
       this._calculateHit();
       this._calculateHealth();
       this._calculateTotalDef();
+      this._generateCharId();
    }
    _calculateCP() {
       let { cp, ...attr } = this.attributes;
@@ -199,10 +195,8 @@ export default class Knight {
 
       this.attributes.cp = cp + this.level * 100;
    }
-   resolveName(name) {
-      name = name || "";
-
-      return name.toLowerCase().replace(/ /g, "-")
+   _generateCharId() {
+      this.characterId = uniqid();
    }
    giveItem(item) {
       this.inventory.push(item);
