@@ -22,7 +22,7 @@ export default function (app) {
     * Add character to user
     */
    app.post(KNIGHT_API + "add", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          if (yupSchema.validate(req)) {
@@ -70,7 +70,7 @@ export default function (app) {
     * Login into character
     */
    app.get(KNIGHT_API + "login", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const AUTH = req.header("Authorization");
@@ -99,7 +99,7 @@ export default function (app) {
     * Find knight by nickname
     */
    app.get(KNIGHT_API + "find", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          if (yupSchema.validate(req)) {
@@ -131,7 +131,7 @@ export default function (app) {
     * Add stats to character;
     */
    app.put(KNIGHT_API + "attr/add", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = KnightClassController.addAttr(req);
@@ -147,7 +147,7 @@ export default function (app) {
     * Equip Item
     */
    app.put(KNIGHT_API + "equip", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.equip(req);
@@ -163,7 +163,7 @@ export default function (app) {
     * Unequip Item
     */
    app.put(KNIGHT_API + "unequip", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.unequip(req);
@@ -179,7 +179,7 @@ export default function (app) {
     * Unequip Item
     */
    app.put(KNIGHT_API + "rewards", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.receiveReward(req);
@@ -198,36 +198,6 @@ export default function (app) {
     *
     */
 
-   /**
-    * @method GET
-    * GET Knight using ID
-    */
-   app.get(KNIGHT_API + ":id", async (req, res) => {
-      const DB = process.env.MONGO_SERVER;
-      const DB_NAME = process.env.MONGO_DB_NAME;
-      var knightUser = null;
-
-      mongo.connect(DB, (err, client) => {
-         assert.strictEqual(null, err);
-
-         const db = client.db(DB_NAME);
-         const cursor = db.collection("knights").find({ id: req.params.id });
-
-         cursor.forEach((doc, error) => {
-            assert.strictEqual(undefined, error);
-            knightUser = doc;
-         }, () => {
-            client.close()
-
-            if (knightUser) {
-               res.status(200).json({ user: { ...knightUser } });
-            } else {
-               res.status(404).json({ detail: "User not found" });
-            }
-         })
-      })
-   })
-
    app.put(KNIGHT_API + "inventory/discard", async (req, res, next) => {
       try {
          if (yupSchema.validate(req)) {
@@ -236,7 +206,7 @@ export default function (app) {
 
             let knightData = null;
 
-            mongo.connect(DB_SERVER, (err, client) => {
+            mongo.connect(DB_SERVER, { useNewUrlParser:true, useUnifiedTopology: true}, (err, client) => {
                assert.strictEqual(null, err);
 
                const db = client.db(DB_NAME);
@@ -267,46 +237,4 @@ export default function (app) {
          next();
       }
    })
-
-   // app.put(KNIGHT_API + "rewards", async (req, res, next) => {
-   //    try {
-   //       if (yupSchema.validate(req)) {
-   //          const DB_SERVER = process.env.MONGO_SERVER;
-   //          const DB_NAME = process.env.MONGO_DB_NAME;
-
-   //          let knightUser = null;
-
-   //          mongo.connect(DB_SERVER, (err, client) => {
-   //             assert.strictEqual(null, err);
-
-   //             const db = client.db(DB_NAME);
-   //             const cursor = db.collection("knights").find({ id: req.header("Requester") });
-
-   //             cursor.forEach((doc) => {
-   //                knightUser = gearHandler(doc);
-   //                knightUser.getRewards();
-
-   //                let { _id, ...knightData } = knightUser.config;
-
-   //                db.collection("knights").updateOne({ id: req.header("Requester") }, {
-   //                   $set: { ...knightData }
-   //                })
-   //             }, () => {
-
-   //                if (knightUser) {
-   //                   res.status(200).json({ ...knightUser });
-   //                } else {
-   //                   res.status(400).json({ detail: "Not modified" });
-   //                }
-   //                client.close();
-   //             })
-   //          })
-   //       } else {
-   //          throw "Request required body"
-   //       }
-   //    } catch (err) {
-   //       res.status(404).json({ detail: err });
-   //       next();
-   //    }
-   // })
 }

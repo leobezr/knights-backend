@@ -11,7 +11,7 @@ export default function (app) {
     * Receive reward after each hunt level
     */
    app.post(HUNT_API + "reward", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       const reward = await monsterLooter(req.body);
 
@@ -28,7 +28,7 @@ export default function (app) {
     * @method POST
     */
    app.post(HUNT_API + "reward/boss", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       const reward = await monsterLooter(req.body.enemies);
       const levelUnlocked = bossLevelTable(req.body.level);
