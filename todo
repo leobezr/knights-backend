@@ -1,0 +1,13 @@
+DOCKER
+   - TODO
+OTHERS
+   - websocket
+MISSION
+   - Daily missions
+   - Mission class evolution
+MIGRATION
+   - Life steal
+CHEAT PREVENTION TO REWARDS
+   - Battle logics needs to be in the backend, using WebSocket
+   - Business logic of the battle and damage formulas should be in the backend
+   - Front end shouldn't be handling the reward endpoint
