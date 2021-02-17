@@ -13,7 +13,7 @@ const USER_API = "/api/v1/user/";
 
 export default function (app) {
    app.post(USER_API + "create", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          if (yupSchema.validate(req)) {
@@ -56,7 +56,7 @@ export default function (app) {
    })
 
    app.post(USER_API + "login", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          if (yupSchema.validate(req)) {
@@ -91,7 +91,7 @@ export default function (app) {
    })
 
    app.get(USER_API + "char-list", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const AUTH = req.header("Authorization");
@@ -119,7 +119,7 @@ export default function (app) {
    })
 
    app.put(USER_API + "verify/:emailId", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const Model = mongoose.model("Users", userSchema);
@@ -139,7 +139,7 @@ export default function (app) {
    })
 
    app.get(USER_API + "profile/", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const UserModel = mongoose.model("users", userSchema);

@@ -35,7 +35,7 @@ async function updateMonsterDB() {
 }
 
 async function updateDB() {
-   await mongoose.connect(process.env.MONGO_SERVER);
+   await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
    try {
       await updateItemDB();

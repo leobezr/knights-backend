@@ -14,6 +14,7 @@
     "mongoose": "^5.11.16",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.18",
+    "socket.io": "^3.1.1",
     "uniqid": "^5.2.0",
     "validator": "^13.5.2",
     "yup": "^0.32.8"

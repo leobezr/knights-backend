@@ -12,7 +12,7 @@ export default function (app) {
     * Sell item in shop
     */
    app.post(ITEMS_API + "sell", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.sellItem(req);
@@ -26,7 +26,7 @@ export default function (app) {
     * Buy item in shop
     */
    app.post(ITEMS_API + "buy", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.buyItem(req);
@@ -41,7 +41,7 @@ export default function (app) {
     * Sell entire inventory
     */
    app.post(ITEMS_API + "sell/inventory", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER);
+      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
       try {
          const char = await KnightClassController.sellInventoryItems(req);

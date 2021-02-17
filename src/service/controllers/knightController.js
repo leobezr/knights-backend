@@ -10,7 +10,7 @@ async function getUserById(userId) {
    var knightUser = null;
 
    return new Promise((resolve, reject) => {
-      mongo.connect(DB_SERVER).then((client) => {
+      mongo.connect(DB_SERVER, { useNewUrlParser:true, useUnifiedTopology: true}).then((client) => {
          const db = client.db(DB_NAME);
          const cursor = db.collection("knights").find({ id: userId });
 
@@ -31,7 +31,7 @@ async function getUserById(userId) {
    })
 }
 async function getCharacterByName(name) {
-   await mongoose.connect(process.env.MONGO_SERVER);
+   await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
 
    try {
       const CharacterModel = mongoose.model("knights", RawCharacterSchema);

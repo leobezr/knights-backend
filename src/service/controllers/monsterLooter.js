@@ -15,7 +15,7 @@ async function getMonsterData(monsterId) {
    return new Promise((resolve, reject) => {
       try {
          if (yupSchema.validate(monsterId)) {
-            mongo.connect(DB_SERVER).then((client) => {
+            mongo.connect(DB_SERVER, { useNewUrlParser:true, useUnifiedTopology: true}).then((client) => {
                const db = client.db(DB_NAME);
                const cursor = db.collection("monsters").find({ id: monsterId });
 
