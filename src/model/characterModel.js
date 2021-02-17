@@ -77,7 +77,8 @@ const characterSchema = new mongoose.Schema({
 
    modifier: Object,
    misc: {
-      attackRange: Number
+      attackRange: Number,
+      lifeSteal: Number
    },
 
    inventory: Array,

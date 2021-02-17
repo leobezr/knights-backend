@@ -157,19 +157,21 @@ export default class {
       }
    }
    /**
-    * @returns Amount of attack speed equipped
+    * @returns Amount of attack range equipped
     */
-   _calculateAR(equipped) {
-      let totalAR = 15;
+   _calculateMisc(equipped) {
+      let attackRange = 15; // Attack Range
+      let lifeSteal = 0; // Life Steal
 
       if (equipped) {
          for (let item in equipped) {
             if (equipped[item].misc && equipped[item].type == item || item.includes("accessory")) {
-               totalAR += equipped[item].misc.attackRange
+               attackRange += equipped[item].misc?.attackRange || 0;
+               lifeSteal += equipped[item]?.misc?.lifeSteal || 0;
             };
          }
       }
-      return totalAR;
+      return { attackRange, lifeSteal };
    }
    _evolveVocation() {
       // TODO: Only evolve if has level
@@ -217,7 +219,8 @@ export default class {
       attr = this._applyVocationBuff(attr);
       this.config.modifier = { ...attr };
 
-      this.config.misc.attackRange = this._calculateAR(itemsEquipped);
+      this.config.misc.attackRange = this._calculateMisc(itemsEquipped).attackRange;
+      this.config.misc.lifeSteal = this._calculateMisc(itemsEquipped).lifeSteal;
 
       this._calculateCP();
       this._calculateHit();

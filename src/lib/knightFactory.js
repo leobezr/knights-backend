@@ -72,7 +72,8 @@ export default class Knight {
 
       this.modifier = { ...Modifier() };
       this.misc = {
-         attackRange: 15
+         attackRange: 15,
+         lifeSteal: 0
       }
 
       this.inventory = [];
