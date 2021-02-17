@@ -6,6 +6,7 @@ import Routes from "./route.js";
 import { updateDB } from "./config/databaseUpdate.js"
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import Socket from "./websocket/socket.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,9 +26,8 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.listen(PORT, () => {
-   console.log("Using port: " + PORT);
-});
+// Websocket
+Socket(app, PORT);
 
 // Sets routes
 Routes(app);
