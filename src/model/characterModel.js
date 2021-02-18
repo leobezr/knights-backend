@@ -99,6 +99,11 @@ const characterSchema = new mongoose.Schema({
       luk: Number,
       def: Number,
       hp: Number
+   },
+
+   battleSession: {
+      id: String,
+      partyRoom: [Object]
    }
 }, {
    timestamp: true

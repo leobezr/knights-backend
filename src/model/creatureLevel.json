@@ -1,0 +1,77 @@
+{
+   "0-15": {
+      "monsters": [
+         {
+            "name": "Poring",
+            "gif": "sprite/monsters/gif/poring.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 1,
+            "relatedId": 0
+         },
+         {
+            "name": "Drops",
+            "gif": "sprite/monsters/gif/drops.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 10,
+            "relatedId": 0
+         },
+         {
+            "name": "Arc Angeling",
+            "gif": "sprite/monsters/gif/arc-angeling.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 15,
+            "relatedId": 0
+         }
+      ]
+   },
+   "15-30": {
+      "monsters": [
+         {
+            "name": "Dokebi",
+            "gif": "sprite/monsters/gif/dokebi.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 15,
+            "relatedId": 0
+         },
+         {
+            "name": "Baby Orc",
+            "gif": "sprite/monsters/gif/baby-orc.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 20,
+            "relatedId": 0
+         },
+         {
+            "name": "Goblin",
+            "gif": "sprite/monsters/gif/goblin-dagger.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 30,
+            "relatedId": 0
+         }
+      ]
+   },
+   "30-50": {
+      "monsters": [
+         {
+            "name": "Deleter",
+            "gif": "sprite/monsters/gif/deleter.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-afternoon.jpg",
+            "level": 30,
+            "relatedId": 0
+         },
+         {
+            "name": "Deleter Sky",
+            "gif": "sprite/monsters/gif/deleter-sky.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-afternoon.jpg",
+            "level": 40,
+            "relatedId": 0
+         },
+         {
+            "name": "Metal Dragon",
+            "gif": "sprite/monsters/gif/metal-dragon.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-afternoon.jpg",
+            "level": 50,
+            "relatedId": 0
+         }
+      ]
+   }
+}

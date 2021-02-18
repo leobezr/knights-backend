@@ -1,0 +1,140 @@
+{
+   "0-15": {
+      "challenge": [
+         {
+            "name": "Poring",
+            "gif": "sprite/monsters/gif/poring.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 1
+         },
+         {
+            "name": "Drops",
+            "gif": "sprite/monsters/gif/drops.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 10
+         },
+         {
+            "name": "Arc Angeling",
+            "gif": "sprite/monsters/gif/arc-angeling.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 15
+         },
+         {
+            "name": "Poring King",
+            "gif": "sprite/monsters/gif/king-poring.gif",
+            "thumb": "sprite/monsters/thumb-maps/field.jpg",
+            "level": 15
+         }
+      ],
+      "stage-1": {
+         "name": [
+            "Poring"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-2": {
+         "name": [
+            "Poring",
+            "Drops"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-3": {
+         "name": [
+            "Drops",
+            "Arc Angeling"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-4": {
+         "name": [
+            "Poring",
+            "Drops",
+            "Arc Angeling"
+         ],
+         "count": 3,
+         "boss": null
+      },
+      "stage-5": {
+         "name": [
+            "Arc Angeling"
+         ],
+         "count": 10,
+         "boss": [
+            "Poring King"
+         ]
+      }
+   },
+   "15-30": {
+      "challenge": [
+         {
+            "name": "Dokebi",
+            "gif": "sprite/monsters/gif/dokebi.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 12
+         },
+         {
+            "name": "Baby Orc",
+            "gif": "sprite/monsters/gif/baby-orc.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 20
+         },
+         {
+            "name": "Goblin",
+            "gif": "sprite/monsters/gif/goblin-dagger.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 30
+         },
+         {
+            "name": "Goblin Leader",
+            "gif": "sprite/monsters/gif/goblin-leader.gif",
+            "thumb": "sprite/monsters/thumb-maps/field-fullmoon.jpg",
+            "level": 30
+         }
+      ],
+      "stage-1": {
+         "name": [
+            "Dokebi"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-2": {
+         "name": [
+            "Dokebi",
+            "Baby Orc"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-3": {
+         "name": [
+            "Baby Orc",
+            "Goblin"
+         ],
+         "count": 5,
+         "boss": null
+      },
+      "stage-4": {
+         "name": [
+            "Dokebi",
+            "Baby Orc",
+            "Goblin"
+         ],
+         "count": 3,
+         "boss": null
+      },
+      "stage-5": {
+         "name": [
+            "Goblin"
+         ],
+         "count": 10,
+         "boss": [
+            "Goblin Leader"
+         ]
+      }
+   }
+}

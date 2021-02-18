@@ -1,8 +1,36 @@
 [
   {
-    "id": 10001,
+    "id": 1,
     "name": "Poring",
     "experience": 20,
+    "huntingGrounds": {
+      "stats": {
+        "health": 50,
+        "attackRange": 10,
+        "def": 200,
+        "damage": 2,
+        "lifeSteal": 0,
+        "agi": 10
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/poring",
+        "spritesheet": "poring.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5016,
@@ -15,9 +43,37 @@
     }
   },
   {
-    "id": 10002,
+    "id": 1,
     "name": "Drops",
     "experience": 50,
+    "huntingGrounds": {
+      "stats": {
+        "health": 90,
+        "def": 40,
+        "damage": 35,
+        "agi": 10,
+        "attackRange": 10,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/drops",
+        "spritesheet": "drops.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5016,
@@ -34,9 +90,37 @@
     }
   },
   {
-    "id": 10003,
+    "id": 1,
     "name": "Arc Angeling",
     "experience": 150,
+    "huntingGrounds": {
+      "stats": {
+        "health": 180,
+        "def": 50,
+        "damage": 40,
+        "agi": 80,
+        "attackRange": 10,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/arc-angeling",
+        "spritesheet": "arc-angeling.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 1001,
@@ -53,9 +137,37 @@
     }
   },
   {
-    "id": 10004,
+    "id": 1,
     "name": "King Poring",
-    "experience": 1,
+    "experience": 20,
+    "huntingGrounds": {
+      "stats": {
+        "health": 3500,
+        "def": 90,
+        "damage": 60,
+        "agi": 80,
+        "attackRange": 80,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/king-poring",
+        "spritesheet": "king-poring.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 4400,
+        "height": 3850,
+        "grid": {
+          "width": 550,
+          "height": 550
+        }
+      },
+      "arena": "field",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5004,
@@ -72,9 +184,37 @@
     }
   },
   {
-    "id": 10005,
+    "id": 1,
     "name": "Dokebi",
     "experience": 250,
+    "huntingGrounds": {
+      "stats": {
+        "health": 430,
+        "def": 65,
+        "damage": 50,
+        "agi": 30,
+        "attackRange": 15,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/dokebi",
+        "spritesheet": "dokebi.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-fullmoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5015,
@@ -95,9 +235,88 @@
     }
   },
   {
-    "id": 10006,
+    "id": 1,
+    "name": "Goblin",
+    "experience": 700,
+    "huntingGrounds": {
+      "stats": {
+        "health": 950,
+        "def": 30,
+        "damage": 75,
+        "agi": 120,
+        "attackRange": 15,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/goblin-dagger",
+        "spritesheet": "goblin-dagger.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-fullmoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
+    "loot": [
+      {
+        "id": 6005,
+        "chance": 1
+      },
+      {
+        "id": 1010,
+        "chance": 15
+      },
+      {
+        "id": 1012,
+        "chance": 2
+      }
+    ],
+    "gold": {
+      "min": 0,
+      "max": 110
+    }
+  },
+  {
+    "id": 1,
     "name": "Baby Orc",
     "experience": 490,
+    "huntingGrounds": {
+      "stats": {
+        "health": 620,
+        "def": 30,
+        "damage": 75,
+        "agi": 50,
+        "attackRange": 15,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/baby-orc",
+        "spritesheet": "baby-orc.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-fullmoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5021,
@@ -122,32 +341,37 @@
     }
   },
   {
-    "id": 10007,
-    "name": "Goblin Dagger",
-    "experience": 700,
-    "loot": [
-      {
-        "id": 6005,
-        "chance": 1
-      },
-      {
-        "id": 1010,
-        "chance": 15
-      },
-      {
-        "id": 1012,
-        "chance": 2
-      }
-    ],
-    "gold": {
-      "min": 0,
-      "max": 110
-    }
-  },
-  {
-    "id": 10008,
+    "id": 1,
     "name": "Goblin Leader",
-    "experience": 1,
+    "experience": 20,
+    "huntingGrounds": {
+      "stats": {
+        "health": 5500,
+        "def": 250,
+        "damage": 120,
+        "agi": 80,
+        "attackRange": 80,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/goblin-leader",
+        "spritesheet": "goblin-leader.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 4400,
+        "height": 3850,
+        "grid": {
+          "width": 550,
+          "height": 550
+        }
+      },
+      "arena": "field",
+      "sound": {
+        "attack": "sword.fast",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5003,
@@ -172,9 +396,37 @@
     }
   },
   {
-    "id": 10009,
+    "id": 1,
     "name": "Deleter",
     "experience": 810,
+    "huntingGrounds": {
+      "stats": {
+        "health": 1200,
+        "def": 80,
+        "damage": 120,
+        "agi": 15,
+        "attackRange": 15,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/deleter",
+        "spritesheet": "deleter.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-afternoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5008,
@@ -195,9 +447,37 @@
     }
   },
   {
-    "id": 10010,
+    "id": 1,
     "name": "Deleter Sky",
-    "experience": 990,
+    "experience": 1100,
+    "huntingGrounds": {
+      "stats": {
+        "health": 1350,
+        "def": 20,
+        "damage": 85,
+        "agi": 150,
+        "attackRange": 30,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/deleter-sky",
+        "spritesheet": "deleter-sky.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-afternoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5022,
@@ -230,9 +510,37 @@
     }
   },
   {
-    "id": 10011,
+    "id": 1,
     "name": "Metal Dragon",
-    "experience": 1210,
+    "experience": 1450,
+    "huntingGrounds": {
+      "stats": {
+        "health": 1650,
+        "def": 40,
+        "damage": 110,
+        "agi": 130,
+        "attackRange": 70,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/metal-dragon",
+        "spritesheet": "metal-dragon.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-afternoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 8013,
@@ -261,9 +569,37 @@
     }
   },
   {
-    "id": 10012,
+    "id": 1,
     "name": "Harpy",
-    "experience": 1,
+    "experience": 1450,
+    "huntingGrounds": {
+      "stats": {
+        "health": 8650,
+        "def": 80,
+        "damage": 110,
+        "agi": 250,
+        "attackRange": 70,
+        "lifeSteal": 0
+      },
+      "sprite": {
+        "path": "sprite/monsters/spritesheet/harpy",
+        "spritesheet": "harpy.png",
+        "size": "normal",
+        "rows": 7,
+        "cols": 8,
+        "width": 2400,
+        "height": 1732,
+        "grid": {
+          "width": 300,
+          "height": 247
+        }
+      },
+      "arena": "field-afternoon",
+      "sound": {
+        "attack": "sword.punch",
+        "onHit": null
+      }
+    },
     "loot": [
       {
         "id": 5003,
