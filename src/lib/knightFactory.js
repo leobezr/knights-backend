@@ -98,6 +98,11 @@ export default class Knight {
 
          hp: 100
       }
+
+      this.battleSession = {
+         id: null,
+         partyRoom: []
+      }
    }
    _calculateTotalDef() {
       var { vit, agi } = this.attributes;

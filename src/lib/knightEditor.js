@@ -1,5 +1,6 @@
 import { buyItem, sellItem } from "./market.js";
 import vocationModifiers from "./vocationModifiers.js";
+import uniqid from "uniqid";
 
 const GAIN_STATUS_PER_LEVEL = 5;
 const MAX_STATUS_POINTS = 300;
@@ -259,6 +260,37 @@ export default class {
          this.config.attributes[status] += 1;
       }
       this._applyMod();
+      return this;
+   }
+   /**
+    * Create battle session
+    * Everything inside partyRoom is assumed to be an ally
+    * @param {String} id can be null or false
+    */
+   createBattleSession(id) {
+      const nickname = this.config.nickname
+         .trim()
+         .replace(/ /g, "-")
+         .toLowerCase() + "-";
+
+      const battleSession = {};
+      battleSession.id = id || uniqid(nickname);
+      battleSession.partyRoom = [];
+
+      this.config.battleSession = battleSession;
+      return this;
+   }
+   /**
+    * Joins a battle session
+    * @param {String}
+    */
+   joinBattleSession(id) {
+      this.createBattleSession(id);
+
+      this.config.battleSession.partyRoom.push({
+         id: this.config.characterId,
+         party: id,
+      })
       return this;
    }
    /**
