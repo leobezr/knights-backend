@@ -6,7 +6,6 @@ async function sendEmail(emailData) {
 
    const SENDER = Mailer.createTransport({
       host: SMTP,
-      // service: SMTP,
       port: 465,
       secure: true,
       auth: {
@@ -43,12 +42,12 @@ function validateEmail(props) {
    let email = sendEmail({
       to: props.to,
       subject: "KnightsRPG || Account validation",
-      text: `${process.env.FRONT_END_LINK}/${props.token}`,
+      text: `${process.env.FRONT_END_LINK + props.token}`,
       html: `
          <h1>KnightsRPG</h1>
-         <p>Account created! You can now validate your e-mail <a href="${process.env.FRONT_END_LINK}/${props.token}">here</a>
+         <p>Account created! You can now validate your e-mail <a href="${process.env.FRONT_END_LINK + props.token}">here</a>
          <hr />
-         <p><small><a href="${process.env.FRONT_END_LINK}">KnightsRPG</a></small></p
+         <p><small><a href="${process.env.FRONT_END_LINK}">KnightsRPG</a></small></p>
       `
    })
 
