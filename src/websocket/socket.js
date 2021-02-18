@@ -1,11 +1,9 @@
 import { Server } from "socket.io";
 import { createServer } from "http"
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 import createChat from "./chat.js";
+import pve from "../service/endpoints/PVE.js";
 
 export default function (app, port) {
-   const __dirname = dirname(fileURLToPath(import.meta.url));
    const SOCKET_PORT = port;
 
    const httpServer = createServer(app);
@@ -22,13 +20,9 @@ export default function (app, port) {
       }
    });
 
-
-   app.get('/', (req, res) => {
-      res.sendFile(__dirname + '/index.html');
-   });
-
    io.on("connection", socket => {
-      createChat(socket, io)
+      createChat(socket, io);
+      pve(app, socket, io);
    })
 
    httpServer.listen(SOCKET_PORT, () => {
