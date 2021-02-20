@@ -22,12 +22,13 @@ export default function (app, port) {
 
    io.on("connection", socket => {
       createChat(socket, io);
-      pve(app, socket, io);
    })
 
    httpServer.listen(SOCKET_PORT, () => {
       console.log("listening on *:" + SOCKET_PORT);
    });
+
+   pve(app, io);
 }
 
 
