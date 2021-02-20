@@ -310,7 +310,7 @@ export default class {
    removeParty() {
       this.config.battleSession = {
          id: null,
-         party: null
+         party: this.config.characterId
       }
 
       return this;

@@ -193,11 +193,11 @@ export default async function (app, io) {
             return;
          }
 
+         res.status(200).json(characterData)
+
          // Notify members of party update
          const removed = removeUserFromRoom(req.body.id);
-         io.to(removed.room.name).emit("partyRemoved", removed.userRemoved.identifier);
-
-         res.status(200).json(characterData)
+         io.to(removed.room.name).emit("partyRemoved", removed);
       } catch (err) {
          res.status(500).json({ detail: err });
          throw Error(err);
@@ -263,9 +263,14 @@ export default async function (app, io) {
        * Leaves current room to join another room with characterId
        * Can't be the party leader
        */
-      socket.on("partyRemoved", async room => {
-         socket.join("room_" + room);
-         console.log("joined room: room_" + room);
+      socket.on("partyRemoved", async ({ member, persona }) => {
+         persona.battleSession.party = null;
+
+         socket.leave(member.room.name);
+
+         const room = await joinUser(socket, persona, member.userRemoved.identifier);
+
+         socket.to("room_" + room).emit("partyUpdated", room);
       })
 
       /**
