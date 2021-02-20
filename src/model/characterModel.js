@@ -103,7 +103,7 @@ const characterSchema = new mongoose.Schema({
 
    battleSession: {
       id: String,
-      partyRoom: [Object]
+      party: String
    }
 }, {
    timestamp: true

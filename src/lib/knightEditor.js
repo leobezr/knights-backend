@@ -275,7 +275,6 @@ export default class {
 
       const battleSession = {};
       battleSession.id = id || uniqid(nickname);
-      battleSession.partyRoom = [];
 
       this.config.battleSession = battleSession;
       return this;
@@ -286,11 +285,34 @@ export default class {
     */
    joinBattleSession(id) {
       this.createBattleSession(id);
+      return this;
+   }
+   /**
+    * Joins a battle session
+    * @param {String}
+    */
+   joinParty(id) {
+      id = id || this.config.characterId;
 
-      this.config.battleSession.partyRoom.push({
-         id: this.config.characterId,
-         party: id,
-      })
+      if (!this.config.battleSession) {
+         this.config.battleSession = {
+            id: null,
+            party: id
+         }
+      } else {
+         this.config.battleSession.party = id;
+      }
+      return this;
+   }
+   /**
+    * Removes self from party
+    */
+   removeParty() {
+      this.config.battleSession = {
+         id: null,
+         party: null
+      }
+
       return this;
    }
    /**

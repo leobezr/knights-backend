@@ -101,7 +101,7 @@ export default class Knight {
 
       this.battleSession = {
          id: null,
-         partyRoom: []
+         party: null
       }
    }
    _calculateTotalDef() {
