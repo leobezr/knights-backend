@@ -31,8 +31,6 @@ async function getUserById(userId) {
    })
 }
 async function getCharacterByName(name) {
-   await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
    try {
       const CharacterModel = mongoose.model("knights", RawCharacterSchema);
       const character = await CharacterModel.findOne({ nickname: name });

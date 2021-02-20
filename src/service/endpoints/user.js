@@ -4,6 +4,7 @@ import UserSchema, { userSchema } from "../../model/userModel.js";
 import bcrypt from "bcrypt";
 import validateEmail from "../../subscribers/sendEmail.js";
 import { RawCharacterSchema } from "../../model/characterModel.js"
+import db from "../db.js";
 
 const yupSchema = yup.default.object().shape({
    body: yup.default.object().required()
@@ -13,8 +14,7 @@ const USER_API = "/api/v1/user/";
 
 export default function (app) {
    app.post(USER_API + "create", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+await db();
       try {
          if (yupSchema.validate(req)) {
             let newUser = new UserSchema({
@@ -56,12 +56,10 @@ export default function (app) {
    })
 
    app.post(USER_API + "login", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          if (yupSchema.validate(req)) {
-            const Model = mongoose.model("Users", userSchema);
-            let user = await Model.findOne({ email: req.body.email });
+            let user = await UserSchema.findOne({ email: req.body.email });
 
             if (!user.email) {
                return res.status(404).json({ detail: "User not found" });
@@ -91,8 +89,7 @@ export default function (app) {
    })
 
    app.get(USER_API + "char-list", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const AUTH = req.header("Authorization");
 
@@ -119,8 +116,7 @@ export default function (app) {
    })
 
    app.put(USER_API + "verify/:emailId", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const Model = mongoose.model("Users", userSchema);
          let user = await Model.findOne({ emailValidateId: req.params.emailId });
@@ -139,8 +135,7 @@ export default function (app) {
    })
 
    app.get(USER_API + "profile/", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const UserModel = mongoose.model("users", userSchema);
          const user = await UserModel.findOne({ token: req.header("Authorization") });

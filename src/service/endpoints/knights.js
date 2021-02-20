@@ -7,6 +7,7 @@ import assert from "assert";
 import mongoose from "mongoose"
 import CharacterSchema, { RawCharacterSchema } from "../../model/characterModel.js"
 import KnightClassController from "../controllers/knightClassController.js";
+import db from "../db.js";
 
 const yupSchema = yup.default.object().shape({
    body: yup.default.object().required()
@@ -22,8 +23,7 @@ export default function (app) {
     * Add character to user
     */
    app.post(KNIGHT_API + "add", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          if (yupSchema.validate(req)) {
             const UserModel = mongoose.model("users", userSchema);
@@ -70,15 +70,14 @@ export default function (app) {
     * Login into character
     */
    app.get(KNIGHT_API + "login", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const AUTH = req.header("Authorization");
          const CHAR_AUTH = req.header("CharAuth")
 
          if (AUTH && CHAR_AUTH) {
-            const CharModel = mongoose.model("knights", RawCharacterSchema);
-            const char = await CharModel.findOne({ token: CHAR_AUTH });
+            // const CharModel = mongoose.model("knights", RawCharacterSchema);
+            const char = await CharacterSchema.findOne({ token: CHAR_AUTH });
 
             if (char && char.characterId) {
                return res.status(200).json({ ...char._doc })
@@ -99,8 +98,7 @@ export default function (app) {
     * Find knight by nickname
     */
    app.get(KNIGHT_API + "find", async (req, res, next) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          if (yupSchema.validate(req)) {
             const UserModel = mongoose.model("knights", RawCharacterSchema);
@@ -131,8 +129,7 @@ export default function (app) {
     * Add stats to character;
     */
    app.put(KNIGHT_API + "attr/add", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = KnightClassController.addAttr(req);
 
@@ -147,8 +144,7 @@ export default function (app) {
     * Equip Item
     */
    app.put(KNIGHT_API + "equip", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.equip(req);
 
@@ -163,8 +159,7 @@ export default function (app) {
     * Unequip Item
     */
    app.put(KNIGHT_API + "unequip", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.unequip(req);
 
@@ -179,8 +174,7 @@ export default function (app) {
     * Unequip Item
     */
    app.put(KNIGHT_API + "rewards", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.receiveReward(req);
 

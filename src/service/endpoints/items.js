@@ -1,7 +1,6 @@
 import mongo from "mongodb";
 import assert from "assert";
-
-import mongoose from "mongoose";
+import db from "../db.js";
 import KnightClassController from "../controllers/knightClassController.js";
 
 const ITEMS_API = "/api/v1/items/";
@@ -12,8 +11,7 @@ export default function (app) {
     * Sell item in shop
     */
    app.post(ITEMS_API + "sell", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.sellItem(req);
          res.status(200).json(char);
@@ -26,8 +24,7 @@ export default function (app) {
     * Buy item in shop
     */
    app.post(ITEMS_API + "buy", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.buyItem(req);
          res.status(200).json(char);
@@ -41,8 +38,7 @@ export default function (app) {
     * Sell entire inventory
     */
    app.post(ITEMS_API + "sell/inventory", async (req, res) => {
-      await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser:true, useUnifiedTopology: true});
-
+      await db();
       try {
          const char = await KnightClassController.sellInventoryItems(req);
          res.status(200).json(char);

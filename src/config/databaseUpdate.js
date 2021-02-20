@@ -1,4 +1,3 @@
-import mongoose from "mongoose"
 import fs from "fs";
 import path from "path";
 import { dirname } from 'path';
@@ -58,8 +57,6 @@ async function updateHuntsDB() {
 }
 
 async function updateDB() {
-   await mongoose.connect(process.env.MONGO_SERVER, { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: false });
-
    try {
       await updateItemDB();
       await updateMonsterDB();

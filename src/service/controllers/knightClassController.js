@@ -68,6 +68,14 @@ export default class {
          throw Error(err);
       }
    }
+   static async getData(req) {
+      try {
+         const Char = await CharacterModel.findOne({ token: req.header("CharAuth") });
+         return Char.toObject();
+      } catch (err) {
+         throw Error(err);
+      }
+   }
    static async unequip(req) {
       try {
          const Char = await CharacterModel.findOne({ token: req.header("CharAuth") });
