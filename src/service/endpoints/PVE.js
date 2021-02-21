@@ -280,5 +280,9 @@ export default async function (app, io) {
       socket.on("disconnect", () => {
          userSetOnlineState(socket.id, false)
       })
+
+      socket.on("forceDisconnect", () => {
+         userSetOnlineState(socket.id, false)
+      })
    })
 }
