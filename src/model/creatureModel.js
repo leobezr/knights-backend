@@ -5,6 +5,7 @@ const monsterSchema = new mongoose.Schema({
       id: Number,
       name: String,
       experience: Number,
+      level: Number,
       huntingGrounds: {
          stats: Number,
          def: Number,

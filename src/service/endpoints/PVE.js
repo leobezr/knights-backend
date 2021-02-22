@@ -2,7 +2,7 @@ import ArenaController from "../controllers/arenaController.js";
 import db from "../db.js";
 
 export default async function (app, io) {
-   const PVE_API = "/api/v1/battle/monster/";
+   const PVE_API = "/api/v1/hunt/";
    const PARTY_API = "/api/v1/party/"
 
    /**
@@ -22,6 +22,12 @@ export default async function (app, io) {
     * It serves as a getter for the client side, it doesn't manage socket rooms
     */
    const rooms = [];
+
+   /**
+    * Constant for storing battleSession data
+    * It serves as a getter for the client side, it doesn't manage socket rooms
+    */
+   const battleSessions = [];
 
    /**
     * Clean rooms with no members from constant rooms
@@ -64,6 +70,7 @@ export default async function (app, io) {
                   {
                      id: socket.id,
                      nickname: character.nickname,
+                     level: character.level,
                      identifier: character.characterId,
                      online: true,
                      leader: character.characterId == room
@@ -83,6 +90,7 @@ export default async function (app, io) {
             rooms[index].members.push({
                id: socket.id,
                nickname: character.nickname,
+               level: character.level,
                identifier: character.characterId,
                online: true,
                leader: character.characterId == room
@@ -96,10 +104,10 @@ export default async function (app, io) {
          } else {
             rooms[index].members[existingDataIndex].online = true;
             rooms[index].members[existingDataIndex].id = socket.id;
+            rooms[index].members[existingDataIndex].level = character.level;
          }
       }
       cleanEmptyRooms();
-
       return rooms[index];
    };
    /**
@@ -142,25 +150,96 @@ export default async function (app, io) {
 
    /**
     * PVE API
-    * @NotImplemented
-    * Generates a battleSession.id
-    * After ID is generated, client should emit a PushPlayersToBattle event.
+    * Players will send a request to this endpoint as soon as they land into HuntingGrounds
+    * This counts how many players in a party are joining the game
+    * So the game knows when everyone is loading
     */
-   app.post(PVE_API, async (req, res) => {
+   app.post(PVE_API + "startBattle", async (req, res) => {
       await db();
-      const characterData = await ArenaController.generateArenaId(req);
+      const battleData = req?.body?.session;
 
-      res.status(200).json(characterData.toObject());
+      if (!battleData) {
+         res.status(400).json({ detail: "No session" });
+      } else if (battleData.split(";").length != 3) {
+         res.status(401).json({ detail: "Incorrect code" });
+      }
+
+      try {
+         const characterData = await ArenaController.getPlayer(req);
+         const code = battleData.split(";");
+
+         let codeData = {
+            party: code[0],
+            battleId: code[1],
+            monsterId: code[2]
+         }
+
+         const creatureProps = await ArenaController.getMonsters(codeData.monsterId);
+
+         if (characterData.battleSession.id == battleData) {
+            let index = battleSessions.findIndex(battle => battle.id == battleData);
+
+            if (index == -1) { // Requester generates a battle session
+               let memberReady = {};
+               memberReady[characterData.nickname] = false;
+
+               battleSessions.push({
+                  id: battleData,
+                  party: codeData.party,
+                  spectating: [],
+                  membersReady: memberReady,
+                  enemies: [creatureProps]
+               })
+
+            } else { // If battle session exists
+               let memberIndex = battleSessions[index].membersReady[characterData.nickname] ?? null;
+
+               if (memberIndex == null) {
+                  battleSessions[index].membersReady[characterData.nickname] = false;
+               }
+            }
+         } else {
+            let index = battleSessions.findIndex(battle => battle.id == battleData);
+
+            if (index == -1) {
+               res.status(401).json({ detail: "No active battles" });
+               return;
+            } else {
+               battleSessions[index].spectating.push(characterData.nickname);
+            }
+         }
+         console.log(battleSessions);
+         res.status(200).json(creatureProps);
+      } catch (err) {
+         res.status(500).json({ detail: err });
+      }
+
    })
    /**
     * PVE API
-    * @NotImplemented
     * Player generates battleSession.id based on the monster id
-    * This is for HuntingGrounds
+    * This is for Hunt
+    *
+    * Every party member receives a battle id
     */
-   app.get(PVE_API + ":level", async (req, res) => {
+   app.post(PVE_API + "battle/", async (req, res) => {
       await db();
+      try {
+         const battleSession = await ArenaController.generateArenaId(req, getPartyMembers);
 
+         if (battleSession) {
+            res.status(201).json(battleSession.id);
+            io.of("/").in(battleSession.room).emit("sendPartyMembers", {
+               name: "HuntingGround",
+               params: { hunt: battleSession.id }
+            });
+            return;
+         }
+
+         res.status(400).json({ detail: "Battle wasn't started" });
+      } catch (err) {
+         throw res.status(err.status || 500).json({ detail: err.detail || err.message })
+      }
    })
    /**
     * Create Party
@@ -271,6 +350,62 @@ export default async function (app, io) {
          const room = await joinUser(socket, persona, member.userRemoved.identifier);
 
          socket.to("room_" + room).emit("partyUpdated", room);
+      })
+
+      /**
+       * Party invitation
+       * Emits event to the invited player
+       */
+      socket.on("battleGenerated", props => {
+         if (!rooms.length) return;
+
+         const partyRoom = getPartyMembers(props.battleSession.party);
+
+         io.of("/").to(partyRoom.name).emit("battleGenerated", props.nickname);
+      })
+
+      /**
+       * Client side alert images ready
+       * Every client that completes an image loading emits an event
+       */
+      socket.on("clientReady", async props => {
+         if (!battleSessions.length) return;
+
+         const session = props.battleSession.id;
+         var battleIndex = battleSessions.findIndex(battle => battle.id == session);
+         var canStart = false;
+
+         var clientsReady = 0;
+         var totalMembers = 1;
+
+         if (battleIndex != -1) { // If battle exists
+            let members = battleSessions[battleIndex].membersReady;
+            totalMembers = Object.keys(members).length;
+
+            battleSessions[battleIndex].membersReady[props.nickname] = true;
+
+            await socket.join(battleSessions[battleIndex].id);
+
+            for (let client in members) {
+               client = members[client];
+               canStart = true;
+               clientsReady++
+
+               if (!client) {
+                  canStart = false;
+                  break;
+               }
+            }
+         }
+         if (canStart) {
+            io.of("/")
+               .in(battleSessions[battleIndex].id)
+               .emit("clientBattleReady");
+         } else {
+            io.of("/")
+               .in(battleSessions[battleIndex].id)
+               .emit("clientBattlePercent", clientsReady / totalMembers * 100);
+         }
       })
 
       /**

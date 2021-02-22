@@ -1,5 +1,8 @@
 import KnightEditor from "../../lib/knightEditor.js";
+import uniqid from "uniqid";
 import CharacterSchema from "../../model/characterModel.js"
+import CreatureSchema from "../../model/creatureModel.js"
+import partyRules from "../../rules/partyRules.js";
 
 export default class {
    static async _promiseUpdateKnight(req, incomingData) {
@@ -15,20 +18,62 @@ export default class {
          )
       })
    }
-   static async generateArenaId(req) {
+   static async generateArenaId(req, getPartyMembers) {
       try {
-         const character = await CharacterSchema.findOne({ token: req.header("CharAuth") });
+         const battleInitiator = await CharacterSchema.findOne({ token: req.header("CharAuth") });
+         let monster = await CreatureSchema.findOne({ id: req?.body?.monster });
 
-         if (character?.token) {
-            const charData = new KnightEditor(character.toObject())
-               .createBattleSession()
-               .config
+         if (battleInitiator.toObject && monster.toObject) {
+            let battleInitiatorObj = battleInitiator.toObject();
+            monster = monster.toObject();
 
-            return await this._promiseUpdateKnight(req, charData);
+            const party = getPartyMembers(battleInitiatorObj.battleSession.party);
+            if (!party) throw Error({ status: 401, detail: "Player isn't from a party" });
+
+            const updatePartyMemberBattleId = () => {
+               return new Promise(async (resolve, reject) => {
+                  var partyMembers = [];
+                  var battleId = uniqid(party.name + ";", ";" + monster.id);
+
+                  for (let member in party.members) {
+                     member = party.members[member];
+                     member = await CharacterSchema.findOne({ characterId: member.identifier });
+                     var knight = null
+
+                     if (member.toObject) {
+                        member = member.toObject();
+
+                        if (partyRules.canHuntMonster(member.level, monster.level)) {
+                           knight = new KnightEditor(member)
+                              .createBattleSession(battleId)
+                              .config;
+
+                           await this._promiseUpdateKnight(member.token, knight);
+
+                           partyMembers.push(member);
+                        }
+                     } else {
+                        reject(member);
+                     }
+                  }
+                  resolve({
+                     id: battleId,
+                     room: party.name
+                  });
+               })
+            }
+
+            return await updatePartyMemberBattleId();
+         } else {
+            let ERROR = "";
+
+            if (!character.toObject) ERROR += "Invalid character token; ";
+            if (!monster.toObject) ERROR += "Invalid monster ID; ";
+
+            throw Error({ status: 400, detail: ERROR.trim() });
          }
-         return null;
       } catch (err) {
-         throw Error(err);
+         throw Error({ status: 500, detail: err.message });
       }
    }
    static async joinParty(req, id) {
@@ -96,6 +141,29 @@ export default class {
 
                return await this._promiseUpdateKnight(req, knightEditor);
             }
+         }
+         return null;
+      } catch (err) {
+         throw Error(err);
+      }
+   }
+   static async getPlayer(req) {
+      try {
+         const characterData = await CharacterSchema.findOne({ token: req.header("CharAuth") });
+
+         if (characterData.toObject) {
+            return new KnightEditor(characterData.toObject()).config;
+         }
+      } catch (err) {
+         throw Error(err);
+      }
+   }
+   static async getMonsters(monsterId) {
+      try {
+         const monsterList = await CreatureSchema.findOne({ id: monsterId });
+
+         if (monsterList.toObject) {
+            return monsterList.toObject();
          }
          return null;
       } catch (err) {
