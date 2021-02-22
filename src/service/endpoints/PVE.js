@@ -150,9 +150,19 @@ export default async function (app, io) {
 
    /**
     * PVE API
-    * Players will send a request to this endpoint as soon as they land into HuntingGrounds
-    * This counts how many players in a party are joining the game
-    * So the game knows when everyone is loading
+    * Players will send a request to this endpoint as soon as they land into HuntingGround route
+    * Counts how many players in a party are joining the game so the game knows when everyone is loading
+    *
+    * Spectator mode is allowed
+    *
+    * battleData is a request param from the client side
+    * divided as `${partyRoom};${sessionId};${monsterId}`
+    *
+    * @param {String} partyRoom -> Party room name
+    * @param {String} sessionId -> Random battle session ID
+    * @param {String} monsterId -> Monster ID
+    *
+    * @returns {Object} creatureData
     */
    app.post(PVE_API + "startBattle", async (req, res) => {
       await db();
@@ -208,7 +218,6 @@ export default async function (app, io) {
                battleSessions[index].spectating.push(characterData.nickname);
             }
          }
-         console.log(battleSessions);
          res.status(200).json(creatureProps);
       } catch (err) {
          res.status(500).json({ detail: err });
@@ -367,6 +376,9 @@ export default async function (app, io) {
       /**
        * Client side alert images ready
        * Every client that completes an image loading emits an event
+       *
+       * For every loading client, a percentage is sent
+       * If all clients load, all clients get the OK alert
        */
       socket.on("clientReady", async props => {
          if (!battleSessions.length) return;
@@ -397,11 +409,11 @@ export default async function (app, io) {
                }
             }
          }
-         if (canStart) {
+         if (canStart) { // Tells the client that it should start the battle
             io.of("/")
                .in(battleSessions[battleIndex].id)
                .emit("clientBattleReady");
-         } else {
+         } else { // Sends the percentage of other clients state
             io.of("/")
                .in(battleSessions[battleIndex].id)
                .emit("clientBattlePercent", clientsReady / totalMembers * 100);
