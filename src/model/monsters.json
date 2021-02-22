@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Poring",
     "experience": 20,
+    "level": 1,
     "huntingGrounds": {
       "stats": {
         "health": 50,
@@ -12,8 +13,8 @@
         "lifeSteal": 0,
         "agi": 10
       },
+      "path": "sprite/monsters/spritesheet/poring/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/poring",
         "spritesheet": "poring.png",
         "size": "normal",
         "rows": 7,
@@ -25,7 +26,7 @@
           "height": 247
         }
       },
-      "arena": "field",
+      "arena": "sprite/monsters/maps/field.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -46,6 +47,7 @@
     "id": 1,
     "name": "Drops",
     "experience": 50,
+    "level": 10,
     "huntingGrounds": {
       "stats": {
         "health": 90,
@@ -55,8 +57,8 @@
         "attackRange": 10,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/drops/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/drops",
         "spritesheet": "drops.png",
         "size": "normal",
         "rows": 7,
@@ -68,7 +70,7 @@
           "height": 247
         }
       },
-      "arena": "field",
+      "arena": "sprite/monsters/maps/field.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -93,6 +95,7 @@
     "id": 1,
     "name": "Arc Angeling",
     "experience": 150,
+    "level": 15,
     "huntingGrounds": {
       "stats": {
         "health": 180,
@@ -102,8 +105,8 @@
         "attackRange": 10,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/arc-angeling/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/arc-angeling",
         "spritesheet": "arc-angeling.png",
         "size": "normal",
         "rows": 7,
@@ -115,7 +118,7 @@
           "height": 247
         }
       },
-      "arena": "field",
+      "arena": "sprite/monsters/maps/field.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -140,6 +143,7 @@
     "id": 1,
     "name": "King Poring",
     "experience": 20,
+    "level": 15,
     "huntingGrounds": {
       "stats": {
         "health": 3500,
@@ -149,8 +153,8 @@
         "attackRange": 80,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/king-poring/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/king-poring",
         "spritesheet": "king-poring.png",
         "size": "normal",
         "rows": 7,
@@ -162,7 +166,7 @@
           "height": 550
         }
       },
-      "arena": "field",
+      "arena": "sprite/monsters/maps/field.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -186,6 +190,7 @@
   {
     "id": 1,
     "name": "Dokebi",
+    "level": 15,
     "experience": 250,
     "huntingGrounds": {
       "stats": {
@@ -196,8 +201,8 @@
         "attackRange": 15,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/dokebi/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/dokebi",
         "spritesheet": "dokebi.png",
         "size": "normal",
         "rows": 7,
@@ -209,7 +214,7 @@
           "height": 247
         }
       },
-      "arena": "field-fullmoon",
+      "arena": "sprite/monsters/maps/field-fullmoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -238,6 +243,7 @@
     "id": 1,
     "name": "Goblin",
     "experience": 700,
+    "level": 30,
     "huntingGrounds": {
       "stats": {
         "health": 950,
@@ -247,8 +253,8 @@
         "attackRange": 15,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/goblin-dagger/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/goblin-dagger",
         "spritesheet": "goblin-dagger.png",
         "size": "normal",
         "rows": 7,
@@ -260,7 +266,7 @@
           "height": 247
         }
       },
-      "arena": "field-fullmoon",
+      "arena": "sprite/monsters/maps/field-fullmoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -289,6 +295,7 @@
     "id": 1,
     "name": "Baby Orc",
     "experience": 490,
+    "level": 20,
     "huntingGrounds": {
       "stats": {
         "health": 620,
@@ -298,8 +305,8 @@
         "attackRange": 15,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/baby-orc/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/baby-orc",
         "spritesheet": "baby-orc.png",
         "size": "normal",
         "rows": 7,
@@ -311,7 +318,7 @@
           "height": 247
         }
       },
-      "arena": "field-fullmoon",
+      "arena": "sprite/monsters/maps/field-fullmoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -344,6 +351,7 @@
     "id": 1,
     "name": "Goblin Leader",
     "experience": 20,
+    "level": 30,
     "huntingGrounds": {
       "stats": {
         "health": 5500,
@@ -353,8 +361,8 @@
         "attackRange": 80,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/goblin-leader/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/goblin-leader",
         "spritesheet": "goblin-leader.png",
         "size": "normal",
         "rows": 7,
@@ -366,7 +374,7 @@
           "height": 550
         }
       },
-      "arena": "field",
+      "arena": "sprite/monsters/maps/field.jpg",
       "sound": {
         "attack": "sword.fast",
         "onHit": null
@@ -399,6 +407,7 @@
     "id": 1,
     "name": "Deleter",
     "experience": 810,
+    "level": 30,
     "huntingGrounds": {
       "stats": {
         "health": 1200,
@@ -408,8 +417,8 @@
         "attackRange": 15,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/deleter/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/deleter",
         "spritesheet": "deleter.png",
         "size": "normal",
         "rows": 7,
@@ -421,7 +430,7 @@
           "height": 247
         }
       },
-      "arena": "field-afternoon",
+      "arena": "sprite/monsters/maps/field-afternoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -450,6 +459,7 @@
     "id": 1,
     "name": "Deleter Sky",
     "experience": 1100,
+    "level": 40,
     "huntingGrounds": {
       "stats": {
         "health": 1350,
@@ -459,8 +469,8 @@
         "attackRange": 30,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/deleter-sky/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/deleter-sky",
         "spritesheet": "deleter-sky.png",
         "size": "normal",
         "rows": 7,
@@ -472,7 +482,7 @@
           "height": 247
         }
       },
-      "arena": "field-afternoon",
+      "arena": "sprite/monsters/maps/field-afternoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -512,6 +522,7 @@
   {
     "id": 1,
     "name": "Metal Dragon",
+    "level": 50,
     "experience": 1450,
     "huntingGrounds": {
       "stats": {
@@ -522,8 +533,8 @@
         "attackRange": 70,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/metal-dragon/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/metal-dragon",
         "spritesheet": "metal-dragon.png",
         "size": "normal",
         "rows": 7,
@@ -535,7 +546,7 @@
           "height": 247
         }
       },
-      "arena": "field-afternoon",
+      "arena": "sprite/monsters/maps/field-afternoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
@@ -571,6 +582,7 @@
   {
     "id": 1,
     "name": "Harpy",
+    "level": 50,
     "experience": 1450,
     "huntingGrounds": {
       "stats": {
@@ -581,8 +593,8 @@
         "attackRange": 70,
         "lifeSteal": 0
       },
+      "path": "sprite/monsters/spritesheet/harpy/",
       "sprite": {
-        "path": "sprite/monsters/spritesheet/harpy",
         "spritesheet": "harpy.png",
         "size": "normal",
         "rows": 7,
@@ -594,7 +606,7 @@
           "height": 247
         }
       },
-      "arena": "field-afternoon",
+      "arena": "sprite/monsters/maps/field-afternoon.jpg",
       "sound": {
         "attack": "sword.punch",
         "onHit": null
