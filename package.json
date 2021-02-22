@@ -1,5 +1,5 @@
 {
-  "version": "v0.6.1",
+  "version": "v0.7.0",
   "dependencies": {
     "axios": "^0.21.0",
     "bcrypt": "^5.0.0",
